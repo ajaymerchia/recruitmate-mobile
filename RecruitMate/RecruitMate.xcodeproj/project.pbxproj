@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B646ACB3A4A69F870A6BE17 /* Pods_RecruitMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86641178BD6A139A1328F6AC /* Pods_RecruitMate.framework */; };
 		B7313591217B970D00B9A094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7313590217B970D00B9A094 /* AppDelegate.swift */; };
 		B7313593217B970D00B9A094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7313592217B970D00B9A094 /* ViewController.swift */; };
 		B7313596217B970D00B9A094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7313594217B970D00B9A094 /* Main.storyboard */; };
 		B7313598217B970E00B9A094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7313597217B970E00B9A094 /* Assets.xcassets */; };
 		B731359B217B970E00B9A094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7313599217B970E00B9A094 /* LaunchScreen.storyboard */; };
+		B76E350A217BCD4F00993E15 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3509217BCD4F00993E15 /* Constants.swift */; };
+		B76E350C217BDAC900993E15 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E350B217BDAC900993E15 /* Email.swift */; };
+		B76E3511217BE70C00993E15 /* GmailAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3510217BE70C00993E15 /* GmailAPIHelper.swift */; };
+		B76E3513217BE74B00993E15 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3512217BE74B00993E15 /* LocalData.swift */; };
+		B76E3517217BE79000993E15 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3516217BE79000993E15 /* AlertManager.swift */; };
+		B76E3519217BE7EC00993E15 /* rgba.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3518217BE7EC00993E15 /* rgba.swift */; };
+		B76E351B217BE86900993E15 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E351A217BE86900993E15 /* Utils.swift */; };
+		B76E351D217BF05100993E15 /* LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E351C217BF05100993E15 /* LayoutManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DE80DE35CE07EEC9088CB47 /* Pods-RecruitMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecruitMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecruitMate/Pods-RecruitMate.debug.xcconfig"; sourceTree = "<group>"; };
+		86641178BD6A139A1328F6AC /* Pods_RecruitMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecruitMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5339F031A50A21027DB32E9 /* Pods-RecruitMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecruitMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecruitMate/Pods-RecruitMate.release.xcconfig"; sourceTree = "<group>"; };
 		B731358D217B970D00B9A094 /* RecruitMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecruitMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7313590217B970D00B9A094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7313592217B970D00B9A094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +34,14 @@
 		B7313597217B970E00B9A094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B731359A217B970E00B9A094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B731359C217B970E00B9A094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B76E3509217BCD4F00993E15 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B76E350B217BDAC900993E15 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		B76E3510217BE70C00993E15 /* GmailAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailAPIHelper.swift; sourceTree = "<group>"; };
+		B76E3512217BE74B00993E15 /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
+		B76E3516217BE79000993E15 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		B76E3518217BE7EC00993E15 /* rgba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rgba.swift; sourceTree = "<group>"; };
+		B76E351A217BE86900993E15 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B76E351C217BF05100993E15 /* LayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B646ACB3A4A69F870A6BE17 /* Pods_RecruitMate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6ECC0F869610D867169E2FF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86641178BD6A139A1328F6AC /* Pods_RecruitMate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B7313584217B970D00B9A094 = {
 			isa = PBXGroup;
 			children = (
 				B731358F217B970D00B9A094 /* RecruitMate */,
 				B731358E217B970D00B9A094 /* Products */,
+				BE7CD2E1EACB441B72AB433C /* Pods */,
+				6ECC0F869610D867169E2FF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				B7313590217B970D00B9A094 /* AppDelegate.swift */,
+				B76E3510217BE70C00993E15 /* GmailAPIHelper.swift */,
+				B76E350E217BE6CF00993E15 /* Resources */,
+				B76E350F217BE6D800993E15 /* Models */,
 				B7313592217B970D00B9A094 /* ViewController.swift */,
 				B7313594217B970D00B9A094 /* Main.storyboard */,
 				B7313597217B970E00B9A094 /* Assets.xcassets */,
@@ -64,6 +98,36 @@
 			path = RecruitMate;
 			sourceTree = "<group>";
 		};
+		B76E350E217BE6CF00993E15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B76E3509217BCD4F00993E15 /* Constants.swift */,
+				B76E351A217BE86900993E15 /* Utils.swift */,
+				B76E3516217BE79000993E15 /* AlertManager.swift */,
+				B76E351C217BF05100993E15 /* LayoutManager.swift */,
+				B76E3518217BE7EC00993E15 /* rgba.swift */,
+				B76E3512217BE74B00993E15 /* LocalData.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B76E350F217BE6D800993E15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B76E350B217BDAC900993E15 /* Email.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE7CD2E1EACB441B72AB433C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DE80DE35CE07EEC9088CB47 /* Pods-RecruitMate.debug.xcconfig */,
+				B5339F031A50A21027DB32E9 /* Pods-RecruitMate.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B731359F217B970E00B9A094 /* Build configuration list for PBXNativeTarget "RecruitMate" */;
 			buildPhases = (
+				F25D35A646B54ADC503AAF67 /* [CP] Check Pods Manifest.lock */,
 				B7313589217B970D00B9A094 /* Sources */,
 				B731358A217B970D00B9A094 /* Frameworks */,
 				B731358B217B970D00B9A094 /* Resources */,
+				8B8085255E7300E817E7C8C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +196,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8B8085255E7300E817E7C8C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RecruitMate/Pods-RecruitMate-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Postal/Postal.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Postal.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecruitMate/Pods-RecruitMate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F25D35A646B54ADC503AAF67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecruitMate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B7313589217B970D00B9A094 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B7313593217B970D00B9A094 /* ViewController.swift in Sources */,
+				B76E3519217BE7EC00993E15 /* rgba.swift in Sources */,
+				B76E351B217BE86900993E15 /* Utils.swift in Sources */,
 				B7313591217B970D00B9A094 /* AppDelegate.swift in Sources */,
+				B76E3511217BE70C00993E15 /* GmailAPIHelper.swift in Sources */,
+				B76E351D217BF05100993E15 /* LayoutManager.swift in Sources */,
+				B76E3513217BE74B00993E15 /* LocalData.swift in Sources */,
+				B76E350C217BDAC900993E15 /* Email.swift in Sources */,
+				B76E3517217BE79000993E15 /* AlertManager.swift in Sources */,
+				B76E350A217BCD4F00993E15 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +413,7 @@
 		};
 		B73135A0217B970E00B9A094 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DE80DE35CE07EEC9088CB47 /* Pods-RecruitMate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +432,7 @@
 		};
 		B73135A1217B970E00B9A094 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5339F031A50A21027DB32E9 /* Pods-RecruitMate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
