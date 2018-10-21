@@ -15,7 +15,7 @@ class EmailReadSampleVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         postalConnect()
     }
-    
+
     func postalConnect() {
         GmailAPI.postalConnectGmail(email: Constants.RECRUITMATE_EMAIL, password: Constants.RECRUITMATE_PASSW) { (_, ok) in
             if !ok {
@@ -25,6 +25,7 @@ class EmailReadSampleVC: UIViewController {
             self.postalRead()
         }
     }
+
     func postalRead() {
         GmailAPI.getInboxUIDsFrom(withState: .unread) { (uids) in
             guard let emailUIDs = uids else {
@@ -32,8 +33,12 @@ class EmailReadSampleVC: UIViewController {
                 return
             }
             self.fetchMessages(set: emailUIDs)
+
         }
     }
+
+
+
     func fetchMessages(set: IndexSet) {
         debugPrint("Fetching Emails")
         GmailAPI.getEmailsFromInbox(withUIDs: set) { (emails, ok) in
@@ -41,7 +46,7 @@ class EmailReadSampleVC: UIViewController {
                 print("Failed to get emails")
                 return
             }
-            
+
             for email in emails {
                 print(email.description)
 //                Utils.openURL(email.deeplink)

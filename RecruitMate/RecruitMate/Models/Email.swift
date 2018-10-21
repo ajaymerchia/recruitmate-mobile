@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class Email {
     var from: String!
     var sender: String!

@@ -45,7 +45,7 @@
 		B76E3559217C000500993E15 /* HUD-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3558217C000500993E15 /* HUD-system.swift */; };
 		B76E355D217C002700993E15 /* NewJob-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E355C217C002700993E15 /* NewJob-initUI.swift */; };
 		B76E355F217C002E00993E15 /* NewJob-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E355E217C002E00993E15 /* NewJob-system.swift */; };
-		B76E3561217C0BF300993E15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B76E3560217C0BF200993E15 /* GoogleService-Info.plist */; };
+		B780C5AE217C16E800AA7C27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B780C5AD217C16E800AA7C27 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,7 +91,11 @@
 		B76E3558217C000500993E15 /* HUD-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD-system.swift"; sourceTree = "<group>"; };
 		B76E355C217C002700993E15 /* NewJob-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-initUI.swift"; sourceTree = "<group>"; };
 		B76E355E217C002E00993E15 /* NewJob-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-system.swift"; sourceTree = "<group>"; };
-		B76E3560217C0BF200993E15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B780C5AD217C16E800AA7C27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BD33EE37217C02AC00B2A7B3 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		BD33EE39217C08A400B2A7B3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		BD33EE3B217C096800B2A7B3 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		BD33EE3D217C0FA700B2A7B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +147,8 @@
 				B7313594217B970D00B9A094 /* Main.storyboard */,
 				B7313597217B970E00B9A094 /* Assets.xcassets */,
 				B7313599217B970E00B9A094 /* LaunchScreen.storyboard */,
-				B76E3560217C0BF200993E15 /* GoogleService-Info.plist */,
 				B731359C217B970E00B9A094 /* Info.plist */,
+				B780C5AD217C16E800AA7C27 /* GoogleService-Info.plist */,
 			);
 			path = RecruitMate;
 			sourceTree = "<group>";
@@ -166,6 +170,10 @@
 			isa = PBXGroup;
 			children = (
 				B76E350B217BDAC900993E15 /* Email.swift */,
+				BD33EE37217C02AC00B2A7B3 /* Job.swift */,
+				BD33EE39217C08A400B2A7B3 /* Event.swift */,
+				BD33EE3B217C096800B2A7B3 /* Contact.swift */,
+				BD33EE3D217C0FA700B2A7B3 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -360,7 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B731359B217B970E00B9A094 /* LaunchScreen.storyboard in Resources */,
-				B76E3561217C0BF300993E15 /* GoogleService-Info.plist in Resources */,
+				B780C5AE217C16E800AA7C27 /* GoogleService-Info.plist in Resources */,
 				B7313598217B970E00B9A094 /* Assets.xcassets in Resources */,
 				B7313596217B970D00B9A094 /* Main.storyboard in Resources */,
 			);
@@ -628,6 +636,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "mdb-iostraining.RecruitMate";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -647,6 +656,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "mdb-iostraining.RecruitMate";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
