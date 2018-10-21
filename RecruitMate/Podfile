@@ -7,7 +7,7 @@ target 'RecruitMate' do
 
   # Pods for RecruitMate
   pod 'Postal'
-  
+
   # Pods for API
   pod 'Alamofire', :inhibit_warnings => true
   pod 'SwiftyJSON', :inhibit_warnings => true
