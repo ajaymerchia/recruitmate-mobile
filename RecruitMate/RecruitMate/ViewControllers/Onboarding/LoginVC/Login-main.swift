@@ -14,6 +14,9 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let testing = EmailReadSampleVC()
+        testing.postalConnect()
+        
     }
 
 }

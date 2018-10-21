@@ -9,7 +9,7 @@
 import UIKit
 import Postal
 
-class ViewController: UIViewController {
+class EmailReadSampleVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,23 +25,15 @@ class ViewController: UIViewController {
             self.postalRead()
         }
     }
-
-    
-    
     func postalRead() {
-        
         GmailAPI.getInboxUIDsFrom(withState: .unread) { (uids) in
             guard let emailUIDs = uids else {
                 print("failed to find emails")
                 return
             }
             self.fetchMessages(set: emailUIDs)
-            
         }
     }
-    
-    
-    
     func fetchMessages(set: IndexSet) {
         debugPrint("Fetching Emails")
         GmailAPI.getEmailsFromInbox(withUIDs: set) { (emails, ok) in
@@ -52,6 +44,7 @@ class ViewController: UIViewController {
             
             for email in emails {
                 print(email.description)
+                Utils.openURL(email.deeplink)
             }
         }
     }

@@ -69,7 +69,6 @@ class GmailAPI {
 
         postal.fetchMessages("INBOX", uids: withUIDs, flags: [ .body ], onMessage: { email in
             debugPrint("Received an Email")
-            
             if let body = email.body, let header = email.header {
                 for part in body.allParts {
                     if part.id != "1.2" {
@@ -77,7 +76,9 @@ class GmailAPI {
                     }
                     let msg = String(data: (part.data?.rawData)!, encoding: self.encodingToStringEncode(encoding: (part.data?.encoding)!))
                     
-                    emails.append(Email(from: header.from[0].email, sender: header.from[0].displayName, subject: header.subject, msg: msg!))
+                    
+                    
+                    emails.append(Email(from: header.from[0].email, sender: header.from[0].displayName, subject: header.subject, msg: msg!, deeplink: "message:\(Utils.makeURLSafe("<\(header.id)>"))"  ))
                 }
             }
         }, onComplete: {error in
