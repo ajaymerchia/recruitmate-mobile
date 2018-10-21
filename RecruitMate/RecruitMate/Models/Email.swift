@@ -13,16 +13,18 @@ class Email {
     var sender: String!
     var subject: String!
     var body: String!
+    var deeplink: String!
     
     var description: String {
-        return "From: \(from ?? "")\nSender: \(sender ?? "")\nSubject: \(subject ?? "")\nBody: \(body ?? "")"
+        return "From: \(from ?? "")\nSender: \(sender ?? "")\nSubject: \(subject ?? "")\nDeeplink: \(deeplink ?? "")\nBody: \(body ?? "")"
     }
     
-    init(from: String, sender: String, subject: String, msg: String) {
+    init(from: String, sender: String, subject: String, msg: String, deeplink: String) {
         self.from = from
         self.sender = sender
         self.body = msg
         self.subject = subject
+        self.deeplink = deeplink
     }
     
 }

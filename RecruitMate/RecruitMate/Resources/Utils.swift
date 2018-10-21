@@ -28,6 +28,17 @@ class Utils {
         return url.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
     
+    static func openURL(_ urlString: String) {
+        if let url = URL(string: urlString) {
+            print("Opening URL: \(urlString)")
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+    
     static func startProgressHud(inView: UIView, withMsg:String) -> JGProgressHUD {
         let hud = JGProgressHUD(style: .light)
         hud.textLabel.text = withMsg

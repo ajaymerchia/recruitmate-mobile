@@ -191,8 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				B7313592217B970D00B9A094 /* EmailReadSampleVC.swift */,
-				B76E353A217BFD1000993E15 /* CoreApp */,
 				B76E352F217BFC5100993E15 /* Onboarding */,
+				B76E353A217BFD1000993E15 /* CoreApp */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
