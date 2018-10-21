@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9B646ACB3A4A69F870A6BE17 /* Pods_RecruitMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86641178BD6A139A1328F6AC /* Pods_RecruitMate.framework */; };
 		B7313591217B970D00B9A094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7313590217B970D00B9A094 /* AppDelegate.swift */; };
-		B7313593217B970D00B9A094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7313592217B970D00B9A094 /* ViewController.swift */; };
+		B7313593217B970D00B9A094 /* EmailReadSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7313592217B970D00B9A094 /* EmailReadSampleVC.swift */; };
 		B7313596217B970D00B9A094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7313594217B970D00B9A094 /* Main.storyboard */; };
 		B7313598217B970E00B9A094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7313597217B970E00B9A094 /* Assets.xcassets */; };
 		B731359B217B970E00B9A094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7313599217B970E00B9A094 /* LaunchScreen.storyboard */; };
@@ -21,14 +21,30 @@
 		B76E3519217BE7EC00993E15 /* rgba.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3518217BE7EC00993E15 /* rgba.swift */; };
 		B76E351B217BE86900993E15 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E351A217BE86900993E15 /* Utils.swift */; };
 		B76E351D217BF05100993E15 /* LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E351C217BF05100993E15 /* LayoutManager.swift */; };
-		B76E3521217BF8FB00993E15 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3520217BF8FB00993E15 /* LoginVC.swift */; };
-		B76E3524217BFB4C00993E15 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3523217BFB4C00993E15 /* SignUpVC.swift */; };
-		B76E3527217BFBAE00993E15 /* EmailPermissionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3526217BFBAE00993E15 /* EmailPermissionVC.swift */; };
-		B76E352A217BFC0E00993E15 /* HudVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3529217BFC0E00993E15 /* HudVC.swift */; };
+		B76E3521217BF8FB00993E15 /* Login-main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3520217BF8FB00993E15 /* Login-main.swift */; };
+		B76E3524217BFB4C00993E15 /* SignUp-main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3523217BFB4C00993E15 /* SignUp-main.swift */; };
+		B76E3527217BFBAE00993E15 /* EmailPermission-main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3526217BFBAE00993E15 /* EmailPermission-main.swift */; };
+		B76E352A217BFC0E00993E15 /* HUD-main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3529217BFC0E00993E15 /* HUD-main.swift */; };
 		B76E352D217BFC3D00993E15 /* PipelineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E352C217BFC3D00993E15 /* PipelineVC.swift */; };
 		B76E3534217BFCA800993E15 /* JobDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3533217BFCA800993E15 /* JobDetailVC.swift */; };
 		B76E3539217BFCEF00993E15 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3538217BFCEF00993E15 /* SettingsVC.swift */; };
 		B76E353C217BFD2600993E15 /* NewJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E353B217BFD2600993E15 /* NewJobVC.swift */; };
+		B76E353F217BFE3900993E15 /* Login-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E353E217BFE3900993E15 /* Login-initUI.swift */; };
+		B76E3541217BFE6600993E15 /* SignUp-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3540217BFE6600993E15 /* SignUp-initUI.swift */; };
+		B76E3543217BFE7D00993E15 /* EmailPermission-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3542217BFE7D00993E15 /* EmailPermission-initUI.swift */; };
+		B76E3545217BFEE600993E15 /* Login-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3544217BFEE600993E15 /* Login-system.swift */; };
+		B76E3547217BFF6F00993E15 /* SignUp-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3546217BFF6F00993E15 /* SignUp-system.swift */; };
+		B76E3549217BFF8100993E15 /* EmailPermission-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3548217BFF8000993E15 /* EmailPermission-system.swift */; };
+		B76E354B217BFF9900993E15 /* Settings-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E354A217BFF9900993E15 /* Settings-initUI.swift */; };
+		B76E354D217BFFA600993E15 /* Settings-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E354C217BFFA600993E15 /* Settings-system.swift */; };
+		B76E354F217BFFD200993E15 /* JobDetail-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E354E217BFFD200993E15 /* JobDetail-initUI.swift */; };
+		B76E3551217BFFDB00993E15 /* JobDetail-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3550217BFFDB00993E15 /* JobDetail-system.swift */; };
+		B76E3553217BFFE500993E15 /* Pipeline-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3552217BFFE500993E15 /* Pipeline-initUI.swift */; };
+		B76E3555217BFFED00993E15 /* Pipeline-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3554217BFFED00993E15 /* Pipeline-system.swift */; };
+		B76E3557217BFFFD00993E15 /* HUD-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3556217BFFFD00993E15 /* HUD-initUI.swift */; };
+		B76E3559217C000500993E15 /* HUD-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3558217C000500993E15 /* HUD-system.swift */; };
+		B76E355D217C002700993E15 /* NewJob-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E355C217C002700993E15 /* NewJob-initUI.swift */; };
+		B76E355F217C002E00993E15 /* NewJob-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E355E217C002E00993E15 /* NewJob-system.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +53,7 @@
 		B5339F031A50A21027DB32E9 /* Pods-RecruitMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecruitMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecruitMate/Pods-RecruitMate.release.xcconfig"; sourceTree = "<group>"; };
 		B731358D217B970D00B9A094 /* RecruitMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecruitMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7313590217B970D00B9A094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7313592217B970D00B9A094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7313592217B970D00B9A094 /* EmailReadSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailReadSampleVC.swift; sourceTree = "<group>"; };
 		B7313595217B970D00B9A094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7313597217B970E00B9A094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B731359A217B970E00B9A094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,14 +66,30 @@
 		B76E3518217BE7EC00993E15 /* rgba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rgba.swift; sourceTree = "<group>"; };
 		B76E351A217BE86900993E15 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B76E351C217BF05100993E15 /* LayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutManager.swift; sourceTree = "<group>"; };
-		B76E3520217BF8FB00993E15 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		B76E3523217BFB4C00993E15 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		B76E3526217BFBAE00993E15 /* EmailPermissionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPermissionVC.swift; sourceTree = "<group>"; };
-		B76E3529217BFC0E00993E15 /* HudVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudVC.swift; sourceTree = "<group>"; };
+		B76E3520217BF8FB00993E15 /* Login-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-main.swift"; sourceTree = "<group>"; };
+		B76E3523217BFB4C00993E15 /* SignUp-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-main.swift"; sourceTree = "<group>"; };
+		B76E3526217BFBAE00993E15 /* EmailPermission-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmailPermission-main.swift"; sourceTree = "<group>"; };
+		B76E3529217BFC0E00993E15 /* HUD-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD-main.swift"; sourceTree = "<group>"; };
 		B76E352C217BFC3D00993E15 /* PipelineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineVC.swift; sourceTree = "<group>"; };
 		B76E3533217BFCA800993E15 /* JobDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailVC.swift; sourceTree = "<group>"; };
 		B76E3538217BFCEF00993E15 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		B76E353B217BFD2600993E15 /* NewJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobVC.swift; sourceTree = "<group>"; };
+		B76E353E217BFE3900993E15 /* Login-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-initUI.swift"; sourceTree = "<group>"; };
+		B76E3540217BFE6600993E15 /* SignUp-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-initUI.swift"; sourceTree = "<group>"; };
+		B76E3542217BFE7D00993E15 /* EmailPermission-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmailPermission-initUI.swift"; sourceTree = "<group>"; };
+		B76E3544217BFEE600993E15 /* Login-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-system.swift"; sourceTree = "<group>"; };
+		B76E3546217BFF6F00993E15 /* SignUp-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-system.swift"; sourceTree = "<group>"; };
+		B76E3548217BFF8000993E15 /* EmailPermission-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmailPermission-system.swift"; sourceTree = "<group>"; };
+		B76E354A217BFF9900993E15 /* Settings-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings-initUI.swift"; sourceTree = "<group>"; };
+		B76E354C217BFFA600993E15 /* Settings-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings-system.swift"; sourceTree = "<group>"; };
+		B76E354E217BFFD200993E15 /* JobDetail-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDetail-initUI.swift"; sourceTree = "<group>"; };
+		B76E3550217BFFDB00993E15 /* JobDetail-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDetail-system.swift"; sourceTree = "<group>"; };
+		B76E3552217BFFE500993E15 /* Pipeline-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pipeline-initUI.swift"; sourceTree = "<group>"; };
+		B76E3554217BFFED00993E15 /* Pipeline-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pipeline-system.swift"; sourceTree = "<group>"; };
+		B76E3556217BFFFD00993E15 /* HUD-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD-initUI.swift"; sourceTree = "<group>"; };
+		B76E3558217C000500993E15 /* HUD-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD-system.swift"; sourceTree = "<group>"; };
+		B76E355C217C002700993E15 /* NewJob-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-initUI.swift"; sourceTree = "<group>"; };
+		B76E355E217C002E00993E15 /* NewJob-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-system.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +178,7 @@
 		B76E351F217BF36400993E15 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B7313592217B970D00B9A094 /* ViewController.swift */,
+				B7313592217B970D00B9A094 /* EmailReadSampleVC.swift */,
 				B76E353A217BFD1000993E15 /* CoreApp */,
 				B76E352F217BFC5100993E15 /* Onboarding */,
 			);
@@ -156,7 +188,9 @@
 		B76E3522217BF90700993E15 /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
-				B76E3520217BF8FB00993E15 /* LoginVC.swift */,
+				B76E3520217BF8FB00993E15 /* Login-main.swift */,
+				B76E353E217BFE3900993E15 /* Login-initUI.swift */,
+				B76E3544217BFEE600993E15 /* Login-system.swift */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -164,7 +198,9 @@
 		B76E3525217BFB6C00993E15 /* SignUpVC */ = {
 			isa = PBXGroup;
 			children = (
-				B76E3523217BFB4C00993E15 /* SignUpVC.swift */,
+				B76E3523217BFB4C00993E15 /* SignUp-main.swift */,
+				B76E3540217BFE6600993E15 /* SignUp-initUI.swift */,
+				B76E3546217BFF6F00993E15 /* SignUp-system.swift */,
 			);
 			path = SignUpVC;
 			sourceTree = "<group>";
@@ -172,7 +208,9 @@
 		B76E3528217BFBB300993E15 /* EmailPermissionVC */ = {
 			isa = PBXGroup;
 			children = (
-				B76E3526217BFBAE00993E15 /* EmailPermissionVC.swift */,
+				B76E3526217BFBAE00993E15 /* EmailPermission-main.swift */,
+				B76E3542217BFE7D00993E15 /* EmailPermission-initUI.swift */,
+				B76E3548217BFF8000993E15 /* EmailPermission-system.swift */,
 			);
 			path = EmailPermissionVC;
 			sourceTree = "<group>";
@@ -180,7 +218,9 @@
 		B76E352B217BFC1100993E15 /* HudVC */ = {
 			isa = PBXGroup;
 			children = (
-				B76E3529217BFC0E00993E15 /* HudVC.swift */,
+				B76E3529217BFC0E00993E15 /* HUD-main.swift */,
+				B76E3556217BFFFD00993E15 /* HUD-initUI.swift */,
+				B76E3558217C000500993E15 /* HUD-system.swift */,
 			);
 			path = HudVC;
 			sourceTree = "<group>";
@@ -189,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				B76E352C217BFC3D00993E15 /* PipelineVC.swift */,
+				B76E3552217BFFE500993E15 /* Pipeline-initUI.swift */,
+				B76E3554217BFFED00993E15 /* Pipeline-system.swift */,
 			);
 			path = PipelineVC;
 			sourceTree = "<group>";
@@ -207,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				B76E3533217BFCA800993E15 /* JobDetailVC.swift */,
+				B76E354E217BFFD200993E15 /* JobDetail-initUI.swift */,
+				B76E3550217BFFDB00993E15 /* JobDetail-system.swift */,
 			);
 			path = JobDetailVC;
 			sourceTree = "<group>";
@@ -215,6 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				B76E3538217BFCEF00993E15 /* SettingsVC.swift */,
+				B76E354A217BFF9900993E15 /* Settings-initUI.swift */,
+				B76E354C217BFFA600993E15 /* Settings-system.swift */,
 			);
 			path = SettingsVC;
 			sourceTree = "<group>";
@@ -235,6 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				B76E353B217BFD2600993E15 /* NewJobVC.swift */,
+				B76E355C217C002700993E15 /* NewJob-initUI.swift */,
+				B76E355E217C002E00993E15 /* NewJob-system.swift */,
 			);
 			path = NewJobVC;
 			sourceTree = "<group>";
@@ -380,23 +428,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B76E3521217BF8FB00993E15 /* LoginVC.swift in Sources */,
-				B76E3527217BFBAE00993E15 /* EmailPermissionVC.swift in Sources */,
-				B7313593217B970D00B9A094 /* ViewController.swift in Sources */,
+				B76E3521217BF8FB00993E15 /* Login-main.swift in Sources */,
+				B76E3557217BFFFD00993E15 /* HUD-initUI.swift in Sources */,
+				B76E3527217BFBAE00993E15 /* EmailPermission-main.swift in Sources */,
+				B76E3549217BFF8100993E15 /* EmailPermission-system.swift in Sources */,
+				B7313593217B970D00B9A094 /* EmailReadSampleVC.swift in Sources */,
+				B76E3553217BFFE500993E15 /* Pipeline-initUI.swift in Sources */,
 				B76E3534217BFCA800993E15 /* JobDetailVC.swift in Sources */,
+				B76E3551217BFFDB00993E15 /* JobDetail-system.swift in Sources */,
+				B76E354D217BFFA600993E15 /* Settings-system.swift in Sources */,
 				B76E3519217BE7EC00993E15 /* rgba.swift in Sources */,
-				B76E352A217BFC0E00993E15 /* HudVC.swift in Sources */,
+				B76E352A217BFC0E00993E15 /* HUD-main.swift in Sources */,
+				B76E3555217BFFED00993E15 /* Pipeline-system.swift in Sources */,
 				B76E351B217BE86900993E15 /* Utils.swift in Sources */,
+				B76E3545217BFEE600993E15 /* Login-system.swift in Sources */,
 				B76E353C217BFD2600993E15 /* NewJobVC.swift in Sources */,
-				B76E3524217BFB4C00993E15 /* SignUpVC.swift in Sources */,
+				B76E3543217BFE7D00993E15 /* EmailPermission-initUI.swift in Sources */,
+				B76E3524217BFB4C00993E15 /* SignUp-main.swift in Sources */,
+				B76E354F217BFFD200993E15 /* JobDetail-initUI.swift in Sources */,
+				B76E353F217BFE3900993E15 /* Login-initUI.swift in Sources */,
 				B7313591217B970D00B9A094 /* AppDelegate.swift in Sources */,
 				B76E3511217BE70C00993E15 /* GmailAPIHelper.swift in Sources */,
+				B76E354B217BFF9900993E15 /* Settings-initUI.swift in Sources */,
 				B76E351D217BF05100993E15 /* LayoutManager.swift in Sources */,
 				B76E3513217BE74B00993E15 /* LocalData.swift in Sources */,
+				B76E355D217C002700993E15 /* NewJob-initUI.swift in Sources */,
+				B76E355F217C002E00993E15 /* NewJob-system.swift in Sources */,
 				B76E350C217BDAC900993E15 /* Email.swift in Sources */,
+				B76E3541217BFE6600993E15 /* SignUp-initUI.swift in Sources */,
 				B76E352D217BFC3D00993E15 /* PipelineVC.swift in Sources */,
 				B76E3517217BE79000993E15 /* AlertManager.swift in Sources */,
+				B76E3547217BFF6F00993E15 /* SignUp-system.swift in Sources */,
 				B76E350A217BCD4F00993E15 /* Constants.swift in Sources */,
+				B76E3559217C000500993E15 /* HUD-system.swift in Sources */,
 				B76E3539217BFCEF00993E15 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

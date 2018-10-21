@@ -53,12 +53,7 @@ class ViewController: UIViewController {
             for email in emails {
                 print(email.description)
             }
-            
-            
         }
-        
-        
-        
     }
 
 }
