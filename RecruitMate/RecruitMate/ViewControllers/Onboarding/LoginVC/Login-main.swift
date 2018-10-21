@@ -14,10 +14,10 @@ class LoginVC: UIViewController {
     var logo: UIImageView!
     var appHeader: UILabel!
     
-    var usernameField: UITextField!
+    var emailField: UITextField!
     var passwordField: UITextField!
     
-    var usernameFieldUnderline: UIView!
+    var emailFieldUnderline: UIView!
     var passwordFieldUnderline: UIView!
     
     var advanceToLogin: UIButton!

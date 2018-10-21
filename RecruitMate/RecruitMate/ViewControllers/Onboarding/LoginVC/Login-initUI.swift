@@ -50,31 +50,31 @@ extension LoginVC {
         
         let underlineThickness: CGFloat = 1.5
         
-        usernameField = UITextField(frame: CGRect(x: 2 * Constants.PADDING, y: appHeader.frame.maxY + Constants.PADDING/2, width: view.frame.width - 4 * Constants.PADDING, height: 40))
+        emailField = UITextField(frame: CGRect(x: 2 * Constants.PADDING, y: appHeader.frame.maxY + Constants.PADDING/2, width: view.frame.width - 4 * Constants.PADDING, height: 40))
         
-        usernameField.backgroundColor = rgba(0,0,0,0)
-        usernameField.insetsLayoutMarginsFromSafeArea = true
-        usernameField.textColor = UIColor.white
-        usernameField.attributedPlaceholder = NSAttributedString(string: "Username",
+        emailField.backgroundColor = rgba(0,0,0,0)
+        emailField.insetsLayoutMarginsFromSafeArea = true
+        emailField.textColor = UIColor.white
+        emailField.attributedPlaceholder = NSAttributedString(string: "email",
                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         
-        usernameField.layer.cornerRadius = 5
-        usernameField.textAlignment = .center
-        usernameField.tintColor = UIColor.white
-        usernameField.autocapitalizationType = .none
+        emailField.layer.cornerRadius = 5
+        emailField.textAlignment = .center
+        emailField.tintColor = UIColor.white
+        emailField.autocapitalizationType = .none
         
         
         
         
-        view.addSubview(usernameField)
+        view.addSubview(emailField)
         
     
-        passwordField = UITextField(frame: LayoutManager.belowCentered(elementAbove: usernameField, padding: Constants.PADDING/2, width: usernameField.frame.width, height: usernameField.frame.height))
+        passwordField = UITextField(frame: LayoutManager.belowCentered(elementAbove: emailField, padding: Constants.PADDING/2, width: emailField.frame.width, height: emailField.frame.height))
         
         passwordField.backgroundColor = rgba(0,0,0,0)
         passwordField.insetsLayoutMarginsFromSafeArea = true
         passwordField.textColor = UIColor.white
-        passwordField.attributedPlaceholder = NSAttributedString(string: "Password",
+        passwordField.attributedPlaceholder = NSAttributedString(string: "password",
                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         
         passwordField.layer.cornerRadius = 5
@@ -85,16 +85,16 @@ extension LoginVC {
         
         
         
-        usernameField.alpha = 0
+        emailField.alpha = 0
         passwordField.alpha = 0
         
-        usernameFieldUnderline = Utils.getBottomBorder(forView: usernameField, thickness: underlineThickness, color: .white)
+        emailFieldUnderline = Utils.getBottomBorder(forView: emailField, thickness: underlineThickness, color: .white)
         passwordFieldUnderline = Utils.getBottomBorder(forView: passwordField, thickness: underlineThickness, color: .white)
         
-        usernameFieldUnderline.alpha = 0
+        emailFieldUnderline.alpha = 0
         passwordFieldUnderline.alpha = 0
         
-        view.addSubview(usernameFieldUnderline)
+        view.addSubview(emailFieldUnderline)
         view.addSubview(passwordFieldUnderline)
         
         
@@ -127,9 +127,9 @@ extension LoginVC {
         }, completion: nil)
         
         UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseOut, animations: {
-            self.usernameField.alpha = 1.0
+            self.emailField.alpha = 1.0
             self.passwordField.alpha = 1.0
-            self.usernameFieldUnderline.alpha = 1.0
+            self.emailFieldUnderline.alpha = 1.0
             self.passwordFieldUnderline.alpha = 1.0
             
         }, completion: nil)
