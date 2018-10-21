@@ -113,6 +113,8 @@ extension LoginVC {
     
     // Button Targets
     @objc func toSignup() {
+        signUp.setTitleColor(Constants.RECRUITMATE_BLUE, for: .normal)
+        signUp.setBackgroundColor(color: .white, forState: .normal)
         performSegue(withIdentifier: "login2signup", sender: self)
     }
     
