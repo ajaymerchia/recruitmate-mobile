@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class LoginVC: UIViewController {
 
@@ -23,12 +24,17 @@ class LoginVC: UIViewController {
     var advanceToLogin: UIButton!
     var signUp: UIButton!
     
+    var hud: JGProgressHUD!
+    
+    var alerts: AlertManager!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
 //        let testing = EmailReadSampleVC()
 //        testing.postalConnect()
+        setupAlertManager()
         initUI()
         
     }

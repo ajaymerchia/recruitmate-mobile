@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 class Job {
  
     var companyName: String!

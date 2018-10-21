@@ -10,8 +10,18 @@ import Foundation
 import UIKit
 
 extension LoginVC {
+    
+    func setupAlertManager() {
+        alerts = AlertManager(view: self, stateRestoration: {
+            self.advanceToLogin.isUserInteractionEnabled = true
+            self.hud?.dismiss()
+        })
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
+        if let navVC = segue.destination as? HudVC {
+            
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
