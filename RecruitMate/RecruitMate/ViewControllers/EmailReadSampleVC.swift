@@ -44,7 +44,7 @@ class EmailReadSampleVC: UIViewController {
             
             for email in emails {
                 print(email.description)
-                Utils.openURL(email.deeplink)
+//                Utils.openURL(email.deeplink)
             }
         }
     }

@@ -10,12 +10,16 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    // UI Elements
+    var signUp: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let testing = EmailReadSampleVC()
-        testing.postalConnect()
+//        let testing = EmailReadSampleVC()
+//        testing.postalConnect()
+        initUI()
         
     }
 

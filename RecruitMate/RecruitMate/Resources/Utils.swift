@@ -11,7 +11,6 @@ import JGProgressHUD
 
 class Utils {
     
-    
     /// Adds the question mark based background image to the given view
     ///
     /// - Parameter given_view: View to which a background image should be added

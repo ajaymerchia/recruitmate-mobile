@@ -20,7 +20,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="OKb-ql-gpE" kind="presentation" id="Lqk-S5-Ul7"/>
+                        <segue destination="OKb-ql-gpE" kind="presentation" identifier="login2signup" id="Lqk-S5-Ul7"/>
                         <segue destination="9sX-BN-gvc" kind="show" id="chX-ml-h05"/>
                     </connections>
                 </viewController>
