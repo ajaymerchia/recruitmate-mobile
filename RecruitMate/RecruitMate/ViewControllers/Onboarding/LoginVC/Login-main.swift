@@ -11,6 +11,16 @@ import UIKit
 class LoginVC: UIViewController {
 
     // UI Elements
+    var logo: UIImageView!
+    var appHeader: UILabel!
+    
+    var usernameField: UITextField!
+    var passwordField: UITextField!
+    
+    var usernameFieldUnderline: UIView!
+    var passwordFieldUnderline: UIView!
+    
+    var advanceToLogin: UIButton!
     var signUp: UIButton!
     
     override func viewDidLoad() {
