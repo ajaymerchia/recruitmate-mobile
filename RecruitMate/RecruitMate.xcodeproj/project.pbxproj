@@ -21,6 +21,14 @@
 		B76E3519217BE7EC00993E15 /* rgba.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3518217BE7EC00993E15 /* rgba.swift */; };
 		B76E351B217BE86900993E15 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E351A217BE86900993E15 /* Utils.swift */; };
 		B76E351D217BF05100993E15 /* LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E351C217BF05100993E15 /* LayoutManager.swift */; };
+		B76E3521217BF8FB00993E15 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3520217BF8FB00993E15 /* LoginVC.swift */; };
+		B76E3524217BFB4C00993E15 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3523217BFB4C00993E15 /* SignUpVC.swift */; };
+		B76E3527217BFBAE00993E15 /* EmailPermissionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3526217BFBAE00993E15 /* EmailPermissionVC.swift */; };
+		B76E352A217BFC0E00993E15 /* HudVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3529217BFC0E00993E15 /* HudVC.swift */; };
+		B76E352D217BFC3D00993E15 /* PipelineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E352C217BFC3D00993E15 /* PipelineVC.swift */; };
+		B76E3534217BFCA800993E15 /* JobDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3533217BFCA800993E15 /* JobDetailVC.swift */; };
+		B76E3539217BFCEF00993E15 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3538217BFCEF00993E15 /* SettingsVC.swift */; };
+		B76E353C217BFD2600993E15 /* NewJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E353B217BFD2600993E15 /* NewJobVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +50,14 @@
 		B76E3518217BE7EC00993E15 /* rgba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rgba.swift; sourceTree = "<group>"; };
 		B76E351A217BE86900993E15 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B76E351C217BF05100993E15 /* LayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutManager.swift; sourceTree = "<group>"; };
+		B76E3520217BF8FB00993E15 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		B76E3523217BFB4C00993E15 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		B76E3526217BFBAE00993E15 /* EmailPermissionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPermissionVC.swift; sourceTree = "<group>"; };
+		B76E3529217BFC0E00993E15 /* HudVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudVC.swift; sourceTree = "<group>"; };
+		B76E352C217BFC3D00993E15 /* PipelineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineVC.swift; sourceTree = "<group>"; };
+		B76E3533217BFCA800993E15 /* JobDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailVC.swift; sourceTree = "<group>"; };
+		B76E3538217BFCEF00993E15 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		B76E353B217BFD2600993E15 /* NewJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				B7313590217B970D00B9A094 /* AppDelegate.swift */,
-				B76E3510217BE70C00993E15 /* GmailAPIHelper.swift */,
+				B76E351E217BF34F00993E15 /* Helpers */,
 				B76E350E217BE6CF00993E15 /* Resources */,
 				B76E350F217BE6D800993E15 /* Models */,
-				B7313592217B970D00B9A094 /* ViewController.swift */,
+				B76E351F217BF36400993E15 /* ViewControllers */,
 				B7313594217B970D00B9A094 /* Main.storyboard */,
 				B7313597217B970E00B9A094 /* Assets.xcassets */,
 				B7313599217B970E00B9A094 /* LaunchScreen.storyboard */,
@@ -105,8 +121,8 @@
 				B76E351A217BE86900993E15 /* Utils.swift */,
 				B76E3516217BE79000993E15 /* AlertManager.swift */,
 				B76E351C217BF05100993E15 /* LayoutManager.swift */,
-				B76E3518217BE7EC00993E15 /* rgba.swift */,
 				B76E3512217BE74B00993E15 /* LocalData.swift */,
+				B76E3518217BE7EC00993E15 /* rgba.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -117,6 +133,110 @@
 				B76E350B217BDAC900993E15 /* Email.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B76E351E217BF34F00993E15 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B76E3510217BE70C00993E15 /* GmailAPIHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B76E351F217BF36400993E15 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7313592217B970D00B9A094 /* ViewController.swift */,
+				B76E353A217BFD1000993E15 /* CoreApp */,
+				B76E352F217BFC5100993E15 /* Onboarding */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B76E3522217BF90700993E15 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				B76E3520217BF8FB00993E15 /* LoginVC.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		B76E3525217BFB6C00993E15 /* SignUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				B76E3523217BFB4C00993E15 /* SignUpVC.swift */,
+			);
+			path = SignUpVC;
+			sourceTree = "<group>";
+		};
+		B76E3528217BFBB300993E15 /* EmailPermissionVC */ = {
+			isa = PBXGroup;
+			children = (
+				B76E3526217BFBAE00993E15 /* EmailPermissionVC.swift */,
+			);
+			path = EmailPermissionVC;
+			sourceTree = "<group>";
+		};
+		B76E352B217BFC1100993E15 /* HudVC */ = {
+			isa = PBXGroup;
+			children = (
+				B76E3529217BFC0E00993E15 /* HudVC.swift */,
+			);
+			path = HudVC;
+			sourceTree = "<group>";
+		};
+		B76E352E217BFC4000993E15 /* PipelineVC */ = {
+			isa = PBXGroup;
+			children = (
+				B76E352C217BFC3D00993E15 /* PipelineVC.swift */,
+			);
+			path = PipelineVC;
+			sourceTree = "<group>";
+		};
+		B76E352F217BFC5100993E15 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B76E3522217BF90700993E15 /* LoginVC */,
+				B76E3525217BFB6C00993E15 /* SignUpVC */,
+				B76E3528217BFBB300993E15 /* EmailPermissionVC */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B76E3532217BFC7A00993E15 /* JobDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				B76E3533217BFCA800993E15 /* JobDetailVC.swift */,
+			);
+			path = JobDetailVC;
+			sourceTree = "<group>";
+		};
+		B76E3537217BFCDD00993E15 /* SettingsVC */ = {
+			isa = PBXGroup;
+			children = (
+				B76E3538217BFCEF00993E15 /* SettingsVC.swift */,
+			);
+			path = SettingsVC;
+			sourceTree = "<group>";
+		};
+		B76E353A217BFD1000993E15 /* CoreApp */ = {
+			isa = PBXGroup;
+			children = (
+				B76E3537217BFCDD00993E15 /* SettingsVC */,
+				B76E3532217BFC7A00993E15 /* JobDetailVC */,
+				B76E352E217BFC4000993E15 /* PipelineVC */,
+				B76E352B217BFC1100993E15 /* HudVC */,
+				B76E353D217BFD2900993E15 /* NewJobVC */,
+			);
+			path = CoreApp;
+			sourceTree = "<group>";
+		};
+		B76E353D217BFD2900993E15 /* NewJobVC */ = {
+			isa = PBXGroup;
+			children = (
+				B76E353B217BFD2600993E15 /* NewJobVC.swift */,
+			);
+			path = NewJobVC;
 			sourceTree = "<group>";
 		};
 		BE7CD2E1EACB441B72AB433C /* Pods */ = {
@@ -260,16 +380,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76E3521217BF8FB00993E15 /* LoginVC.swift in Sources */,
+				B76E3527217BFBAE00993E15 /* EmailPermissionVC.swift in Sources */,
 				B7313593217B970D00B9A094 /* ViewController.swift in Sources */,
+				B76E3534217BFCA800993E15 /* JobDetailVC.swift in Sources */,
 				B76E3519217BE7EC00993E15 /* rgba.swift in Sources */,
+				B76E352A217BFC0E00993E15 /* HudVC.swift in Sources */,
 				B76E351B217BE86900993E15 /* Utils.swift in Sources */,
+				B76E353C217BFD2600993E15 /* NewJobVC.swift in Sources */,
+				B76E3524217BFB4C00993E15 /* SignUpVC.swift in Sources */,
 				B7313591217B970D00B9A094 /* AppDelegate.swift in Sources */,
 				B76E3511217BE70C00993E15 /* GmailAPIHelper.swift in Sources */,
 				B76E351D217BF05100993E15 /* LayoutManager.swift in Sources */,
 				B76E3513217BE74B00993E15 /* LocalData.swift in Sources */,
 				B76E350C217BDAC900993E15 /* Email.swift in Sources */,
+				B76E352D217BFC3D00993E15 /* PipelineVC.swift in Sources */,
 				B76E3517217BE79000993E15 /* AlertManager.swift in Sources */,
 				B76E350A217BCD4F00993E15 /* Constants.swift in Sources */,
+				B76E3539217BFCEF00993E15 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

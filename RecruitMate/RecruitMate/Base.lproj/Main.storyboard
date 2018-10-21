@@ -1,24 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="OKb-ql-gpE" kind="presentation" id="Lqk-S5-Ul7"/>
+                        <segue destination="9sX-BN-gvc" kind="show" id="chX-ml-h05"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1406" y="27"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Wi-8d-7bK">
+            <objects>
+                <navigationController id="OKb-ql-gpE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DJu-5L-umz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="F4N-LJ-Ait" kind="relationship" relationship="rootViewController" id="hLc-W5-fkV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w7Y-be-SOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1406" y="1019"/>
+        </scene>
+        <!--Sign UpVC-->
+        <scene sceneID="M6C-oG-33o">
+            <objects>
+                <viewController id="F4N-LJ-Ait" customClass="SignUpVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LAl-04-CeE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="I99-fm-l1T"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xFU-E2-hpg"/>
+                    <connections>
+                        <segue destination="SCf-DW-Ion" kind="show" id="sjm-DM-H3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18r-0J-FgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="1019"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Tjt-05-2GO">
+            <objects>
+                <viewController id="SCf-DW-Ion" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yrh-Hm-Nmm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IQU-nr-USg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIn-2I-jd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3063" y="1019"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="Krc-Xz-XDj">
+            <objects>
+                <viewController id="zi6-3g-ST0" customClass="SettingsVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZYG-oR-MXb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="74T-bX-bDW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9L-7M-tg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4377" y="1019"/>
+        </scene>
+        <!--New JobVC-->
+        <scene sceneID="qWC-rl-GJh">
+            <objects>
+                <viewController id="eC3-k7-gcE" customClass="NewJobVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YYt-aQ-shn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Oht-PU-UwA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdV-w7-pP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5334" y="-1103"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="EDf-JS-ij1">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s5b-sX-tuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="3Gm-e8-mcj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="e5D-O9-Cb8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GYM-a7-qUh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KGn-1r-YLJ" kind="relationship" relationship="rootViewController" id="Ync-mR-ICs"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="5334" y="-304"/>
+        </scene>
+        <!--HudVC-->
+        <scene sceneID="dWj-ha-T9j">
+            <objects>
+                <viewController id="KGn-1r-YLJ" customClass="HudVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9MD-lR-t6f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3jV-Kn-2od"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="24g-1A-4st"/>
+                    <connections>
+                        <segue destination="E8Q-sa-eow" kind="show" id="xq2-1t-KQV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mvz-oH-lDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6271" y="-304"/>
+        </scene>
+        <!--Job DetailVC-->
+        <scene sceneID="mX3-NE-Eoq">
+            <objects>
+                <viewController id="E8Q-sa-eow" customClass="JobDetailVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a6Z-EC-IFN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nOf-LX-1eQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KOY-Kl-4d3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7262" y="27"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="b4x-Rv-VyB">
+            <objects>
+                <tabBarController id="9sX-BN-gvc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lO7-XS-3Tc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3Gm-e8-mcj" kind="relationship" relationship="viewControllers" id="vzn-Dv-8DY"/>
+                        <segue destination="lmt-Nl-g5T" kind="relationship" relationship="viewControllers" id="XRC-12-sVz"/>
+                        <segue destination="zi6-3g-ST0" kind="presentation" id="u64-wr-qEd"/>
+                        <segue destination="eC3-k7-gcE" kind="presentation" id="uyO-SR-UGd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iD8-h6-nGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4378" y="28"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="TyM-e4-5Ch">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8FW-f8-BwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="lmt-Nl-g5T" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="yjd-RC-2YM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ht1-Aj-7Qy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pSc-Pe-sxY" kind="relationship" relationship="rootViewController" id="tsp-Jt-hn8"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="5334" y="357"/>
+        </scene>
+        <!--PipelineVC-->
+        <scene sceneID="ZbY-Sb-IjF">
+            <objects>
+                <viewController id="pSc-Pe-sxY" customClass="PipelineVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dhd-Bp-J4D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JzW-QG-PNq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gqf-jK-fOF"/>
+                    <connections>
+                        <segue destination="E8Q-sa-eow" kind="show" id="2Ws-2Z-bgK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X2L-IR-a1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6270" y="357"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Ws-2Z-bgK"/>
+    </inferredMetricsTieBreakers>
 </document>
