@@ -23,6 +23,7 @@ class Constants {
     static let TEXT_FONT = UIFont(name: "Avenir-Roman", size: 16)
     
     static let RECRUITMATE_BLUE = rgb(23, 105, 197)
+    static let RECRUITMATE_BLUE_DARK = rgb(9, 72, 142)
     
 }
 

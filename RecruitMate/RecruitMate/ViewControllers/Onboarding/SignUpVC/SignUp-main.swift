@@ -7,14 +7,29 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class SignUpVC: UIViewController {
 
+    // UI Elements
+    var prompt: UILabel!
+    
+    var firstNameField: UITextField!
+    var lastNameField: UITextField!
+    var emailField: UITextField!
+    var password1Field: UITextField!
+    var password2Field: UITextField!
+    
+    var signUpButton: UIButton!
+    
+    // Alert Manager
+    var alerts: AlertManager!
+    var hud: JGProgressHUD?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationController?.navigationBar.isHidden = true
-        self.view.backgroundColor = Constants.RECRUITMATE_BLUE
+        setupAlertManager()
+        initUI()
     }
 
 }

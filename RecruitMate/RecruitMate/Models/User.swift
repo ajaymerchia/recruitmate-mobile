@@ -11,16 +11,14 @@ import UIKit
 class User {
     var name: String!
     var email: String!
-    var password: String!
     
     var boarduids: [String]!
     
     var profilePicture: UIImage!
     
-    init(name: String, email: String, password: String, boarduids: [String]) {
+    init(name: String, email: String, boarduids: [String]) {
         self.name = name
         self.email = email
-        self.password = password
         self.boarduids = boarduids
     }
 }

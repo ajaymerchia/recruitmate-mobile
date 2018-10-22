@@ -10,6 +10,13 @@ import Foundation
 import UIKit
 
 extension SignUpVC {
+    func setupAlertManager() {
+        alerts = AlertManager(view: self, stateRestoration: {
+            self.signUpButton.isUserInteractionEnabled = true
+            self.hud?.dismiss()
+        })
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }

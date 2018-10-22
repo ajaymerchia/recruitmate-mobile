@@ -46,6 +46,7 @@
 		B76E355D217C002700993E15 /* NewJob-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E355C217C002700993E15 /* NewJob-initUI.swift */; };
 		B76E355F217C002E00993E15 /* NewJob-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E355E217C002E00993E15 /* NewJob-system.swift */; };
 		B780C5AE217C16E800AA7C27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B780C5AD217C16E800AA7C27 /* GoogleService-Info.plist */; };
+		B780C5B0217C296200AA7C27 /* SignUp-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C5AF217C296200AA7C27 /* SignUp-logic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		B76E355C217C002700993E15 /* NewJob-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-initUI.swift"; sourceTree = "<group>"; };
 		B76E355E217C002E00993E15 /* NewJob-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-system.swift"; sourceTree = "<group>"; };
 		B780C5AD217C16E800AA7C27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B780C5AF217C296200AA7C27 /* SignUp-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-logic.swift"; sourceTree = "<group>"; };
 		BD33EE37217C02AC00B2A7B3 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		BD33EE39217C08A400B2A7B3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BD33EE3B217C096800B2A7B3 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				B76E3523217BFB4C00993E15 /* SignUp-main.swift */,
 				B76E3540217BFE6600993E15 /* SignUp-initUI.swift */,
+				B780C5AF217C296200AA7C27 /* SignUp-logic.swift */,
 				B76E3546217BFF6F00993E15 /* SignUp-system.swift */,
 			);
 			path = SignUpVC;
@@ -453,6 +456,7 @@
 				B76E3527217BFBAE00993E15 /* EmailPermission-main.swift in Sources */,
 				B76E3549217BFF8100993E15 /* EmailPermission-system.swift in Sources */,
 				B7313593217B970D00B9A094 /* EmailReadSampleVC.swift in Sources */,
+				B780C5B0217C296200AA7C27 /* SignUp-logic.swift in Sources */,
 				B76E3553217BFFE500993E15 /* Pipeline-initUI.swift in Sources */,
 				B76E3534217BFCA800993E15 /* JobDetailVC.swift in Sources */,
 				B76E3551217BFFDB00993E15 /* JobDetail-system.swift in Sources */,
