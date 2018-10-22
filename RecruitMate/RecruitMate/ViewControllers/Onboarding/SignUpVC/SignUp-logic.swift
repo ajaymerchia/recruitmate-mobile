@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 extension SignUpVC {
     @objc func attemptSignUp() {
@@ -47,12 +48,11 @@ extension SignUpVC {
             return
         }
         
-        let userRecord = ["first": first, "last": last, "email": email, "password": pw1]
-        createAccountFor(user: userRecord)
+        createAccountFor(first: first, last: last, email: email, pw: pw1)
     }
     
-    func createAccountFor(user: [String!: String!]) {
-        Auth.auth().createUser(withEmail: user["email"], password: user["password"], completion: { (user, error) in
+    func createAccountFor(first: String!, last: String!, email: String!, pw: String!) {
+        Auth.auth().createUser(withEmail: email, password: pw, completion: { (user, error) in
             if let error = error {
                 print(error)
                 self.signupError(code: 5)
@@ -62,18 +62,14 @@ extension SignUpVC {
                     return
                 }
                 let ref = Database.database().reference()
-                let userRef = ref.child("users").child(username)
-                let values = ["fullname": name, "email": email, "url": photo.absoluteString]
-                
-                let dataRef = ref.child("uid_lookup")
-                dataRef.updateChildValues([uid: username])
+                let userRef = ref.child("users").child(uid)
+                let firstBoard = Utils.uuid()
+                let values = ["first": first, "last": last, "email": email, "boards": [firstBoard]] as [String : Any]
+            
                 
                 userRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
                     
-                    LocalData.putLocalData(forKey: .username, data: username)
-                    LocalData.putLocalData(forKey: .fullname, data: name)
-                    LocalData.putLocalData(forKey: .forwardIndicator, data: LocalData.forwardIndicator.key_name)
-                    
+                    self.createdUser = User(first: first, last: last, email: email, boarduids: [firstBoard])
                     self.dismiss(animated: true, completion: {})
                 })
             }

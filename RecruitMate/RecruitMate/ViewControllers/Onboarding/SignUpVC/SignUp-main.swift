@@ -26,6 +26,9 @@ class SignUpVC: UIViewController {
     var alerts: AlertManager!
     var hud: JGProgressHUD?
     
+    // Logic
+    var createdUser: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAlertManager()

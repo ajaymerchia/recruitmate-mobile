@@ -84,7 +84,7 @@ class GmailAPI {
         }, onComplete: {error in
             debugPrint("Done Getting Emails")
             if error != nil {
-                print("an error occured: \(error)")
+                print("an error occured: \(error!)")
                 callback(emails, false)
             } else {
                 callback(emails, true)

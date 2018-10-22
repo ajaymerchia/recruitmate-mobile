@@ -11,18 +11,13 @@ import JGProgressHUD
 
 class Utils {
     
-    /// Adds the question mark based background image to the given view
-    ///
-    /// - Parameter given_view: View to which a background image should be added
-    static func addBackgroundImage(givenView: UIView, imgName: String, opacity: CGFloat = 1) {
-        let backgroundImage = UIImageView(frame: CGRect(x: 0, y: 0, width: givenView.frame.width, height: givenView.frame.height))
-        backgroundImage.contentMode = .scaleAspectFill
-        backgroundImage.clipsToBounds = true
-        backgroundImage.image = UIImage(named: imgName)
-        backgroundImage.alpha = opacity
-        givenView.insertSubview(backgroundImage, at: 0)
+   // Backend Stuff
+    static func uuid() -> String {
+        return UUID().uuidString
     }
     
+    
+    // URL Stuff
     static func makeURLSafe(_ url: String) -> String{
         return url.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
@@ -36,50 +31,6 @@ class Utils {
                 UIApplication.shared.openURL(url)
             }
         }
-    }
-    
-    static func startProgressHud(inView: UIView, withMsg:String) -> JGProgressHUD {
-        let hud = JGProgressHUD(style: .light)
-        hud.textLabel.text = withMsg
-        hud.show(in: inView)
-        return hud
-    }
-    
-    static func getYYYYMMDDRepr(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        dateFormatter.locale = Locale(identifier: "en_US")
-        return dateFormatter.string(from: date)
-    }
-    
-    static func convertToDate(timestring: String) -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
-        dateFormatter.locale = Locale(identifier: "en_US")
-        return dateFormatter.date(from: timestring) ?? nil
-    }
-    
-    static func cleanJSONRead(_ str: String, other: String) -> String {
-        if str == "" {
-            return other
-        }
-        return str
-    }
-    
-    /// Prints all Fonts that have been loaded into the application
-    static func printFontFamilies() {
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) Font names: \(names)")
-        }
-    }
-    
-    static func generateRandomColor() -> UIColor {
-        let hue : CGFloat = CGFloat(arc4random() % 256) / 256 // use 256 to get full range from 0.0 to 1.0
-        let saturation : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from white
-        let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from black
-        
-        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
     }
     
     static func getImageFrom(url: String, defaultImg: UIImage, callback: @escaping ((UIImage) -> ())) {
@@ -102,12 +53,78 @@ class Utils {
         }
     }
     
+    
+    // Loading Stuff
+    static func startProgressHud(inView: UIView, withMsg:String) -> JGProgressHUD {
+        let hud = JGProgressHUD(style: .light)
+        hud.textLabel.text = withMsg
+        hud.show(in: inView)
+        return hud
+    }
+    
+    
+    // Time Management Stuff
+    static func getYYYYMMDDRepr(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = Locale(identifier: "en_US")
+        return dateFormatter.string(from: date)
+    }
+    
+    static func convertToDate(timestring: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
+        dateFormatter.locale = Locale(identifier: "en_US")
+        return dateFormatter.date(from: timestring) ?? nil
+    }
+    
+    // JSON Read Stuff
+    static func cleanJSONRead(_ str: String, other: String) -> String {
+        if str == "" {
+            return other
+        }
+        return str
+    }
+    
+    
+    
+    
+    
+    // UI Stuff
+    
     static func getBottomBorder(forView: UIView, thickness: CGFloat, color: UIColor) -> UIView {
         let ret = UIView(frame: LayoutManager.belowCentered(elementAbove: forView, padding: 0, width: forView.frame.width, height: thickness))
         
         ret.backgroundColor = color
         return ret
+    }
+    
+    /// Adds the question mark based background image to the given view
+    ///
+    /// - Parameter given_view: View to which a background image should be added
+    static func addBackgroundImage(givenView: UIView, imgName: String, opacity: CGFloat = 1) {
+        let backgroundImage = UIImageView(frame: CGRect(x: 0, y: 0, width: givenView.frame.width, height: givenView.frame.height))
+        backgroundImage.contentMode = .scaleAspectFill
+        backgroundImage.clipsToBounds = true
+        backgroundImage.image = UIImage(named: imgName)
+        backgroundImage.alpha = opacity
+        givenView.insertSubview(backgroundImage, at: 0)
+    }
+    
+    static func generateRandomColor() -> UIColor {
+        let hue : CGFloat = CGFloat(arc4random() % 256) / 256 // use 256 to get full range from 0.0 to 1.0
+        let saturation : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from white
+        let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from black
         
+        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
+    }
+    
+    /// Prints all Fonts that have been loaded into the application
+    static func printFontFamilies() {
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
     }
     
 }

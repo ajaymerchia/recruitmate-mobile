@@ -21,7 +21,7 @@
                     </view>
                     <connections>
                         <segue destination="OKb-ql-gpE" kind="presentation" identifier="login2signup" id="Lqk-S5-Ul7"/>
-                        <segue destination="9sX-BN-gvc" kind="show" id="chX-ml-h05"/>
+                        <segue destination="9sX-BN-gvc" kind="show" identifier="login2HUD" id="chX-ml-h05"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -111,7 +111,6 @@
         <!--Item-->
         <scene sceneID="EDf-JS-ij1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s5b-sX-tuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="3Gm-e8-mcj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="e5D-O9-Cb8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GYM-a7-qUh">
@@ -122,6 +121,7 @@
                         <segue destination="KGn-1r-YLJ" kind="relationship" relationship="rootViewController" id="Ync-mR-ICs"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s5b-sX-tuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5334" y="-304"/>
         </scene>
@@ -182,7 +182,6 @@
         <!--Item-->
         <scene sceneID="TyM-e4-5Ch">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8FW-f8-BwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="lmt-Nl-g5T" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="yjd-RC-2YM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ht1-Aj-7Qy">
@@ -193,6 +192,7 @@
                         <segue destination="pSc-Pe-sxY" kind="relationship" relationship="rootViewController" id="tsp-Jt-hn8"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8FW-f8-BwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5334" y="357"/>
         </scene>

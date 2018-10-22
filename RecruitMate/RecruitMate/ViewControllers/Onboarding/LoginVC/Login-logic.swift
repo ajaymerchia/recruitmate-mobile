@@ -14,70 +14,43 @@ extension LoginVC {
 
     @objc func getEmailLogin() {
         advanceToLogin.isUserInteractionEnabled = false
+        hud = Utils.startProgressHud(inView: view, withMsg: "Logging in")
         
         guard let email = emailField.text?.lowercased() else {
-            alerts.displayAlert(title: "Oops", message: "Check your email!")
-            advanceToLogin.isUserInteractionEnabled = true
+            loginError(code: 1)
             return
         }
         if email == "" {
-            alerts.displayAlert(title: "Oops", message: "Check your username!")
-            advanceToLogin.isUserInteractionEnabled = true
+            loginError(code: 1)
+            return
+        }
+        guard let password = passwordField.text else {
+            loginError(code: 2)
+            return
+        }
+        if password == "" {
+            loginError(code: 2)
             return
         }
         
-        let ref = Database.database().reference()
-        let userRef = ref.child("email").child(email)
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            let name = value?["fullname"] as? String ?? ""
-            
-            debugPrint("Got Email: " + email)
-            
-            self.loginPressed(email: email, fullname: name)
-            
-            // ...
-        }) { (error) in
-            print(error.localizedDescription)
-        }
+        self.loginWith(email: email, password: password)
+
     }
     
-    func loginPressed(email: String, fullname: String) {
-        advanceToLogin.isUserInteractionEnabled = false
-        debugPrint("pressed")
-        
-        hud = Utils.startProgressHud(inView: view, withMsg: "Logging in")
-        
-        guard let password = passwordField.text else {
-            advanceToLogin.isUserInteractionEnabled = true
-            self.hud.dismiss()
-            return
-        }
-        
-        if password == "" {
-            signup_error(code: 2)
-            return
-        }
-        
-        
+    func loginWith(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
                 print(error)
-                self.advanceToLogin.isUserInteractionEnabled = true
-                self.hud.dismiss()
-                self.signup_error(code: 2)
+                self.loginError(code: 3)
                 return
             } else {
-                self.currEmail = email
-                self.currFullName = fullname
-                // TODO: change this to the correct segue
-                self.performSegue(withIdentifier: "login2feed", sender: self)
+                // TODO: Get User Data and then segue
+                self.performSegue(withIdentifier: "login2HUD", sender: self)
             }
         })
     }
     
-    func signup_error(code: Int) {
+    func loginError(code: Int) {
         var msg = "We had an issue with "
         switch code {
         case 1:
@@ -85,13 +58,7 @@ extension LoginVC {
         case 2:
             msg = msg + "your password."
         case 3:
-            msg = msg + "your username."
-        case 4:
-            msg = msg + "your name."
-        case 5:
-            msg = "Sorry! That username is already taken."
-        case 6:
-            msg = "Make sure your email is correct and your password is at least 8 characters long."
+            msg = "Failed to login. Check your username & password."
         default:
             msg = msg + " something. Try again later."
         }

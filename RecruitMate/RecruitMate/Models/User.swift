@@ -9,15 +9,20 @@
 import UIKit
 
 class User {
-    var name: String!
+    var first: String!
+    var last: String!
+    var fullname: String {
+        return "\(first ?? "") \(last ?? "")"
+    }
     var email: String!
     
     var boarduids: [String]!
     
     var profilePicture: UIImage!
     
-    init(name: String, email: String, boarduids: [String]) {
-        self.name = name
+    init(first: String, last: String, email: String, boarduids: [String]) {
+        self.first = first
+        self.last = last
         self.email = email
         self.boarduids = boarduids
     }

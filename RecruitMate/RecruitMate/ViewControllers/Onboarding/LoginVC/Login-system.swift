@@ -20,7 +20,7 @@ extension LoginVC {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navVC = segue.destination as? HudVC {
-            
+            debugPrint(navVC)
         }
     }
 
