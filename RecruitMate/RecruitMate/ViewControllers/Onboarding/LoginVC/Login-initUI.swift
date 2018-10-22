@@ -8,11 +8,15 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 import ChameleonFramework
+import JGProgressHUD
 
 extension LoginVC {
     func initUI() {
         view.backgroundColor = Constants.RECRUITMATE_BLUE
+                
         addLogo()
         addAdvanceToLogin()
         addLoginTextFields()
@@ -20,7 +24,10 @@ extension LoginVC {
     }
     
     func addLogo() {
-        
+        logo = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        logo.center = CGPoint(x: view.frame.width / 2, y: view.frame.height / 3)
+        logo.image = UIImage(named: "logo-dark")
+        view.addSubview(logo)
         
         appHeader = UILabel(frame: CGRect(x: 0, y: view.frame.height/2, width: view.frame.width, height: 100))
         appHeader.textAlignment = .center
@@ -120,7 +127,7 @@ extension LoginVC {
         debugPrint("CALLED")
         
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-            self.advanceToLogin.transform = CGAffineTransform(scaleX: 0.75, y: 0.75).concatenating(CGAffineTransform(translationX: 0, y: 110))
+            self.advanceToLogin.transform = CGAffineTransform(scaleX: 0.75, y: 0.75).concatenating(CGAffineTransform(translationX: 0, y: 80))
             
         }, completion: nil)
         
@@ -133,7 +140,7 @@ extension LoginVC {
         }, completion: nil)
         
         advanceToLogin.removeTarget(self, action: #selector(revealLogin), for: .touchUpInside)
-//        advanceToLogin.addTarget(self, action: #selector(get_email_login), for: .touchUpInside)
+        advanceToLogin.addTarget(self, action: #selector(getEmailLogin), for: .touchUpInside)
         
     }
     
