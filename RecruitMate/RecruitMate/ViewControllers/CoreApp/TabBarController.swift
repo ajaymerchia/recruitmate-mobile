@@ -11,6 +11,7 @@ import UIKit
 class TabBarController: UITabBarController {
 
     var currentUser: User!
+    var currentBoard: Board!
     
     override func viewDidLoad() {
         super.viewDidLoad()

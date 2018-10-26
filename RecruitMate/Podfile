@@ -6,7 +6,7 @@ target 'RecruitMate' do
   use_frameworks!
 
   # Pods for RecruitMate
-  pod 'Postal'
+  pod 'Postal', :inhibit_warnings => true
   
   pod 'Firebase/Core'
   pod 'Firebase/Auth'

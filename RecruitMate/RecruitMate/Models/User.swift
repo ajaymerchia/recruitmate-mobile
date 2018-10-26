@@ -17,13 +17,16 @@ class User {
     var email: String!
     
     var boarduids: [String]!
+    var boards: [String: Board] = [:]
+    var defaultBoardID: String!
     
     var profilePicture: UIImage!
     
-    init(first: String, last: String, email: String, boarduids: [String]) {
+    init(first: String, last: String, email: String, boarduids: [String], favorite: String) {
         self.first = first
         self.last = last
         self.email = email
         self.boarduids = boarduids
+        self.defaultBoardID = favorite
     }
 }

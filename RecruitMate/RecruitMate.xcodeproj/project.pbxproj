@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B646ACB3A4A69F870A6BE17 /* Pods_RecruitMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86641178BD6A139A1328F6AC /* Pods_RecruitMate.framework */; };
+		B71A20D52182B48D00D383ED /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A20D42182B48D00D383ED /* Board.swift */; };
 		B7313591217B970D00B9A094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7313590217B970D00B9A094 /* AppDelegate.swift */; };
 		B7313593217B970D00B9A094 /* EmailReadSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7313592217B970D00B9A094 /* EmailReadSampleVC.swift */; };
 		B7313596217B970D00B9A094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7313594217B970D00B9A094 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		3DE80DE35CE07EEC9088CB47 /* Pods-RecruitMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecruitMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecruitMate/Pods-RecruitMate.debug.xcconfig"; sourceTree = "<group>"; };
 		86641178BD6A139A1328F6AC /* Pods_RecruitMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecruitMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5339F031A50A21027DB32E9 /* Pods-RecruitMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecruitMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecruitMate/Pods-RecruitMate.release.xcconfig"; sourceTree = "<group>"; };
+		B71A20D42182B48D00D383ED /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		B731358D217B970D00B9A094 /* RecruitMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecruitMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7313590217B970D00B9A094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7313592217B970D00B9A094 /* EmailReadSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailReadSampleVC.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				B76E350B217BDAC900993E15 /* Email.swift */,
 				BD33EE37217C02AC00B2A7B3 /* Job.swift */,
+				B71A20D42182B48D00D383ED /* Board.swift */,
 				BD33EE39217C08A400B2A7B3 /* Event.swift */,
 				BD33EE3B217C096800B2A7B3 /* Contact.swift */,
 				BD33EE3D217C0FA700B2A7B3 /* User.swift */,
@@ -468,6 +471,7 @@
 				B76E3557217BFFFD00993E15 /* HUD-initUI.swift in Sources */,
 				B76E3527217BFBAE00993E15 /* EmailPermission-main.swift in Sources */,
 				B76E3549217BFF8100993E15 /* EmailPermission-system.swift in Sources */,
+				B71A20D52182B48D00D383ED /* Board.swift in Sources */,
 				B7313593217B970D00B9A094 /* EmailReadSampleVC.swift in Sources */,
 				B780C5B0217C296200AA7C27 /* SignUp-logic.swift in Sources */,
 				B76E3553217BFFE500993E15 /* Pipeline-initUI.swift in Sources */,

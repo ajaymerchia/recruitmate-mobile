@@ -64,13 +64,15 @@ extension SignUpVC {
                 }
                 let ref = Database.database().reference()
                 let userRef = ref.child("users").child(uid)
-                let firstBoard = Utils.uuid()
-                let values = ["first": first, "last": last, "email": email, "boards": [firstBoard]] as [String : Any]
+                let firstBoardID = Utils.uuid()
+                let firstBoard = Board(title: "\(first!)'s Board", uuid: firstBoardID)
+                let values = ["first": first, "last": last, "email": email, "boards": [firstBoardID]] as [String : Any]
             
                 
                 userRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
                     
-                    self.createdUser = User(first: first, last: last, email: email, boarduids: [firstBoard])
+                    self.createdUser = User(first: first, last: last, email: email, boarduids: [firstBoardID], favorite: firstBoardID)
+                    self.createdUser?.boards.updateValue(firstBoard, forKey: firstBoardID)
                     
                     let dataToPost = ["user": self.createdUser]
                     NotificationCenter.default.post(name: .hasPendingUserLogin, object: nil, userInfo: dataToPost as [AnyHashable : Any])

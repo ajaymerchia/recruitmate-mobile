@@ -24,7 +24,11 @@ extension LoginVC {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tabVC = segue.destination as? TabBarController {
             debugPrint("Hand-off to TabBarVC. Passing User Object")
-            tabVC.currentUser = pendingUser
+            guard let user = pendingUser else {
+                return
+            }
+            tabVC.currentUser = user
+            tabVC.currentBoard = user.boards[user.defaultBoardID]
         }
     }
 
