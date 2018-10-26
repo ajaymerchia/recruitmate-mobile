@@ -14,7 +14,7 @@ class FirebaseAPIClient {
     static func getUserRecordFrom(uid: String, completion: (([String : Any?]) -> ())) {
         
         
-        
+        completion(["dumbstuff": 3])
     }
     
     
