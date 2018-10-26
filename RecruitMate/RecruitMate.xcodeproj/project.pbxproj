@@ -14,6 +14,8 @@
 		B7313596217B970D00B9A094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7313594217B970D00B9A094 /* Main.storyboard */; };
 		B7313598217B970E00B9A094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7313597217B970E00B9A094 /* Assets.xcassets */; };
 		B731359B217B970E00B9A094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7313599217B970E00B9A094 /* LaunchScreen.storyboard */; };
+		B74493AB2182CD2400E43BA5 /* FirebaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74493AA2182CD2400E43BA5 /* FirebaseAPIClient.swift */; };
+		B74493AE2182CFCF00E43BA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B74493AD2182CFCF00E43BA5 /* GoogleService-Info.plist */; };
 		B76D5522218292BE00D3ECFA /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D5521218292BE00D3ECFA /* Notifications.swift */; };
 		B76D55242182A12600D3ECFA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D55232182A12600D3ECFA /* TabBarController.swift */; };
 		B76E350A217BCD4F00993E15 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3509217BCD4F00993E15 /* Constants.swift */; };
@@ -48,7 +50,6 @@
 		B76E3559217C000500993E15 /* HUD-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3558217C000500993E15 /* HUD-system.swift */; };
 		B76E355D217C002700993E15 /* NewJob-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E355C217C002700993E15 /* NewJob-initUI.swift */; };
 		B76E355F217C002E00993E15 /* NewJob-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E355E217C002E00993E15 /* NewJob-system.swift */; };
-		B780C5AE217C16E800AA7C27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B780C5AD217C16E800AA7C27 /* GoogleService-Info.plist */; };
 		B780C5B0217C296200AA7C27 /* SignUp-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C5AF217C296200AA7C27 /* SignUp-logic.swift */; };
 		B78AF181217DAAE400DE37C9 /* Login-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78AF180217DAAE400DE37C9 /* Login-logic.swift */; };
 		B78AF182217DAB3C00DE37C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33EE3D217C0FA700B2A7B3 /* User.swift */; };
@@ -69,6 +70,8 @@
 		B7313597217B970E00B9A094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B731359A217B970E00B9A094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B731359C217B970E00B9A094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B74493AA2182CD2400E43BA5 /* FirebaseAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPIClient.swift; sourceTree = "<group>"; };
+		B74493AD2182CFCF00E43BA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B76D5521218292BE00D3ECFA /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		B76D55232182A12600D3ECFA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B76E3509217BCD4F00993E15 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -103,7 +106,6 @@
 		B76E3558217C000500993E15 /* HUD-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD-system.swift"; sourceTree = "<group>"; };
 		B76E355C217C002700993E15 /* NewJob-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-initUI.swift"; sourceTree = "<group>"; };
 		B76E355E217C002E00993E15 /* NewJob-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-system.swift"; sourceTree = "<group>"; };
-		B780C5AD217C16E800AA7C27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B780C5AF217C296200AA7C27 /* SignUp-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-logic.swift"; sourceTree = "<group>"; };
 		B78AF180217DAAE400DE37C9 /* Login-logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Login-logic.swift"; path = "RecruitMate/ViewControllers/Onboarding/LoginVC/Login-logic.swift"; sourceTree = SOURCE_ROOT; };
 		BD33EE37217C02AC00B2A7B3 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
@@ -162,7 +164,7 @@
 				B7313597217B970E00B9A094 /* Assets.xcassets */,
 				B7313599217B970E00B9A094 /* LaunchScreen.storyboard */,
 				B731359C217B970E00B9A094 /* Info.plist */,
-				B780C5AD217C16E800AA7C27 /* GoogleService-Info.plist */,
+				B74493AD2182CFCF00E43BA5 /* GoogleService-Info.plist */,
 			);
 			path = RecruitMate;
 			sourceTree = "<group>";
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				B76E3510217BE70C00993E15 /* GmailAPIHelper.swift */,
+				B74493AA2182CD2400E43BA5 /* FirebaseAPIClient.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -387,7 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B731359B217B970E00B9A094 /* LaunchScreen.storyboard in Resources */,
-				B780C5AE217C16E800AA7C27 /* GoogleService-Info.plist in Resources */,
+				B74493AE2182CFCF00E43BA5 /* GoogleService-Info.plist in Resources */,
 				B7313598217B970E00B9A094 /* Assets.xcassets in Resources */,
 				B7313596217B970D00B9A094 /* Main.storyboard in Resources */,
 			);
@@ -495,6 +498,7 @@
 				B76E3511217BE70C00993E15 /* GmailAPIHelper.swift in Sources */,
 				B78AF182217DAB3C00DE37C9 /* User.swift in Sources */,
 				B78AF184217DAB4200DE37C9 /* Event.swift in Sources */,
+				B74493AB2182CD2400E43BA5 /* FirebaseAPIClient.swift in Sources */,
 				B76E354B217BFF9900993E15 /* Settings-initUI.swift in Sources */,
 				B76E351D217BF05100993E15 /* LayoutManager.swift in Sources */,
 				B76E3513217BE74B00993E15 /* LocalData.swift in Sources */,
