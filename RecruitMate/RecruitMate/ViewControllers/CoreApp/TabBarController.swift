@@ -1,14 +1,17 @@
 //
-//  HudVC.swift
+//  TabBarController.swift
 //  RecruitMate
 //
-//  Created by Ajay Raj Merchia on 10/20/18.
+//  Created by Ajay Raj Merchia on 10/25/18.
 //  Copyright © 2018 Ajay Raj Merchia. All rights reserved.
 //
 
 import UIKit
 
-class HudVC: UIViewController {    
+class TabBarController: UITabBarController {
+
+    var currentUser: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

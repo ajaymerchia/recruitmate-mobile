@@ -14,6 +14,7 @@
 		B7313598217B970E00B9A094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7313597217B970E00B9A094 /* Assets.xcassets */; };
 		B731359B217B970E00B9A094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7313599217B970E00B9A094 /* LaunchScreen.storyboard */; };
 		B76D5522218292BE00D3ECFA /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D5521218292BE00D3ECFA /* Notifications.swift */; };
+		B76D55242182A12600D3ECFA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D55232182A12600D3ECFA /* TabBarController.swift */; };
 		B76E350A217BCD4F00993E15 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3509217BCD4F00993E15 /* Constants.swift */; };
 		B76E350C217BDAC900993E15 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E350B217BDAC900993E15 /* Email.swift */; };
 		B76E3511217BE70C00993E15 /* GmailAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E3510217BE70C00993E15 /* GmailAPIHelper.swift */; };
@@ -67,6 +68,7 @@
 		B731359A217B970E00B9A094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B731359C217B970E00B9A094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B76D5521218292BE00D3ECFA /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		B76D55232182A12600D3ECFA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B76E3509217BCD4F00993E15 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B76E350B217BDAC900993E15 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		B76E3510217BE70C00993E15 /* GmailAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailAPIHelper.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				B76E352E217BFC4000993E15 /* PipelineVC */,
 				B76E352B217BFC1100993E15 /* HudVC */,
 				B76E353D217BFD2900993E15 /* NewJobVC */,
+				B76D55232182A12600D3ECFA /* TabBarController.swift */,
 			);
 			path = CoreApp;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				B76E3547217BFF6F00993E15 /* SignUp-system.swift in Sources */,
 				B76E350A217BCD4F00993E15 /* Constants.swift in Sources */,
 				B76E3559217C000500993E15 /* HUD-system.swift in Sources */,
+				B76D55242182A12600D3ECFA /* TabBarController.swift in Sources */,
 				B76E3539217BFCEF00993E15 /* SettingsVC.swift in Sources */,
 				B78AF185217DAB4500DE37C9 /* Job.swift in Sources */,
 			);

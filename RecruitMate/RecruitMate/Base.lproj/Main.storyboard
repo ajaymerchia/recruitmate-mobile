@@ -162,7 +162,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="b4x-Rv-VyB">
             <objects>
-                <tabBarController id="9sX-BN-gvc" sceneMemberID="viewController">
+                <tabBarController id="9sX-BN-gvc" customClass="TabBarController" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lO7-XS-3Tc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

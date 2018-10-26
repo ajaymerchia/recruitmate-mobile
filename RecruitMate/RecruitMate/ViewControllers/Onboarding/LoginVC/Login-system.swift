@@ -22,9 +22,9 @@ extension LoginVC {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let navVC = segue.destination as? HudVC {
-            debugPrint(navVC)
-            navVC.currentUser = pendingUser
+        if let tabVC = segue.destination as? TabBarController {
+            debugPrint("Hand-off to TabBarVC. Passing User Object")
+            tabVC.currentUser = pendingUser
         }
     }
 
