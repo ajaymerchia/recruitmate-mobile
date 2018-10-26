@@ -43,7 +43,7 @@ class User {
         let boardList = firebaseStruct["boards"] as! [String: String]
         
         for (key, value) in boardList {
-            
+            self.boards[key] = Board(title: value, uuid: key)
         }
         
     }
