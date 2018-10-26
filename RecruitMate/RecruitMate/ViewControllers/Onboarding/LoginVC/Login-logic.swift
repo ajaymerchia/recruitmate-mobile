@@ -65,7 +65,7 @@ extension LoginVC {
     }
     
     func checkForAutoLogin() {
-        FirebaseAPIClient.logout() //FIXME: REMOVE WHEN DONE TESTING MANUAL LOGINS
+//        FirebaseAPIClient.logout() //FIXME: REMOVE WHEN DONE TESTING MANUAL LOGINS
         guard let loggedInUser = Auth.auth().currentUser else {
             return
         }
