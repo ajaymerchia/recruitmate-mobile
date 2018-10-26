@@ -34,8 +34,6 @@ class User {
         }
     }
 
-    
-    
     init(firebaseStruct: [String: Any?]) {
         self.first = (firebaseStruct["first"] as! String)
         self.last = (firebaseStruct["last"] as! String)

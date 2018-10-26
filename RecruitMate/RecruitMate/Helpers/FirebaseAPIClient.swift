@@ -11,11 +11,20 @@ import FirebaseDatabase
 import FirebaseAuth
 
 class FirebaseAPIClient {
-    static func getUserRecordFrom(uid: String, completion: (([String : Any?]) -> ())) {
-        
-        
-        completion(["dumbstuff": 3])
+    static func getUserRecordFrom(uid: String, completion: (User) -> ()) {
+        completion(User.SAMPLE_USER)
     }
     
+    static func loadBoardFrom(uid: String, completion: (Board) -> ()) {
+        
+    }
+    
+    static func logout() {
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
     
 }
