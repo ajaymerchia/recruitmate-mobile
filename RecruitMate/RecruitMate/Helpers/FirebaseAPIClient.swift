@@ -11,8 +11,16 @@ import FirebaseDatabase
 import FirebaseAuth
 
 class FirebaseAPIClient {
-    static func getUserRecordFrom(uid: String, completion: (User) -> ()) {
-        completion(User.SAMPLE_USER)
+    static func getUserRecordFrom(uid: String, completion: @escaping (User?) -> ()) {
+        let userRef = Database.database().reference().child("users").child(uid)
+        userRef.observeSingleEvent(of: .value) { (snapshot) in
+            guard let data = snapshot.value as? [String: Any?] else {
+                completion(nil)
+                return
+            }
+            let returnableUser = User(firebaseStruct: data)
+            completion(returnableUser)
+        }
     }
     
     static func loadBoardFrom(uid: String, completion: (Board) -> ()) {

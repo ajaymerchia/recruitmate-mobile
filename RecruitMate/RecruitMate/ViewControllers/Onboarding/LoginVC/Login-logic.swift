@@ -49,7 +49,12 @@ extension LoginVC {
                     return
                 }
                 FirebaseAPIClient.getUserRecordFrom(uid: uid, completion: { (user) in
-                    self.pendingUser = user
+                    
+                    guard let absoluteUser = user else {
+                        self.loginError(code: 3)
+                        return
+                    }
+                    self.pendingUser = absoluteUser
                     self.pendingLogin = true
                     self.performSegue(withIdentifier: "login2HUD", sender: self)
                 })
