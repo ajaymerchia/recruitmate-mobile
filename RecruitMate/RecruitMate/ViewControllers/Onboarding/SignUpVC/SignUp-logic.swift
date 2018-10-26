@@ -77,7 +77,7 @@ extension SignUpVC {
                 boardRef.updateChildValues(boardValues as [AnyHashable : Any])
                 userRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
                     
-                    self.createdUser = User(first: first, last: last, email: email, boarduids: [firstBoardID], favorite: firstBoardID)
+                    self.createdUser = User(first: first, last: last, email: email, boards: [firstBoardID: firstBoard], favorite: firstBoardID)
                     self.createdUser?.boards.updateValue(firstBoard, forKey: firstBoardID)
                     
                     let dataToPost = ["user": self.createdUser]
