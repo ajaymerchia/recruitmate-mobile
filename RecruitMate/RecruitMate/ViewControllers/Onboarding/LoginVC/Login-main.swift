@@ -40,6 +40,7 @@ class LoginVC: UIViewController {
 //        testing.postalConnect()
         setupManagers()
         initUI()
+        checkForAutoLogin()
         
     }
 

@@ -35,8 +35,6 @@ class User {
         }
     }
 
-    
-    
     init(firebaseStruct: [String: Any?]) {
         
     }

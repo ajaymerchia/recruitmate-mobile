@@ -39,30 +39,36 @@ extension LoginVC {
     
     func loginWith(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-            
-            debugPrint("Got Auth Object Callback")
-            debugPrint(error)
-            debugPrint(user)
-            
             if let error = error {
                 print(error)
                 self.loginError(code: 3)
                 return
             } else {
-                // TODO: Get User Data and then segue
                 guard let uid = user?.user.uid else {
                     self.loginError(code: 3)
                     return
                 }
-                FirebaseAPIClient.getUserRecordFrom(uid: uid, completion: { (userRecord) in
-//                    pendingUser = User(firebaseStruct: userRecord)
-                    self.pendingUser = User.SAMPLE_USER
+                FirebaseAPIClient.getUserRecordFrom(uid: uid, completion: { (user) in
+                    self.pendingUser = user
+                    self.pendingLogin = true
                     self.performSegue(withIdentifier: "login2HUD", sender: self)
                 })
                 
                 
             }
         })
+    }
+    
+    func checkForAutoLogin() {
+        FirebaseAPIClient.logout() //FIXME: REMOVE WHEN DONE TESTING MANUAL LOGINS
+        guard let loggedInUser = Auth.auth().currentUser else {
+            return
+        }
+        FirebaseAPIClient.getUserRecordFrom(uid: loggedInUser.uid) { (user) in
+            self.pendingUser = user
+            self.pendingLogin = true
+            self.performSegue(withIdentifier: "login2HUD", sender: self)
+        }
     }
     
     func loginError(code: Int) {
