@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import NotificationCenter
 
 extension SignUpVC {
     @objc func attemptSignUp() {
@@ -70,6 +71,10 @@ extension SignUpVC {
                 userRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
                     
                     self.createdUser = User(first: first, last: last, email: email, boarduids: [firstBoard])
+                    
+                    let dataToPost = ["user": self.createdUser]
+                    NotificationCenter.default.post(name: .hasPendingUserLogin, object: nil, userInfo: dataToPost as [AnyHashable : Any])
+                    
                     self.dismiss(animated: true, completion: {})
                 })
             }

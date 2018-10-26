@@ -27,6 +27,10 @@ class LoginVC: UIViewController {
     var hud: JGProgressHUD!
     
     var alerts: AlertManager!
+    
+    // Login management
+    var pendingLogin = false
+    var pendingUser: User?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +38,7 @@ class LoginVC: UIViewController {
         // Do any additional setup after loading the view.
 //        let testing = EmailReadSampleVC()
 //        testing.postalConnect()
-        setupAlertManager()
+        setupManagers()
         initUI()
         
     }

@@ -63,6 +63,7 @@ extension SignUpVC {
         firstNameField.layer.cornerRadius = 5
         firstNameField.textAlignment = .center
         firstNameField.tintColor = Constants.RECRUITMATE_BLUE
+        firstNameField.autocorrectionType = .no
         view.addSubview(firstNameField)
         
         lastNameField = UITextField(frame: LayoutManager.belowCentered(elementAbove: firstNameField, padding: Constants.PADDING, width: firstNameField.frame.width, height: firstNameField.frame.height))
@@ -75,6 +76,7 @@ extension SignUpVC {
         lastNameField.layer.cornerRadius = 5
         lastNameField.textAlignment = .center
         lastNameField.tintColor = Constants.RECRUITMATE_BLUE
+        lastNameField.autocorrectionType = .no
         view.addSubview(lastNameField)
         
         
@@ -89,6 +91,7 @@ extension SignUpVC {
         emailField.textAlignment = .center
         emailField.tintColor = Constants.RECRUITMATE_BLUE
         emailField.autocapitalizationType = .none
+        emailField.autocorrectionType = .no
         view.addSubview(emailField)
         
         
@@ -118,6 +121,7 @@ extension SignUpVC {
         password2Field.isSecureTextEntry = true
         password2Field.textAlignment = .center
         password2Field.tintColor = Constants.RECRUITMATE_BLUE
+        
         view.addSubview(password2Field)
         
         

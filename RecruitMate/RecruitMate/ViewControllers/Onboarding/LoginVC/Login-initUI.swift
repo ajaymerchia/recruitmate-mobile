@@ -88,6 +88,8 @@ extension LoginVC {
         passwordField.isSecureTextEntry = true
         passwordField.textAlignment = .center
         passwordField.tintColor = UIColor.white
+        passwordField.returnKeyType = .go
+        passwordField.addTarget(self, action: #selector(getEmailLogin), for: .editingDidEndOnExit)
         view.addSubview(passwordField)
         
         
