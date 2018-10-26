@@ -17,6 +17,8 @@ class Board: Equatable {
     var id: String!
     var jobs: [Job] = []
     
+    static let DEFAULT_BOARD = Board(title: "Random Board", uuid: "randomBoardsYeeet234")
+    
     init(title: String, uuid: String) {
         name = title
         id = uuid
