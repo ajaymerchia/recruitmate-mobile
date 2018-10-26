@@ -68,7 +68,11 @@ extension SignUpVC {
                 let firstBoard = Board(title: "\(first!)'s Board", uuid: firstBoardID)
                 let boardDict: [String: String] = [firstBoardID : firstBoard.name]
                 let values = ["first": first, "last": last, "email": email, "boards": boardDict] as [String : Any]
-            
+                
+                let boardRef = ref.child("boards").child(firstBoardID)
+                let boardValues = ["title": firstBoard.name]
+                
+                boardRef.updateChildValues(boardValues as [AnyHashable : Any])
                 
                 userRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
                     
