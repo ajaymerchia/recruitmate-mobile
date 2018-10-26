@@ -60,10 +60,9 @@ extension LoginVC {
         debugPrint(pendingUser)
         if pendingLogin && (pendingUser != nil) {
             debugPrint("segueing")
+            performSegue(withIdentifier: "login2HUD", sender: self)
             pendingLogin = false
             pendingUser = nil
-            performSegue(withIdentifier: "login2HUD", sender: self)
-            
         }
     }
 }

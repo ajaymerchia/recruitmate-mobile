@@ -15,7 +15,9 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        debugPrint("Successfully Loaded Tab Bar Controller")
+        debugPrint("Logged in as \(currentUser.fullname)")
+        debugPrint("Showing Board: \(currentBoard.name)")
         // Do any additional setup after loading the view.
     }
     
