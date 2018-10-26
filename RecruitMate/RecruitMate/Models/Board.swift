@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftyJSON
+
 class Board: Equatable {
     static func == (lhs: Board, rhs: Board) -> Bool {
         return lhs.id == rhs.id
@@ -22,7 +22,7 @@ class Board: Equatable {
         id = uuid
     }
     
-    init(firebaseRecord: JSON) {
+    init(firebaseRecord: [String: Any?]) {
         //TODO: Implement JSON -> Job arrya parser
     }
     

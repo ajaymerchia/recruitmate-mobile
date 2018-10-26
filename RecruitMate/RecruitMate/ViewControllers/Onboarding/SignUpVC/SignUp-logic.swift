@@ -66,7 +66,8 @@ extension SignUpVC {
                 let userRef = ref.child("users").child(uid)
                 let firstBoardID = Utils.uuid()
                 let firstBoard = Board(title: "\(first!)'s Board", uuid: firstBoardID)
-                let values = ["first": first, "last": last, "email": email, "boards": [firstBoardID]] as [String : Any]
+                let boardDict: [String: String] = [firstBoardID : firstBoard.name]
+                let values = ["first": first, "last": last, "email": email, "boards": boardDict] as [String : Any]
             
                 
                 userRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
