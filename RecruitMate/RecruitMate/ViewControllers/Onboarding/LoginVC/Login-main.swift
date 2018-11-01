@@ -38,10 +38,18 @@ class LoginVC: UIViewController {
         // Do any additional setup after loading the view.
 //        let testing = EmailReadSampleVC()
 //        testing.postalConnect()
+//        testClearbit()
+        
         setupManagers()
         initUI()
         checkForAutoLogin()
         
+    }
+    
+    func testClearbit() {
+        ClearbitAPI.getAutoCompleteSuggestionsFor(partial: "facebo") { (results) in
+            debugPrint(results)
+        }
     }
 
 }

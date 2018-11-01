@@ -10,9 +10,17 @@ import UIKit
 
 class NewJobVC: UIViewController {
 
+    var image: UIImageView!
+    
+    var goToCompanySearch: UIButton!
+    var positionField: UITextField!
+    var linkField: UITextField!
+    var goToPipelineSelect: UIButton!
+    var saveJob: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initUI()
         // Do any additional setup after loading the view.
     }
     

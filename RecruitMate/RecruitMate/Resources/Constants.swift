@@ -9,9 +9,13 @@
 import Foundation
 import UIKit
 class Constants {
+    // Web Authentication & Endpoints
     static let RECRUITMATE_EMAIL = "recruitmate.app@gmail.com"
     static let RECRUITMATE_PASSW = "Recruitmate.2018"
 
+    static let CLEARBIT_KEY = "sk_5ef942a05f89d6394286683fd2263791"
+    static let CLEARBIT_AUTO = "https://autocomplete.clearbit.com/v1/companies/suggest?query="
+    
     // UI Elements
     static let PADDING:CGFloat = 20
     static let MARGINAL_PADDING:CGFloat = 5
@@ -24,6 +28,7 @@ class Constants {
     
     static let RECRUITMATE_BLUE = rgb(23, 105, 197)
     static let RECRUITMATE_BLUE_DARK = rgb(9, 72, 142)
+    static let PLACEHOLDER_COLOR = rgb(184, 184, 193)
     
 }
 
