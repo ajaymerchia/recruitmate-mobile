@@ -12,9 +12,26 @@ import ChameleonFramework
 
 extension NewJobVC {
     func initUI() {
+        initNav()
         initPicture()
         initDataEntry()
     }
+    func initNav() {
+        let navbar = UINavigationBar(frame: CGRect(x: 0, y: Constants.PADDING, width: view.frame.width, height: 50));
+        navbar.tintColor = Constants.RECRUITMATE_BLUE
+        navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navbar.shadowImage = UIImage()
+        navbar.isTranslucent = true
+        
+        self.view.addSubview(navbar)
+        
+        let navItem = UINavigationItem(title: "")
+        let navBarbutton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.stop, target: self, action: #selector(goBack))
+        navItem.leftBarButtonItem = navBarbutton
+        
+        navbar.items = [navItem]
+    }
+    
     func initPicture() {
         image = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width/4, height: view.frame.width/4))
         image.image = UIImage(named: "logo-light")
@@ -37,13 +54,14 @@ extension NewJobVC {
         goToCompanySearch.setTitleColor(Constants.PLACEHOLDER_COLOR, for: .normal)
         goToCompanySearch.setBackgroundColor(color: .white, forState: .normal)
         goToCompanySearch.titleLabel?.font = Constants.TEXT_FONT
+        goToCompanySearch.addTarget(self, action: #selector(toCompanySearch), for: .touchUpInside)
         applyFormatting(component: goToCompanySearch)
         view.addSubview(goToCompanySearch)
         
         positionField = UITextField(frame: LayoutManager.belowCentered(elementAbove: goToCompanySearch, padding: gutter, width: width, height: height))
         positionField.textColor = Constants.RECRUITMATE_BLUE
         positionField.font = Constants.TEXT_FONT
-        positionField.placeholder = "Position"
+        positionField.placeholder = "Position (Optional)"
         positionField.textAlignment = .center
         applyFormatting(component: positionField)
         view.addSubview(positionField)
@@ -51,16 +69,20 @@ extension NewJobVC {
         linkField = UITextField(frame: LayoutManager.belowCentered(elementAbove: positionField, padding: gutter, width: width, height: height))
         linkField.textColor = Constants.RECRUITMATE_BLUE
         linkField.font = Constants.TEXT_FONT
-        linkField.placeholder = "Post URL"
+        linkField.placeholder = "Post URL (Optional)"
         linkField.textAlignment = .center
+        linkField.autocorrectionType = .no
+        linkField.autocapitalizationType = .none
         applyFormatting(component: linkField)
         view.addSubview(linkField)
         
         goToPipelineSelect = UIButton(frame: LayoutManager.belowCentered(elementAbove: linkField, padding: gutter, width: width, height: height))
-        goToPipelineSelect.setTitle("Wishlist", for: .normal)
-        goToPipelineSelect.setTitleColor(Constants.PLACEHOLDER_COLOR, for: .normal)
+        
+        goToPipelineSelect.setTitle(swimlane, for: .normal)
+        goToPipelineSelect.setTitleColor(Constants.RECRUITMATE_BLUE, for: .normal)
         goToPipelineSelect.setBackgroundColor(color: .white, forState: .normal)
         goToPipelineSelect.titleLabel?.font = Constants.TEXT_FONT
+        goToPipelineSelect.addTarget(self, action: #selector(toPipelineSelect), for: .touchUpInside)
         applyFormatting(component: goToPipelineSelect)
         view.addSubview(goToPipelineSelect)
         
@@ -68,6 +90,7 @@ extension NewJobVC {
         saveJob.setTitle("Save Job", for: .normal)
         saveJob.titleLabel?.font = Constants.TEXT_FONT
         saveJob.setBackgroundColor(color: Constants.RECRUITMATE_BLUE, forState: .normal)
+        saveJob.addTarget(self, action: #selector(createJob), for: .touchUpInside)
         applyFormatting(component: saveJob)
         view.addSubview(saveJob)
         

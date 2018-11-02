@@ -17,7 +17,5 @@ extension HudVC {
     func initNav() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(goToNewJob))
     }
-    @objc func goToNewJob() {
-        self.tabBarController?.performSegue(withIdentifier: "main2NewJob", sender: self)
-    }
+    
 }

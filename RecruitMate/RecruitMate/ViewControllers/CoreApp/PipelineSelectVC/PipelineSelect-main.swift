@@ -1,40 +1,24 @@
 //
-//  NewJobVC.swift
+//  PipelineSelectVC.swift
 //  RecruitMate
 //
-//  Created by Ajay Raj Merchia on 10/20/18.
+//  Created by Ajay Raj Merchia on 11/1/18.
 //  Copyright © 2018 Ajay Raj Merchia. All rights reserved.
 //
 
 import UIKit
-import JGProgressHUD
 
-class NewJobVC: UIViewController {
+class PipelineSelectVC: UIViewController {
 
-    var image: UIImageView!
-    
-    var goToCompanySearch: UIButton!
-    var positionField: UITextField!
-    var linkField: UITextField!
-    var goToPipelineSelect: UIButton!
-    var saveJob: UIButton!
-    
-    var company: CompanySearchResult?
-    var swimlane: String!
-    var companyColor: UIColor?
-    
-    var alerts: AlertManager!
-    var hud: JGProgressHUD!
-    
+    var navbar: UINavigationBar!
     var board: Board!
+    var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        swimlane = board.swimlanes[0]
-        setupManagers()
-        initUI()
+
         // Do any additional setup after loading the view.
-        
+        initUI()
     }
     
 

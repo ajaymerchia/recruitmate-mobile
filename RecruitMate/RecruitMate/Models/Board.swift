@@ -15,6 +15,7 @@ class Board: Equatable {
     
     var name: String!
     var id: String!
+    var swimlanes:[String] = ["Wishlist", "Applied", "Coding Challenge", "Phone Screen", "Onsite Interview", "Offer", "Rejection"]
     var jobs: [Job] = []
     
     static let DEFAULT_BOARD = Board(title: "Random Board", uuid: "randomBoardsYeeet234")

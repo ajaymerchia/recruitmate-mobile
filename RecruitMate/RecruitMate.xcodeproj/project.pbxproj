@@ -58,6 +58,17 @@
 		B78AF183217DAB4000DE37C9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33EE3B217C096800B2A7B3 /* Contact.swift */; };
 		B78AF184217DAB4200DE37C9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33EE39217C08A400B2A7B3 /* Event.swift */; };
 		B78AF185217DAB4500DE37C9 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33EE37217C02AC00B2A7B3 /* Job.swift */; };
+		B7A23262218B6C8800DBB6AF /* CompanySelectVC-main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23261218B6C8800DBB6AF /* CompanySelectVC-main.swift */; };
+		B7A23265218B6CD500DBB6AF /* CompanySelectVC-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23264218B6CD500DBB6AF /* CompanySelectVC-initUI.swift */; };
+		B7A23267218B6CE900DBB6AF /* CompanySelectVC-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23266218B6CE900DBB6AF /* CompanySelectVC-system.swift */; };
+		B7A23269218B9DB900DBB6AF /* CompanySearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23268218B9DB900DBB6AF /* CompanySearchCell.swift */; };
+		B7A2326B218B9DD200DBB6AF /* CompanySelectVC-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2326A218B9DD200DBB6AF /* CompanySelectVC-tableview.swift */; };
+		B7A2326D218BC7DB00DBB6AF /* PipelineSelect-main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2326C218BC7DB00DBB6AF /* PipelineSelect-main.swift */; };
+		B7A23270218BC81800DBB6AF /* PipelineSelect-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2326F218BC81800DBB6AF /* PipelineSelect-initUI.swift */; };
+		B7A23272218BC84A00DBB6AF /* PipelineSelect-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23271218BC84A00DBB6AF /* PipelineSelect-system.swift */; };
+		B7A23274218BC9C200DBB6AF /* PipelineSelect-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23273218BC9C200DBB6AF /* PipelineSelect-tableview.swift */; };
+		B7A23276218BCBC900DBB6AF /* NewJob-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23275218BCBC900DBB6AF /* NewJob-logic.swift */; };
+		B7A23278218BEADB00DBB6AF /* FirebasePushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23277218BEADB00DBB6AF /* FirebasePushable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +123,17 @@
 		B76E355E217C002E00993E15 /* NewJob-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-system.swift"; sourceTree = "<group>"; };
 		B780C5AF217C296200AA7C27 /* SignUp-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-logic.swift"; sourceTree = "<group>"; };
 		B78AF180217DAAE400DE37C9 /* Login-logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Login-logic.swift"; path = "RecruitMate/ViewControllers/Onboarding/LoginVC/Login-logic.swift"; sourceTree = SOURCE_ROOT; };
+		B7A23261218B6C8800DBB6AF /* CompanySelectVC-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanySelectVC-main.swift"; sourceTree = "<group>"; };
+		B7A23264218B6CD500DBB6AF /* CompanySelectVC-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanySelectVC-initUI.swift"; sourceTree = "<group>"; };
+		B7A23266218B6CE900DBB6AF /* CompanySelectVC-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanySelectVC-system.swift"; sourceTree = "<group>"; };
+		B7A23268218B9DB900DBB6AF /* CompanySearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanySearchCell.swift; sourceTree = "<group>"; };
+		B7A2326A218B9DD200DBB6AF /* CompanySelectVC-tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanySelectVC-tableview.swift"; sourceTree = "<group>"; };
+		B7A2326C218BC7DB00DBB6AF /* PipelineSelect-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PipelineSelect-main.swift"; sourceTree = "<group>"; };
+		B7A2326F218BC81800DBB6AF /* PipelineSelect-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PipelineSelect-initUI.swift"; sourceTree = "<group>"; };
+		B7A23271218BC84A00DBB6AF /* PipelineSelect-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PipelineSelect-system.swift"; sourceTree = "<group>"; };
+		B7A23273218BC9C200DBB6AF /* PipelineSelect-tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PipelineSelect-tableview.swift"; sourceTree = "<group>"; };
+		B7A23275218BCBC900DBB6AF /* NewJob-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-logic.swift"; sourceTree = "<group>"; };
+		B7A23277218BEADB00DBB6AF /* FirebasePushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePushable.swift; sourceTree = "<group>"; };
 		BD33EE37217C02AC00B2A7B3 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		BD33EE39217C08A400B2A7B3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BD33EE3B217C096800B2A7B3 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -164,6 +186,7 @@
 				B76E350E217BE6CF00993E15 /* Resources */,
 				B76E350F217BE6D800993E15 /* Models */,
 				B76E351F217BF36400993E15 /* ViewControllers */,
+				B7A2327B218BED3000DBB6AF /* Protocols */,
 				B7313594217B970D00B9A094 /* Main.storyboard */,
 				B7313597217B970E00B9A094 /* Assets.xcassets */,
 				B7313599217B970E00B9A094 /* LaunchScreen.storyboard */,
@@ -311,6 +334,8 @@
 				B76E352E217BFC4000993E15 /* PipelineVC */,
 				B76E352B217BFC1100993E15 /* HudVC */,
 				B76E353D217BFD2900993E15 /* NewJobVC */,
+				B7A23263218B6C8C00DBB6AF /* CompanySelectVC */,
+				B7A2326E218BC7E000DBB6AF /* PipelineSelectVC */,
 				B76D55232182A12600D3ECFA /* TabBarController.swift */,
 			);
 			path = CoreApp;
@@ -321,9 +346,41 @@
 			children = (
 				B76E353B217BFD2600993E15 /* NewJobVC.swift */,
 				B76E355C217C002700993E15 /* NewJob-initUI.swift */,
+				B7A23275218BCBC900DBB6AF /* NewJob-logic.swift */,
 				B76E355E217C002E00993E15 /* NewJob-system.swift */,
 			);
 			path = NewJobVC;
+			sourceTree = "<group>";
+		};
+		B7A23263218B6C8C00DBB6AF /* CompanySelectVC */ = {
+			isa = PBXGroup;
+			children = (
+				B7A23261218B6C8800DBB6AF /* CompanySelectVC-main.swift */,
+				B7A23264218B6CD500DBB6AF /* CompanySelectVC-initUI.swift */,
+				B7A2326A218B9DD200DBB6AF /* CompanySelectVC-tableview.swift */,
+				B7A23266218B6CE900DBB6AF /* CompanySelectVC-system.swift */,
+				B7A23268218B9DB900DBB6AF /* CompanySearchCell.swift */,
+			);
+			path = CompanySelectVC;
+			sourceTree = "<group>";
+		};
+		B7A2326E218BC7E000DBB6AF /* PipelineSelectVC */ = {
+			isa = PBXGroup;
+			children = (
+				B7A2326C218BC7DB00DBB6AF /* PipelineSelect-main.swift */,
+				B7A2326F218BC81800DBB6AF /* PipelineSelect-initUI.swift */,
+				B7A23273218BC9C200DBB6AF /* PipelineSelect-tableview.swift */,
+				B7A23271218BC84A00DBB6AF /* PipelineSelect-system.swift */,
+			);
+			path = PipelineSelectVC;
+			sourceTree = "<group>";
+		};
+		B7A2327B218BED3000DBB6AF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B7A23277218BEADB00DBB6AF /* FirebasePushable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		BE7CD2E1EACB441B72AB433C /* Pods */ = {
@@ -423,6 +480,7 @@
 				"${BUILT_PRODUCTS_DIR}/Postal/Postal.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UIImageColors/UIImageColors.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -439,6 +497,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Postal.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -481,8 +540,11 @@
 				B76E3557217BFFFD00993E15 /* HUD-initUI.swift in Sources */,
 				B76E3527217BFBAE00993E15 /* EmailPermission-main.swift in Sources */,
 				B76E3549217BFF8100993E15 /* EmailPermission-system.swift in Sources */,
+				B7A23274218BC9C200DBB6AF /* PipelineSelect-tableview.swift in Sources */,
 				B71A20D52182B48D00D383ED /* Board.swift in Sources */,
 				B7313593217B970D00B9A094 /* EmailReadSampleVC.swift in Sources */,
+				B7A23269218B9DB900DBB6AF /* CompanySearchCell.swift in Sources */,
+				B7A23272218BC84A00DBB6AF /* PipelineSelect-system.swift in Sources */,
 				B780C5B0217C296200AA7C27 /* SignUp-logic.swift in Sources */,
 				B76E3553217BFFE500993E15 /* Pipeline-initUI.swift in Sources */,
 				B76E3534217BFCA800993E15 /* JobDetailVC.swift in Sources */,
@@ -494,16 +556,21 @@
 				B76E351B217BE86900993E15 /* Utils.swift in Sources */,
 				B76E3545217BFEE600993E15 /* Login-system.swift in Sources */,
 				B76E353C217BFD2600993E15 /* NewJobVC.swift in Sources */,
+				B7A23262218B6C8800DBB6AF /* CompanySelectVC-main.swift in Sources */,
 				B78AF181217DAAE400DE37C9 /* Login-logic.swift in Sources */,
 				B76E3543217BFE7D00993E15 /* EmailPermission-initUI.swift in Sources */,
 				B76E3524217BFB4C00993E15 /* SignUp-main.swift in Sources */,
+				B7A23270218BC81800DBB6AF /* PipelineSelect-initUI.swift in Sources */,
+				B7A23265218B6CD500DBB6AF /* CompanySelectVC-initUI.swift in Sources */,
 				B76D5522218292BE00D3ECFA /* Notifications.swift in Sources */,
 				B76E354F217BFFD200993E15 /* JobDetail-initUI.swift in Sources */,
 				B78AF183217DAB4000DE37C9 /* Contact.swift in Sources */,
 				B76E353F217BFE3900993E15 /* Login-initUI.swift in Sources */,
 				B7313591217B970D00B9A094 /* AppDelegate.swift in Sources */,
+				B7A2326B218B9DD200DBB6AF /* CompanySelectVC-tableview.swift in Sources */,
 				B76E3511217BE70C00993E15 /* GmailAPIHelper.swift in Sources */,
 				B78AF182217DAB3C00DE37C9 /* User.swift in Sources */,
+				B7A23278218BEADB00DBB6AF /* FirebasePushable.swift in Sources */,
 				B78AF184217DAB4200DE37C9 /* Event.swift in Sources */,
 				B74493AB2182CD2400E43BA5 /* FirebaseAPIClient.swift in Sources */,
 				B74493B22182E0C400E43BA5 /* CompanySearchResult.swift in Sources */,
@@ -512,6 +579,7 @@
 				B76E3513217BE74B00993E15 /* LocalData.swift in Sources */,
 				B76E355D217C002700993E15 /* NewJob-initUI.swift in Sources */,
 				B76E355F217C002E00993E15 /* NewJob-system.swift in Sources */,
+				B7A2326D218BC7DB00DBB6AF /* PipelineSelect-main.swift in Sources */,
 				B76E350C217BDAC900993E15 /* Email.swift in Sources */,
 				B76E3541217BFE6600993E15 /* SignUp-initUI.swift in Sources */,
 				B76E352D217BFC3D00993E15 /* PipelineVC.swift in Sources */,
@@ -521,7 +589,9 @@
 				B76E3559217C000500993E15 /* HUD-system.swift in Sources */,
 				B76D55242182A12600D3ECFA /* TabBarController.swift in Sources */,
 				B76E3539217BFCEF00993E15 /* SettingsVC.swift in Sources */,
+				B7A23276218BCBC900DBB6AF /* NewJob-logic.swift in Sources */,
 				B78AF185217DAB4500DE37C9 /* Job.swift in Sources */,
+				B7A23267218B6CE900DBB6AF /* CompanySelectVC-system.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

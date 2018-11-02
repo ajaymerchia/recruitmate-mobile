@@ -8,14 +8,52 @@
 
 import Foundation
 import UIKit
+import UIImageColors
 
 extension NewJobVC {
+    @objc func toCompanySearch() {
+        performSegue(withIdentifier: "new2Company", sender: self)
+    }
+    @objc func toPipelineSelect() {
+        performSegue(withIdentifier: "new2Stage", sender: self)
+    }
+    @objc func goBack() {
+        self.dismiss(animated: true, completion: {})
+    }
+    func setupManagers() {
+        alerts = AlertManager(view: self, stateRestoration: {
+            self.saveJob.isUserInteractionEnabled = true
+            self.hud?.dismiss()
+        })
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if let vc = segue.destination as? PipelineSelectVC {
+            vc.board = board
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if let selectedCompany = company {
+            image.image = selectedCompany.img!
+            goToCompanySearch.setTitle(selectedCompany.name, for: .normal)
+            goToCompanySearch.setTitleColor(Constants.RECRUITMATE_BLUE, for: .normal)
+            
+            print(selectedCompany)
+            print(selectedCompany.img?.getColors())
+            
+            companyColor = selectedCompany.img?.getColors().background
+            
+            
+//            goToCompanySearch.setBackgroundColor(color: companyColor!, forState: .normal)
+
+        }
         
+        if goToPipelineSelect != nil {
+            goToPipelineSelect.setTitle(swimlane, for: .normal)
+        } else {
+            swimlane = (self.presentingViewController as! TabBarController).currentBoard.swimlanes[0]
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

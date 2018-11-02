@@ -8,7 +8,16 @@
 
 import Foundation
 
-class Event {
+class Event: FirebasePushable {
+    func createPushable() -> [String : Any?] {
+        var values: [String : Any?] = [:]
+        values["name"] = name
+        values["date"] = date
+        values["time"] = time
+        values["location"] = location
+        return values
+    }
+    
     var name: String!
     var date: String!
     var time: String!

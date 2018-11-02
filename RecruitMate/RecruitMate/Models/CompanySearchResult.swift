@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class CompanySearchResult {
     var name: String!
-    var img: UIImage!
+    var img: UIImage?
     var link: String!
     
     init(name: String, link: String, img: UIImage) {

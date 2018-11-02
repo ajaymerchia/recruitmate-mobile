@@ -103,10 +103,44 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Oht-PU-UwA"/>
                     </view>
+                    <connections>
+                        <segue destination="wRg-f5-9XK" kind="presentation" identifier="new2Stage" id="Rmi-Sr-PgQ"/>
+                        <segue destination="eoh-3P-r81" kind="presentation" identifier="new2Company" id="ibL-rP-lIq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdV-w7-pP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5334" y="-1103"/>
+        </scene>
+        <!--Company SelectVC-->
+        <scene sceneID="qNP-2z-B9T">
+            <objects>
+                <viewController id="eoh-3P-r81" customClass="CompanySelectVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jbs-Wn-qWe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xwD-Yi-sr3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oid-Ba-imp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6446" y="-1868"/>
+        </scene>
+        <!--Pipeline SelectVC-->
+        <scene sceneID="PUr-09-YId">
+            <objects>
+                <viewController id="wRg-f5-9XK" customClass="PipelineSelectVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UFU-ty-LNq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PAI-2D-B9Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAm-cl-NAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6447" y="-1103"/>
         </scene>
         <!--Item-->
         <scene sceneID="EDf-JS-ij1">

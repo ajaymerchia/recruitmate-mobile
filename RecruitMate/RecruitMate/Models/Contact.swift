@@ -8,7 +8,15 @@
 
 import UIKit
 
-class Contact {
+class Contact: FirebasePushable {
+    func createPushable() -> [String : Any?] {
+        var values: [String : Any?] = [:]
+        values["name"] = name
+        values["email"] = email
+        values["position"] = position
+        return values
+    }
+    
     var name: String!
     var email: String!
     var position: String!

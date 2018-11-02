@@ -9,36 +9,68 @@
 import Foundation
 import UIKit
 
-class Job {
- 
+class Job: FirebasePushable {
+    func createPushable() -> [String : Any?] {
+        var values: [String : Any?] = [:]
+        values["companyName"] = companyName
+        values["companyPosition"] = companyPosition
+        values["companyLogoLink"] = companyLogoLink
+        values["companyColor"] = companyColor?.hexValue()
+        
+        values["applicationURL"] = applicationURL
+        values["additionalInfo"] = additionalInfo
+        
+        values["pipelineStatus"] = pipelineStatus
+        values["HUDStatus"] = HUDStatus
+        
+        if let activeEvents = events {
+            var pushableEvents: [[String: Any?]] = []
+            for event in activeEvents {
+                pushableEvents.append(event.createPushable())
+            }
+            values["events"] = pushableEvents
+        }
+        
+        if let activeContacts = contacts {
+            var pushableContacts: [[String: Any?]] = []
+            for contact in activeContacts {
+                pushableContacts.append(contact.createPushable())
+            }
+            values["contacts"] = pushableContacts
+        }
+        
+        values["tasks"] = tasks
+        return values
+    }
+    
+    var id: String!
     var companyName: String!
-    var companyPosition: String!
-    var companyStatus: String!
-    var HUDStatus: String!
-    var applicationURL: String!
-    var additionalInfo: String!
+    var companyPosition: String?
+    var pipelineStatus: String?
+    var HUDStatus: String?
+    var applicationURL: String?
+    var additionalInfo: String?
+    var companyLogo: UIImage?
+    var companyLogoLink: String?
+    var companyColor: UIColor?
     
-    var tasks: [String]!
+    var events: [Event]?
+    var contacts: [Contact]?
+    var tasks: [String]?
 
-    var companyLogo: UIImage!
-    
-    var companyColor: UIColor!
-    
-    var event: Event!
-    
-    var recruiterContact: Contact!
     
     // Most basic information.
     init(companyName: String) {
+        self.id = Utils.uuid()
         self.companyName = companyName
     }
     
-    init(companyName: String, companyPosition: String, companyStatus: String, HUDStatus: String, companyLogo: UIImage, companyColor: UIColor, applicationURL: String, additionalInfo: String) {
+    init(companyName: String, companyPosition: String, pipelineStatus: String, HUDStatus: String, companyLogo: UIImage, companyColor: UIColor, applicationURL: String, additionalInfo: String) {
         self.companyName = companyName
         self.companyLogo = companyLogo
         self.companyColor = companyColor
         self.companyPosition = companyPosition
-        self.companyStatus = companyStatus
+        self.pipelineStatus = pipelineStatus
         self.HUDStatus = HUDStatus
         self.applicationURL = applicationURL
         self.additionalInfo = additionalInfo
