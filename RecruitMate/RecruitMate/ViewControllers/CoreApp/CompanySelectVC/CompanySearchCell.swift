@@ -16,12 +16,13 @@ class CompanySearchCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        name = UILabel(frame: CGRect(x: Constants.MARGINAL_PADDING, y: Constants.MARGINAL_PADDING, width: contentView.frame.width, height: 80 - Constants.MARGINAL_PADDING*2))
+        name = UILabel(frame: CGRect(x: 5 * Constants.MARGINAL_PADDING, y: Constants.MARGINAL_PADDING, width: contentView.frame.width, height: 60 - Constants.MARGINAL_PADDING * 2))
         name.text = "sample"
+        name.font = Constants.TEXT_FONT
         contentView.addSubview(name)
         
         let logoWidth:CGFloat = 40
-        logo = UIImageView(frame: CGRect(x: contentView.frame.width - Constants.MARGINAL_PADDING - logoWidth, y: Constants.MARGINAL_PADDING, width: logoWidth, height: logoWidth))
+        logo = UIImageView(frame: CGRect(x: contentView.frame.width - 5 * Constants.MARGINAL_PADDING - logoWidth, y: Constants.MARGINAL_PADDING, width: logoWidth, height: logoWidth))
         logo.image = UIImage(named: "logo-light")
         logo.contentMode = .scaleAspectFit
         logo.clipsToBounds = true

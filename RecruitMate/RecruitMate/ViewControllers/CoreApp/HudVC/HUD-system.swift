@@ -14,6 +14,10 @@ extension HudVC {
         self.tabBarController?.performSegue(withIdentifier: "main2NewJob", sender: self)
     }
     
+    @objc func goToSettings() {
+        self.tabBarController?.performSegue(withIdentifier: "main2Settings", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }

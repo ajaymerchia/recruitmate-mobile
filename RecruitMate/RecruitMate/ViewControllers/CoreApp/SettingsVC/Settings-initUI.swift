@@ -14,4 +14,19 @@ extension SettingsVC {
     func initUI() {
         
     }
+    func initNav() {
+        let navbar = UINavigationBar(frame: CGRect(x: 0, y: Constants.PADDING, width: view.frame.width, height: 50));
+        navbar.tintColor = Constants.RECRUITMATE_BLUE
+        navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navbar.shadowImage = UIImage()
+        navbar.isTranslucent = true
+        
+        self.view.addSubview(navbar)
+        
+        let navItem = UINavigationItem(title: "")
+        let navBarbutton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.stop, target: self, action: #selector(goBack))
+        navItem.leftBarButtonItem = navBarbutton
+        
+        navbar.items = [navItem]
+    }
 }
