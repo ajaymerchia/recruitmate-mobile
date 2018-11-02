@@ -10,9 +10,12 @@ import UIKit
 
 class PipelineVC: UIViewController {
 
+    var swimlaneHolder: UIScrollView!
+    var swimlanes: [Swimlane] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initUI()
         // Do any additional setup after loading the view.
     }
     

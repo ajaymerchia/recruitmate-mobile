@@ -30,7 +30,9 @@ class NewJobVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        swimlane = board.swimlanes[0]
+        if swimlane == nil {
+            swimlane = board.swimlanes[0]
+        }
         setupManagers()
         initUI()
         // Do any additional setup after loading the view.

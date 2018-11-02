@@ -142,11 +142,11 @@
             </objects>
             <point key="canvasLocation" x="6447" y="-1103"/>
         </scene>
-        <!--Item-->
+        <!--What's Next-->
         <scene sceneID="EDf-JS-ij1">
             <objects>
                 <navigationController id="3Gm-e8-mcj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="e5D-O9-Cb8"/>
+                    <tabBarItem key="tabBarItem" title="What's Next" image="hud" id="e5D-O9-Cb8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GYM-a7-qUh">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -213,11 +213,11 @@
             </objects>
             <point key="canvasLocation" x="4378" y="28"/>
         </scene>
-        <!--Item-->
+        <!--Pipeline-->
         <scene sceneID="TyM-e4-5Ch">
             <objects>
                 <navigationController id="lmt-Nl-g5T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="yjd-RC-2YM"/>
+                    <tabBarItem key="tabBarItem" title="Pipeline" image="pipeline" id="yjd-RC-2YM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ht1-Aj-7Qy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -250,6 +250,10 @@
             <point key="canvasLocation" x="6270" y="357"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hud" width="37.5" height="37.5"/>
+        <image name="pipeline" width="36" height="36"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Ws-2Z-bgK"/>
     </inferredMetricsTieBreakers>

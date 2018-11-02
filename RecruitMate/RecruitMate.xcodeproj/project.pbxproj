@@ -69,6 +69,9 @@
 		B7A23274218BC9C200DBB6AF /* PipelineSelect-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23273218BC9C200DBB6AF /* PipelineSelect-tableview.swift */; };
 		B7A23276218BCBC900DBB6AF /* NewJob-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23275218BCBC900DBB6AF /* NewJob-logic.swift */; };
 		B7A23278218BEADB00DBB6AF /* FirebasePushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23277218BEADB00DBB6AF /* FirebasePushable.swift */; };
+		B7A2327D218C023400DBB6AF /* Swimlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2327C218C023400DBB6AF /* Swimlane.swift */; };
+		B7A2327F218C0A7E00DBB6AF /* Swimlane-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2327E218C0A7E00DBB6AF /* Swimlane-initUI.swift */; };
+		B7A23281218C0D1600DBB6AF /* Swimlane-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23280218C0D1600DBB6AF /* Swimlane-system.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +137,9 @@
 		B7A23273218BC9C200DBB6AF /* PipelineSelect-tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PipelineSelect-tableview.swift"; sourceTree = "<group>"; };
 		B7A23275218BCBC900DBB6AF /* NewJob-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-logic.swift"; sourceTree = "<group>"; };
 		B7A23277218BEADB00DBB6AF /* FirebasePushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePushable.swift; sourceTree = "<group>"; };
+		B7A2327C218C023400DBB6AF /* Swimlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swimlane.swift; sourceTree = "<group>"; };
+		B7A2327E218C0A7E00DBB6AF /* Swimlane-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swimlane-initUI.swift"; sourceTree = "<group>"; };
+		B7A23280218C0D1600DBB6AF /* Swimlane-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swimlane-system.swift"; sourceTree = "<group>"; };
 		BD33EE37217C02AC00B2A7B3 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		BD33EE39217C08A400B2A7B3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BD33EE3B217C096800B2A7B3 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -182,11 +188,11 @@
 			isa = PBXGroup;
 			children = (
 				B7313590217B970D00B9A094 /* AppDelegate.swift */,
-				B76E351E217BF34F00993E15 /* Helpers */,
 				B76E350E217BE6CF00993E15 /* Resources */,
+				B76E351E217BF34F00993E15 /* Helpers */,
 				B76E350F217BE6D800993E15 /* Models */,
-				B76E351F217BF36400993E15 /* ViewControllers */,
 				B7A2327B218BED3000DBB6AF /* Protocols */,
+				B76E351F217BF36400993E15 /* ViewControllers */,
 				B7313594217B970D00B9A094 /* Main.storyboard */,
 				B7313597217B970E00B9A094 /* Assets.xcassets */,
 				B7313599217B970E00B9A094 /* LaunchScreen.storyboard */,
@@ -292,6 +298,9 @@
 				B76E352C217BFC3D00993E15 /* PipelineVC.swift */,
 				B76E3552217BFFE500993E15 /* Pipeline-initUI.swift */,
 				B76E3554217BFFED00993E15 /* Pipeline-system.swift */,
+				B7A2327C218C023400DBB6AF /* Swimlane.swift */,
+				B7A2327E218C0A7E00DBB6AF /* Swimlane-initUI.swift */,
+				B7A23280218C0D1600DBB6AF /* Swimlane-system.swift */,
 			);
 			path = PipelineVC;
 			sourceTree = "<group>";
@@ -556,6 +565,8 @@
 				B76E351B217BE86900993E15 /* Utils.swift in Sources */,
 				B76E3545217BFEE600993E15 /* Login-system.swift in Sources */,
 				B76E353C217BFD2600993E15 /* NewJobVC.swift in Sources */,
+				B7A2327D218C023400DBB6AF /* Swimlane.swift in Sources */,
+				B7A2327F218C0A7E00DBB6AF /* Swimlane-initUI.swift in Sources */,
 				B7A23262218B6C8800DBB6AF /* CompanySelectVC-main.swift in Sources */,
 				B78AF181217DAAE400DE37C9 /* Login-logic.swift in Sources */,
 				B76E3543217BFE7D00993E15 /* EmailPermission-initUI.swift in Sources */,
@@ -575,6 +586,7 @@
 				B74493AB2182CD2400E43BA5 /* FirebaseAPIClient.swift in Sources */,
 				B74493B22182E0C400E43BA5 /* CompanySearchResult.swift in Sources */,
 				B76E354B217BFF9900993E15 /* Settings-initUI.swift in Sources */,
+				B7A23281218C0D1600DBB6AF /* Swimlane-system.swift in Sources */,
 				B76E351D217BF05100993E15 /* LayoutManager.swift in Sources */,
 				B76E3513217BE74B00993E15 /* LocalData.swift in Sources */,
 				B76E355D217C002700993E15 /* NewJob-initUI.swift in Sources */,

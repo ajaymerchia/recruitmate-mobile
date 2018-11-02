@@ -12,19 +12,25 @@ class TabBarController: UITabBarController {
 
     var currentUser: User!
     var currentBoard: Board!
+    var addFromSwimlane: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         debugPrint("Successfully Loaded Tab Bar Controller")
         debugPrint("Logged in as \(currentUser.fullname)")
-        debugPrint("Showing Board: \(currentBoard.name)")
+        debugPrint("Showing Board: \(String(describing: currentBoard.name))")
         // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let target = segue.destination as? NewJobVC {
             target.board = currentBoard
+            if let swim = addFromSwimlane {
+                target.swimlane = swim
+                addFromSwimlane = nil
+            }
         }
+        
     }
  
 }

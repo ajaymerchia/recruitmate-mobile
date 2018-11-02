@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 extension PipelineVC {
+    @objc func goToNewJob() {
+        self.tabBarController?.performSegue(withIdentifier: "main2NewJob", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }

@@ -12,6 +12,34 @@ import ChameleonFramework
 
 extension PipelineVC {
     func initUI() {
+        initNav()
+        initScrollView()
+    }
+    func initNav() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(goToNewJob))
+    }
+    func initScrollView() {
+        swimlaneHolder = UIScrollView(frame: LayoutManager.belowCentered(elementAbove: (self.navigationController?.navigationBar)!, padding: 0, width: view.frame.width, height: (self.tabBarController?.tabBar.frame.minY)! - (self.navigationController?.navigationBar.frame.maxY)!))
+        swimlaneHolder.backgroundColor = .flatWhite
+        
+        let swimlaneNames: [String] = (self.tabBarController as! TabBarController).currentBoard.swimlanes
+        let sizeOfSwimlane: CGFloat = view.frame.width * 0.75
+        let numSwimlanes = CGFloat(swimlaneNames.count)
+        swimlaneHolder.contentSize = CGSize(width: (numSwimlanes * sizeOfSwimlane + (numSwimlanes-1) * Constants.PADDING ), height: swimlaneHolder.frame.height)
+        
+        view.addSubview(swimlaneHolder)
+        var offset: CGFloat = 0
+        
+        for name in swimlaneNames {
+            swimlanes.append(Swimlane(frame: CGRect(x: offset, y: swimlaneHolder.frame.minY, width: sizeOfSwimlane, height: swimlaneHolder.frame.height), name: name, swimlaneParent: self))
+            offset += (sizeOfSwimlane + Constants.PADDING)
+        }
+        
+        for swimlane in swimlanes {
+            swimlaneHolder.addSubview(swimlane)
+        }
+        
         
     }
+    
 }

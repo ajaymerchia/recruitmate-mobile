@@ -39,20 +39,15 @@ extension NewJobVC {
             goToCompanySearch.setTitle(selectedCompany.name, for: .normal)
             goToCompanySearch.setTitleColor(Constants.RECRUITMATE_BLUE, for: .normal)
             
-            print(selectedCompany)
-            print(selectedCompany.img?.getColors())
-            
             companyColor = selectedCompany.img?.getColors().background
-            
-            
-//            goToCompanySearch.setBackgroundColor(color: companyColor!, forState: .normal)
-
         }
         
         if goToPipelineSelect != nil {
             goToPipelineSelect.setTitle(swimlane, for: .normal)
         } else {
-            swimlane = (self.presentingViewController as! TabBarController).currentBoard.swimlanes[0]
+            if swimlane == nil {
+                swimlane = (self.presentingViewController as! TabBarController).currentBoard.swimlanes[0]
+            }
         }
     }
     
