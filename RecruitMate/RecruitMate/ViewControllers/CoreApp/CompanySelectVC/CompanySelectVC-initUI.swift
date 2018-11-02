@@ -39,7 +39,7 @@ extension CompanySelectVC {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .white
-        tableView.rowHeight = 80
+        tableView.rowHeight = 60
         tableView.showsVerticalScrollIndicator = false
         
         view.addSubview(tableView)

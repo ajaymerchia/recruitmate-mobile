@@ -45,7 +45,7 @@ extension NewJobVC {
         view.addSubview(image)
     }
     func initDataEntry() {
-        let gutter:CGFloat = 2 * Constants.PADDING
+        let gutter:CGFloat = 1.6 * Constants.PADDING
         let width:CGFloat = view.frame.width - 2 * gutter
         let height:CGFloat = 60
         

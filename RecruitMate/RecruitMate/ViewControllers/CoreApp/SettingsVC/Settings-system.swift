@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 extension SettingsVC {
+    @objc func goBack() {
+        self.dismiss(animated: true, completion: {})
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }

@@ -1,18 +1,18 @@
 //
-//  CompanySearchCell.swift
+//  JobDisplayCell.swift
 //  RecruitMate
 //
-//  Created by Ajay Raj Merchia on 11/1/18.
+//  Created by Isabella Lau on 11/1/18.
 //  Copyright © 2018 Ajay Raj Merchia. All rights reserved.
 //
 
 import UIKit
 
-class CompanySearchCell: UITableViewCell {
-
+class JobDisplayCell: UITableViewCell {
+    
     var name: UILabel!
     var logo: UIImageView!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,27 +32,12 @@ class CompanySearchCell: UITableViewCell {
         contentView.addSubview(logo)
     }
     
-    func initializeCellFrom(result: CompanySearchResult) {
-        name.text = result.name
-        
-        // FIXME: if the cell's result changes, we need to not render this photo
-        guard let loadedLogo = result.img else {
-            Utils.getImageFrom(url: "https://logo.clearbit.com/\(result.link!)", defaultImg: UIImage(named: "white-placeholder")!) { (img) in
-                result.img = img
-                self.logo.image = img
-            }
-            return
-        }
-        
-        self.logo.image = loadedLogo
-    }
     
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
         
     }
-
+    
 }

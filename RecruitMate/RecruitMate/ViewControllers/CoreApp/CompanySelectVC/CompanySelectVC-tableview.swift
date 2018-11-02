@@ -37,7 +37,7 @@ extension CompanySelectVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 60
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +49,7 @@ extension CompanySelectVC: UITableViewDelegate, UITableViewDataSource {
         
         // Initialize Cell
         cell.awakeFromNib()
-        cell.intializeCellFrom(result: results[indexPath.row])
+        cell.initializeCellFrom(result: results[indexPath.row])
         
         
         return cell
