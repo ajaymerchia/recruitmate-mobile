@@ -11,7 +11,7 @@ import UIKit
 class JobDetailVC: UIViewController {
 
     var job: Job!
-    var companyName: UILabel!
+    var companyPosition: UILabel!
     var img: UIImageView!
     
     override func viewDidLoad() {
