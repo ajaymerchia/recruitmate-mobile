@@ -112,7 +112,7 @@ class Job: FirebasePushable {
 
         
         
-        self.tasks = firebaseStruct["task"] as? NSArray as? [String]
+//        self.tasks = firebaseStruct["task"] as? NSArray as? [String]
         
     }
     
