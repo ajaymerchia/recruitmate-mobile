@@ -57,7 +57,7 @@ class Job: FirebasePushable {
     
     var events: [Event]?
     var contacts: [Contact]?
-    var tasks: [String]?
+    var tasks: [Task]?
 
     
     // Most basic information.
