@@ -13,6 +13,7 @@ import ChameleonFramework
 extension JobDetailVC {
     func initUI() {
         initHeader()
+        initTasks()
 //        initQuickTaskAdder()
     }
     
@@ -45,11 +46,23 @@ extension JobDetailVC {
         view.addSubview(urlButton)
         //Utils.openURL(<#T##urlString: String##String#>)
 //        searchWebButton.addTarget(self, action: #selector(gotoWebsite), for: .touchUpInside)
-   
-        
-        
     }
     
-    
+    func initTasks() {
+        tasksTitle = UILabel(frame: LayoutManager.belowCentered(elementAbove: urlButton, padding: Constants.PADDING, width: view.frame.width, height: 60))
+        tasksTitle.text = "Tasks"
+        tasksTitle.font = Constants.SUBTITLE_FONT
+        view.addSubview(tasksTitle)
+        
+        tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: tasksTitle, padding: 0, width: view.frame.width, height: view.frame.maxY - tasksTitle.frame.maxY))
+        tableView.register(TaskCell.self, forCellReuseIdentifier: "taskCell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.backgroundColor = .flatWhite
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        
+        view.addSubview(tableView)
+    }
     
 }
