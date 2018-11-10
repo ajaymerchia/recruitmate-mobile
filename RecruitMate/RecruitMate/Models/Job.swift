@@ -23,29 +23,28 @@ class Job: FirebasePushable {
         values["pipelineStatus"] = pipelineStatus
         values["HUDStatus"] = HUDStatus
         
-        if let activeEvents = events {
-            var pushableEvents: [String: [String: Any?]] = [:]
-            for event in activeEvents {
-                pushableEvents[event.id] = event.createPushable()
-            }
-            values["events"] = pushableEvents
-        }
+//        if let activeEvents = events {
+//            var pushableEvents: [String: [String: Any?]] = [:]
+//            for event in activeEvents {
+//                pushableEvents[event.id] = event.createPushable()
+//            }
+//            values["events"] = pushableEvents
+//        }
         
-        if let activeContacts = contacts {
-            var pushableContacts: [String: [String: Any?]] = [:]
-            for contact in activeContacts {
-                pushableContacts[contact.id] = contact.createPushable()
-            }
-            values["contacts"] = pushableContacts
-        }
         
-        if let activeTasks = tasks {
-            var pushableTasks: [String: [String: Any?]] = [:]
-            for task in activeTasks {
-                pushableTasks[task.id] = task.createPushable()
-            }
-            values["tasks"] = pushableTasks
+        var pushableContacts: [String: [String: Any?]] = [:]
+        for contact in contacts {
+            pushableContacts[contact.id] = contact.createPushable()
         }
+        values["contacts"] = pushableContacts
+
+        
+        var pushableTasks: [String: [String: Any?]] = [:]
+        for task in tasks {
+            pushableTasks[task.id] = task.createPushable()
+        }
+        values["tasks"] = pushableTasks
+        
         return values
     }
     
@@ -61,9 +60,9 @@ class Job: FirebasePushable {
     var companyLogoLink: String?
     var companyColor: UIColor?
     
-    var events: [Event]?
-    var contacts: [Contact]?
-    var tasks: [Task]?
+//    var events: [Event]!
+    var contacts: [Contact]!
+    var tasks: [Task]!
 
     
     // Most basic information.
@@ -108,14 +107,16 @@ class Job: FirebasePushable {
         
         self.HUDStatus = firebaseStruct["HUDStatus"] as? String
         
-        // TODO
-        if let storedEvents = firebaseStruct["events"] as? NSDictionary as? [String: [String: Any?]]{
-            self.events = []
-            for (id, record) in storedEvents {
-                self.events?.append(Event(key: id, firebaseStruct: record))
-            }
-            
-        }
+//        // TODO
+//        self.events = []
+//        if let storedEvents = firebaseStruct["events"] as? NSDictionary as? [String: [String: Any?]]{
+//            for (id, record) in storedEvents {
+//                self.events?.append(Event(key: id, firebaseStruct: record))
+//            }
+//
+//        }
+        
+        self.contacts = []
         if let storedContacts = firebaseStruct["contacts"] as? NSDictionary as? [String: [String: Any?]]{
             self.contacts = []
             for (id, record) in storedContacts {
@@ -123,12 +124,22 @@ class Job: FirebasePushable {
             }
         }
         
+        self.tasks = []
         if let storedTasks = firebaseStruct["Tasks"] as? NSDictionary as? [String: [String: Any?]]{
-            self.tasks = []
             for (id, record) in storedTasks {
                 self.tasks?.append(Task(key: id, firebaseStruct: record))
             }
         }
+    }
+    
+    func addTask(_ t: Task) {
+        self.tasks.append(t)
+    }
+//    func addEvent(_ e: Event) {
+//        self.events.append(e)
+//    }
+    func addContact(_ c: Contact) {
+        self.contacts.append(c)
     }
     
     
