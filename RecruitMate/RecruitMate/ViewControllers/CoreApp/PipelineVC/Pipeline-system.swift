@@ -15,7 +15,10 @@ extension PipelineVC {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if let vc = segue.destination as? JobDetailVC {
+            vc.job = jobForDetail
+            jobForDetail = nil
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

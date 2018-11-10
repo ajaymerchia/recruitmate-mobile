@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import JGProgressHUD
 
 class AlertManager {
     private var srcView:UIViewController!
@@ -25,6 +26,13 @@ class AlertManager {
         alert.addAction(defaultAction)
         srcView.present(alert, animated: true, completion: nil)
         callback?()
+    }
+    
+    func startProgressHud(withMsg:String) -> JGProgressHUD {
+        let hud = JGProgressHUD(style: .light)
+        hud.textLabel.text = withMsg
+        hud.show(in: self.srcView.view)
+        return hud
     }
     
     

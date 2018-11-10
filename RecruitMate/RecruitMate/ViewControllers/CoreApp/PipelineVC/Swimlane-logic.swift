@@ -1,5 +1,5 @@
 //
-//  Swimlane-system.swift
+//  Swimlane-logic.swift
 //  RecruitMate
 //
 //  Created by Ajay Raj Merchia on 11/1/18.
@@ -16,4 +16,5 @@ extension Swimlane {
             tabVC.performSegue(withIdentifier: "main2NewJob", sender: self)
         }
     }
+    
 }

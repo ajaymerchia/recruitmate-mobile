@@ -171,7 +171,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="24g-1A-4st"/>
                     <connections>
-                        <segue destination="E8Q-sa-eow" kind="show" id="xq2-1t-KQV"/>
+                        <segue destination="E8Q-sa-eow" kind="show" identifier="hud2detail" id="xq2-1t-KQV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mvz-oH-lDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,7 +242,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Gqf-jK-fOF"/>
                     <connections>
-                        <segue destination="E8Q-sa-eow" kind="show" id="2Ws-2Z-bgK"/>
+                        <segue destination="E8Q-sa-eow" kind="show" identifier="pipe2detail" id="2Ws-2Z-bgK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2L-IR-a1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,7 +251,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hud" width="37.5" height="37.5"/>
+        <image name="hud" width="36" height="36"/>
         <image name="pipeline" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>

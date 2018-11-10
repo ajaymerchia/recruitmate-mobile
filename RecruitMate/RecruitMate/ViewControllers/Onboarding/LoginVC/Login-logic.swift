@@ -14,7 +14,7 @@ extension LoginVC {
 
     @objc func getEmailLogin() {
         advanceToLogin.isUserInteractionEnabled = false
-        hud = Utils.startProgressHud(inView: view, withMsg: "Logging in")
+        hud = alerts.startProgressHud(withMsg: "Logging in")
         
         guard let email = emailField.text?.lowercased() else {
             loginError(code: 1)
@@ -48,7 +48,7 @@ extension LoginVC {
                     self.loginError(code: 3)
                     return
                 }
-                FirebaseAPIClient.getUserRecordFrom(uid: uid, completion: { (user) in
+                FirebaseAPIClient.getUserBareBones(uid: uid, completion: { (user) in
                     
                     guard let absoluteUser = user else {
                         self.loginError(code: 3)
@@ -69,7 +69,7 @@ extension LoginVC {
         guard let loggedInUser = Auth.auth().currentUser else {
             return
         }
-        FirebaseAPIClient.getUserRecordFrom(uid: loggedInUser.uid) { (user) in
+        FirebaseAPIClient.getUserBareBones(uid: loggedInUser.uid) { (user) in
             self.pendingUser = user
             self.pendingLogin = true
             self.performSegue(withIdentifier: "login2HUD", sender: self)

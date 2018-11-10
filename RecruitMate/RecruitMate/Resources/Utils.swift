@@ -16,7 +16,6 @@ class Utils {
         return UUID().uuidString
     }
     
-    
     // URL Stuff
     static func makeURLSafe(_ url: String) -> String{
         return url.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
@@ -55,12 +54,7 @@ class Utils {
     
     
     // Loading Stuff
-    static func startProgressHud(inView: UIView, withMsg:String) -> JGProgressHUD {
-        let hud = JGProgressHUD(style: .light)
-        hud.textLabel.text = withMsg
-        hud.show(in: inView)
-        return hud
-    }
+    
     
     
     // Time Management Stuff

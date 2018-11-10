@@ -25,8 +25,19 @@ class Board: Equatable {
         id = uuid
     }
     
-    init(firebaseRecord: [String: Any?]) {
-        //TODO: Implement JSON -> Job arrya parser
+    init(key: String, firebaseStruct: [String: Any?]) {
+        id = key
+        name = (firebaseStruct["title"] as! String)
+        swimlanes = (firebaseStruct["swimlanes"] as! NSArray) as! [String]
+        
+        if let rawJobs = firebaseStruct["jobs"] as? NSDictionary as? [String: [String: Any?]] {
+            for (jobID, jobData) in rawJobs {
+                debugPrint(jobID, jobData)
+                self.jobs.append(Job(key: jobID, firebaseStruct: jobData))
+            }
+        }
+        
+        
     }
     
     func addJob(_ job: Job) {

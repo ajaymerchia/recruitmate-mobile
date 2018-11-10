@@ -45,8 +45,9 @@ class Job: FirebasePushable {
     
     var id: String!
     var companyName: String!
+    var pipelineStatus: String!
+    
     var companyPosition: String?
-    var pipelineStatus: String?
     var HUDStatus: String?
     var applicationURL: String?
     var additionalInfo: String?
@@ -60,9 +61,10 @@ class Job: FirebasePushable {
 
     
     // Most basic information.
-    init(companyName: String) {
+    init(companyName: String, status: String) {
         self.id = Utils.uuid()
         self.companyName = companyName
+        self.pipelineStatus = status
     }
     
     init(companyName: String, companyPosition: String, pipelineStatus: String, HUDStatus: String, companyLogo: UIImage, companyColor: UIColor, applicationURL: String, additionalInfo: String) {
@@ -74,6 +76,44 @@ class Job: FirebasePushable {
         self.HUDStatus = HUDStatus
         self.applicationURL = applicationURL
         self.additionalInfo = additionalInfo
+    }
+    
+    init(key: String, firebaseStruct: [String: Any?]) {
+        self.id = key
+        self.companyName = (firebaseStruct["companyName"] as! String)
+        self.pipelineStatus = (firebaseStruct["pipelineStatus"] as! String)
+        
+        self.companyPosition = firebaseStruct["companyPosition"] as? String
+        self.companyLogoLink = firebaseStruct["companyLogoLink"] as? String
+        if let url = self.companyLogoLink {
+            Utils.getImageFrom(url: url, defaultImg: .placeholder) { (img) in
+                self.companyLogo = img
+            }
+            
+        }
+        
+        
+        if let colorHex = firebaseStruct["companyColor"] as? String {
+            self.companyColor = UIColor(hexString: colorHex)
+        }
+        
+        self.applicationURL = firebaseStruct["applicationURL"] as? String
+        self.additionalInfo = firebaseStruct["additionalInfo"] as? String
+        
+        self.HUDStatus = firebaseStruct["HUDStatus"] as? String
+        
+        // TODO
+//        if let storedEvents = firebaseStruct["events"] as? NSArray as [[String: Any?]]{
+//
+//        }
+//        if let storedContacts = firebaseStruct["contacts"] as? NSArray as [[String: Any?]]{
+//
+//        }
+
+        
+        
+        self.tasks = firebaseStruct["task"] as? NSArray as? [String]
+        
     }
     
     

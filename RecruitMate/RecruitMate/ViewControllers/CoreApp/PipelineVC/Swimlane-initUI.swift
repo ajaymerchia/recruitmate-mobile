@@ -27,8 +27,25 @@ extension Swimlane {
         addJob.setTitleColor(Constants.RECRUITMATE_BLUE, for: .normal)
         addJob.addTarget(self, action: #selector(goToNewJob), for: .touchUpInside)
         applyFormatting(component: addJob)
-     
         self.addSubview(addJob)
+        
+        numJobs = UILabel(frame: LayoutManager.belowCentered(elementAbove: addJob, padding: Constants.MARGINAL_PADDING, width: self.frame.width, height: 25))
+        numJobs.font = Constants.TEXT_FONT
+        numJobs.textColor = Constants.RECRUITMATE_BLUE
+        numJobs.text = "\(jobs.count) in this lane"
+        numJobs.textAlignment = .center
+        self.addSubview(numJobs)
+        
+        tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: numJobs, padding: 0, width: self.frame.width, height: self.frame.maxY - numJobs.frame.maxY))
+        tableView.register(JobCard.self, forCellReuseIdentifier: "jobCard")
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.backgroundColor = .flatWhite
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+
+        self.addSubview(tableView)
+        
         
     }
     
