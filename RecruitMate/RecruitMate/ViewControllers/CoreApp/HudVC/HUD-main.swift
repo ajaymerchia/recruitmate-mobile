@@ -13,6 +13,7 @@ class HudVC: UIViewController {
     var todayLabel: UILabel!
     var tomorrowLabel: UILabel!
     var thisweekLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class HudVC: UIViewController {
         addTodayLabel()
         addTomorrowLabel()
         addThisWeekLabel()
+       
         // Do any additional setup after loading the view.
     }
     

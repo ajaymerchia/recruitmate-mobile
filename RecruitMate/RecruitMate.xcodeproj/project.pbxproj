@@ -75,6 +75,7 @@
 		B7A2327D218C023400DBB6AF /* Swimlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2327C218C023400DBB6AF /* Swimlane.swift */; };
 		B7A2327F218C0A7E00DBB6AF /* Swimlane-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2327E218C0A7E00DBB6AF /* Swimlane-initUI.swift */; };
 		B7A23281218C0D1600DBB6AF /* Swimlane-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23280218C0D1600DBB6AF /* Swimlane-logic.swift */; };
+		CF40C3F521976D62007030E6 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40C3F421976D62007030E6 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +151,7 @@
 		BD33EE39217C08A400B2A7B3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BD33EE3B217C096800B2A7B3 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		BD33EE3D217C0FA700B2A7B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CF40C3F421976D62007030E6 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = RecruitMate/Models/Task.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				B71A20D42182B48D00D383ED /* Board.swift */,
 				BD33EE39217C08A400B2A7B3 /* Event.swift */,
 				BD33EE3B217C096800B2A7B3 /* Contact.swift */,
+				CF40C3F421976D62007030E6 /* Task.swift */,
 				BD33EE3D217C0FA700B2A7B3 /* User.swift */,
 			);
 			path = Models;
@@ -609,6 +612,7 @@
 				B76E352D217BFC3D00993E15 /* PipelineVC.swift in Sources */,
 				B76E3517217BE79000993E15 /* AlertManager.swift in Sources */,
 				B76E3547217BFF6F00993E15 /* SignUp-system.swift in Sources */,
+				CF40C3F521976D62007030E6 /* Task.swift in Sources */,
 				B76E350A217BCD4F00993E15 /* Constants.swift in Sources */,
 				B76E3559217C000500993E15 /* HUD-system.swift in Sources */,
 				B76D55242182A12600D3ECFA /* TabBarController.swift in Sources */,
