@@ -13,17 +13,28 @@ class Task {
         var values: [String : Any?] = [:]
         values["title"] = title
         values["description"] = description
-        values["deadline"] = deadline
+        values["deadline"] = deadline?.timeIntervalSince1970
         return values
     }
     
+    var id: String!
     var title: String!
     var description: String!
-    var deadline: String!
+    var deadline: Date?
     
-    init(title: String, description: String, deadline: String) {
+    init(title: String, description: String, deadline: Date? = nil) {
+        self.id = Utils.uuid()
         self.title = title
         self.description = description
         self.deadline = deadline
     }
+    
+    init(key: String, firebaseStruct: [String: Any?]) {
+        self.id = key
+        self.title = (firebaseStruct["title"] as! String)
+        self.deadline = Date(timeIntervalSince1970: TimeInterval(exactly: firebaseStruct["deadline"] as! Int)!)
+        self.description = (firebaseStruct["description"] as! String)
+    }
+    
+    
 }

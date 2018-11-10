@@ -24,22 +24,28 @@ class Job: FirebasePushable {
         values["HUDStatus"] = HUDStatus
         
         if let activeEvents = events {
-            var pushableEvents: [[String: Any?]] = []
+            var pushableEvents: [String: [String: Any?]] = [:]
             for event in activeEvents {
-                pushableEvents.append(event.createPushable())
+                pushableEvents[event.id] = event.createPushable()
             }
             values["events"] = pushableEvents
         }
         
         if let activeContacts = contacts {
-            var pushableContacts: [[String: Any?]] = []
+            var pushableContacts: [String: [String: Any?]] = [:]
             for contact in activeContacts {
-                pushableContacts.append(contact.createPushable())
+                pushableContacts[contact.id] = contact.createPushable()
             }
             values["contacts"] = pushableContacts
         }
         
-        values["tasks"] = tasks
+        if let activeTasks = tasks {
+            var pushableTasks: [String: [String: Any?]] = [:]
+            for task in activeTasks {
+                pushableTasks[task.id] = task.createPushable()
+            }
+            values["tasks"] = pushableTasks
+        }
         return values
     }
     
@@ -103,17 +109,26 @@ class Job: FirebasePushable {
         self.HUDStatus = firebaseStruct["HUDStatus"] as? String
         
         // TODO
-//        if let storedEvents = firebaseStruct["events"] as? NSArray as [[String: Any?]]{
-//
-//        }
-//        if let storedContacts = firebaseStruct["contacts"] as? NSArray as [[String: Any?]]{
-//
-//        }
-
+        if let storedEvents = firebaseStruct["events"] as? NSDictionary as? [String: [String: Any?]]{
+            self.events = []
+            for (id, record) in storedEvents {
+                self.events?.append(Event(key: id, firebaseStruct: record))
+            }
+            
+        }
+        if let storedContacts = firebaseStruct["contacts"] as? NSDictionary as? [String: [String: Any?]]{
+            self.contacts = []
+            for (id, record) in storedContacts {
+                self.contacts?.append(Contact(key: id, firebaseStruct: record))
+            }
+        }
         
-        
-//        self.tasks = firebaseStruct["task"] as? NSArray as? [String]
-        
+        if let storedTasks = firebaseStruct["Tasks"] as? NSDictionary as? [String: [String: Any?]]{
+            self.tasks = []
+            for (id, record) in storedTasks {
+                self.tasks?.append(Task(key: id, firebaseStruct: record))
+            }
+        }
     }
     
     
