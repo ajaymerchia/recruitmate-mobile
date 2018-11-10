@@ -13,6 +13,7 @@ import ChameleonFramework
 extension JobDetailVC {
     func initUI() {
         initHeader()
+        initQuickTaskAdder()
     }
     
     func initHeader() {
@@ -34,5 +35,7 @@ extension JobDetailVC {
         view.addSubview(companyName)
         
     }
+    
+    
     
 }

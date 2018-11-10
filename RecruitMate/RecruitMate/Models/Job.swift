@@ -61,8 +61,8 @@ class Job: FirebasePushable {
     var companyColor: UIColor?
     
 //    var events: [Event]!
-    var contacts: [Contact]!
-    var tasks: [Task]!
+    var contacts: [Contact] = []
+    var tasks: [Task] = []
 
     
     // Most basic information.
@@ -120,14 +120,14 @@ class Job: FirebasePushable {
         if let storedContacts = firebaseStruct["contacts"] as? NSDictionary as? [String: [String: Any?]]{
             self.contacts = []
             for (id, record) in storedContacts {
-                self.contacts?.append(Contact(key: id, firebaseStruct: record))
+                self.contacts.append(Contact(key: id, firebaseStruct: record))
             }
         }
         
         self.tasks = []
         if let storedTasks = firebaseStruct["Tasks"] as? NSDictionary as? [String: [String: Any?]]{
             for (id, record) in storedTasks {
-                self.tasks?.append(Task(key: id, firebaseStruct: record))
+                self.tasks.append(Task(key: id, firebaseStruct: record))
             }
         }
     }

@@ -11,8 +11,16 @@ import UIKit
 class JobDetailVC: UIViewController {
 
     var job: Job!
+    var board: Board!
     var companyName: UILabel!
     var img: UIImageView!
+    
+    
+    
+    // Testing Variables [[Ignore]]
+    var task: UITextField!
+    var desc: UITextField!
+    var date: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
