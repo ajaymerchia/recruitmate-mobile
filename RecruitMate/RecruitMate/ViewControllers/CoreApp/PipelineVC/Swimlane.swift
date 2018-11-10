@@ -22,13 +22,18 @@ class Swimlane: UIView {
     
     var name: String!
     var swimlaneParent: PipelineVC!
+    var jobs: [Job]!
+    
     var laneName: UILabel!
+    var numJobs: UILabel!
     var addJob: UIButton!
+    var tableView: UITableView!
 
-    init(frame: CGRect, name: String, swimlaneParent: PipelineVC) {
+    init(frame: CGRect, name: String, swimlaneParent: PipelineVC, jobs: [Job]) {
         super.init(frame: frame)
         self.name = name
         self.swimlaneParent = swimlaneParent
+        self.jobs = jobs
         initUI()
         
     }

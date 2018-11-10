@@ -11,7 +11,7 @@ import FirebaseDatabase
 import FirebaseAuth
 
 class FirebaseAPIClient {
-    static func getUserRecordFrom(uid: String, completion: @escaping (User?) -> ()) {
+    static func getUserBareBones(uid: String, completion: @escaping (User?) -> ()) {
         let userRef = Database.database().reference().child("users").child(uid)
         userRef.observeSingleEvent(of: .value) { (snapshot) in
             guard let data = snapshot.value as? [String: Any?] else {
@@ -19,7 +19,23 @@ class FirebaseAPIClient {
                 return
             }
             let returnableUser = User(firebaseStruct: data)
-            completion(returnableUser)
+            getMainBoard(forPerson: returnableUser, withID: returnableUser.defaultBoardID, completion: {(finalUser) in
+                
+                completion(finalUser)
+            })
+        }
+    }
+    
+    static func getMainBoard(forPerson: User, withID: String, completion: @escaping(User?) -> ()) {
+        let boardRef = Database.database().reference().child("boards").child(withID)
+        
+        boardRef.observeSingleEvent(of: .value) { (snapshot) in
+            guard let data = snapshot.value as? [String: Any?] else {
+                completion(nil)
+                return
+            }
+            forPerson.boards[withID] = Board(key: withID, firebaseStruct: data)
+            completion(forPerson)
         }
     }
     
@@ -32,9 +48,6 @@ class FirebaseAPIClient {
         
     }
     
-    static func loadBoardFrom(uid: String, completion: (Board) -> ()) {
-        
-    }
     
     static func logout() {
         do {

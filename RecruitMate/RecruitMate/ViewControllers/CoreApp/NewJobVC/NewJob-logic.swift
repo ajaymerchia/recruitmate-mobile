@@ -12,7 +12,7 @@ import UIKit
 extension NewJobVC {
     @objc func createJob() {
         saveJob.isUserInteractionEnabled = false
-        hud = Utils.startProgressHud(inView: self.view, withMsg: "Saving Job")
+        hud = alerts.startProgressHud(withMsg: "Saving job")
         
         guard let targetCompany = company?.name else {
             alerts.displayAlert(title: "Oops", message: "Please select a company.")
@@ -21,8 +21,7 @@ extension NewJobVC {
         
         goToCompanySearch.setBackgroundColor(color: companyColor!, forState: .normal)
         
-        let job = Job(companyName: targetCompany)
-        job.pipelineStatus = swimlane
+        let job = Job(companyName: targetCompany, status: swimlane)
         job.companyPosition = positionField.text
         job.applicationURL = linkField.text
         job.companyColor = companyColor

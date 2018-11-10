@@ -29,6 +29,8 @@ class Constants {
     static let RECRUITMATE_BLUE = rgb(23, 105, 197)
     static let RECRUITMATE_BLUE_DARK = rgb(9, 72, 142)
     static let PLACEHOLDER_COLOR = rgb(184, 184, 193)
-    
 }
 
+extension UIImage {
+    static let placeholder: UIImage! = UIImage(named: "white-placeholder")
+}

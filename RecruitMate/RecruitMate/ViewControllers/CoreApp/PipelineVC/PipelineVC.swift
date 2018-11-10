@@ -13,8 +13,15 @@ class PipelineVC: UIViewController {
     var swimlaneHolder: UIScrollView!
     var swimlanes: [Swimlane] = []
     
+    
+    var board: Board!
+    var swimlaneNames: [String]!
+    var cards: [String: [Job]] = [:]
+    var jobForDetail: Job?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initData()
         initUI()
         // Do any additional setup after loading the view.
     }

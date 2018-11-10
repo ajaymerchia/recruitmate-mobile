@@ -10,10 +10,15 @@ import UIKit
 
 class JobDetailVC: UIViewController {
 
+    var job: Job!
+    var companyName: UILabel!
+    var img: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        initUI()
     }
     
 

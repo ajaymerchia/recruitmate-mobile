@@ -15,7 +15,7 @@ import NotificationCenter
 extension SignUpVC {
     @objc func attemptSignUp() {
         signUpButton.isUserInteractionEnabled = false
-        hud = Utils.startProgressHud(inView: view, withMsg: "Creating Account")
+        hud = alerts.startProgressHud(withMsg: "Creating Account")
         
         let first = firstNameField.text!
         let last = lastNameField.text!
