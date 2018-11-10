@@ -49,18 +49,18 @@ extension JobDetailVC {
     }
     
     func initTasks() {
-        tasksTitle = UILabel(frame: LayoutManager.belowCentered(elementAbove: urlButton, padding: Constants.PADDING, width: view.frame.width, height: 60))
+        tasksTitle = UILabel(frame: LayoutManager.belowCentered(elementAbove: urlButton, padding: Constants.PADDING, width: view.frame.width - 50, height: 60))
         tasksTitle.text = "Tasks"
         tasksTitle.font = Constants.SUBTITLE_FONT
         view.addSubview(tasksTitle)
         
-        tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: tasksTitle, padding: 0, width: view.frame.width, height: view.frame.maxY - tasksTitle.frame.maxY))
+        tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: tasksTitle, padding: 0, width: view.frame.width - 50, height: view.frame.height / 4))
         tableView.register(TaskCell.self, forCellReuseIdentifier: "taskCell")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .flatWhite
         tableView.separatorStyle = .none
-        tableView.showsVerticalScrollIndicator = false
+        tableView.showsVerticalScrollIndicator = true
         
         view.addSubview(tableView)
     }
