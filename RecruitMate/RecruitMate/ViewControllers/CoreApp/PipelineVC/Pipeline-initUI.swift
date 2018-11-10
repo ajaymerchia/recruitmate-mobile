@@ -17,6 +17,8 @@ extension PipelineVC {
     }
     func initNav() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(goToNewJob))
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings"), style: .plain, target: self, action: #selector(goToSettings))
     }
     func initScrollView() {
         swimlaneHolder = UIScrollView(frame: LayoutManager.belowCentered(elementAbove: (self.navigationController?.navigationBar)!, padding: 0, width: view.frame.width, height: (self.tabBarController?.tabBar.frame.minY)! - (self.navigationController?.navigationBar.frame.maxY)!))
