@@ -14,12 +14,14 @@ class HudVC: UIViewController {
     var tomorrowLabel: UILabel!
     var thisweekLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
         addTodayLabel()
         addTomorrowLabel()
         addThisWeekLabel()
+
         // Do any additional setup after loading the view.
     }
     

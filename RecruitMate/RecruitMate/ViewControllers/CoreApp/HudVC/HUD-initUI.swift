@@ -20,7 +20,7 @@ extension HudVC {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings"), style: .plain, target: self, action: #selector(goToSettings))
     }
     
-    //UI Labels of TODAY, TOMORROW, THIS WEEK
+   // UI Labels of TODAY, TOMORROW, THIS WEEK
     func addTodayLabel() {
        todayLabel = UILabel(frame: CGRect(x: 2 * Constants.PADDING, y: 150, width: view.frame.width - 4 * Constants.PADDING, height: 40))
         todayLabel.textColor = .black
@@ -45,5 +45,6 @@ extension HudVC {
         view.addSubview(thisweekLabel)
     }
     
+   
     
 }

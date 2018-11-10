@@ -12,7 +12,7 @@ class JobDetailVC: UIViewController {
 
     var job: Job!
     var board: Board!
-    var companyName: UILabel!
+    var companyPosition: UILabel!
     var img: UIImageView!
     
     
