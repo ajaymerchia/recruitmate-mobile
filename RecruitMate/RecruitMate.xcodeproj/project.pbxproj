@@ -12,6 +12,7 @@
 		B71BA464218D0595008E71C4 /* Pipeline-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71BA463218D0595008E71C4 /* Pipeline-logic.swift */; };
 		B71BA466218D09C2008E71C4 /* Swimlane-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71BA465218D09C2008E71C4 /* Swimlane-tableview.swift */; };
 		B71BA468218D09E2008E71C4 /* JobCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71BA467218D09E2008E71C4 /* JobCard.swift */; };
+		B7290FA621976D660073795A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7290FA521976D650073795A /* Task.swift */; };
 		B7313591217B970D00B9A094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7313590217B970D00B9A094 /* AppDelegate.swift */; };
 		B7313593217B970D00B9A094 /* EmailReadSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7313592217B970D00B9A094 /* EmailReadSampleVC.swift */; };
 		B7313596217B970D00B9A094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7313594217B970D00B9A094 /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		B71BA463218D0595008E71C4 /* Pipeline-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pipeline-logic.swift"; sourceTree = "<group>"; };
 		B71BA465218D09C2008E71C4 /* Swimlane-tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swimlane-tableview.swift"; sourceTree = "<group>"; };
 		B71BA467218D09E2008E71C4 /* JobCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCard.swift; sourceTree = "<group>"; };
+		B7290FA521976D650073795A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B731358D217B970D00B9A094 /* RecruitMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecruitMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7313590217B970D00B9A094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7313592217B970D00B9A094 /* EmailReadSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailReadSampleVC.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				B76E350B217BDAC900993E15 /* Email.swift */,
 				BD33EE37217C02AC00B2A7B3 /* Job.swift */,
+				B7290FA521976D650073795A /* Task.swift */,
 				B74493B12182E0C400E43BA5 /* CompanySearchResult.swift */,
 				B71A20D42182B48D00D383ED /* Board.swift */,
 				BD33EE39217C08A400B2A7B3 /* Event.swift */,
@@ -609,6 +612,7 @@
 				B76E352D217BFC3D00993E15 /* PipelineVC.swift in Sources */,
 				B76E3517217BE79000993E15 /* AlertManager.swift in Sources */,
 				B76E3547217BFF6F00993E15 /* SignUp-system.swift in Sources */,
+				B7290FA621976D660073795A /* Task.swift in Sources */,
 				B76E350A217BCD4F00993E15 /* Constants.swift in Sources */,
 				B76E3559217C000500993E15 /* HUD-system.swift in Sources */,
 				B76D55242182A12600D3ECFA /* TabBarController.swift in Sources */,
