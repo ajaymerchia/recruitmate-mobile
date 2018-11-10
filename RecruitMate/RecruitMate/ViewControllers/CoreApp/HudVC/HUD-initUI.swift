@@ -13,6 +13,8 @@ import ChameleonFramework
 extension HudVC {
     func initUI() {
         initNav()
+        initTitle()
+        initTableview()
     }
     
     func initNav() {
@@ -20,31 +22,30 @@ extension HudVC {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings"), style: .plain, target: self, action: #selector(goToSettings))
     }
     
-   // UI Labels of TODAY, TOMORROW, THIS WEEK
-    func addTodayLabel() {
-       todayLabel = UILabel(frame: CGRect(x: 2 * Constants.PADDING, y: 150, width: view.frame.width - 4 * Constants.PADDING, height: 40))
-        todayLabel.textColor = .black
-        todayLabel.font = Constants.HEADER_FONT
-        todayLabel.text = "TODAY"
-        view.addSubview(todayLabel)
+    func initTitle() {
+        welcome = UILabel(frame: LayoutManager.belowCentered(elementAbove: (navigationController?.navigationBar)!, padding: Constants.PADDING, width: view.frame.width, height: 50))
+        welcome.text = "Welcome, \((self.tabBarController as! TabBarController).currentUser.first!)"
+        welcome.textAlignment = .center
+        welcome.font = Constants.HEADER_FONT
+        view.addSubview(welcome)
+        
     }
     
-    func addTomorrowLabel() {
-        tomorrowLabel = UILabel(frame: LayoutManager.belowCentered(elementAbove: todayLabel, padding: Constants.PADDING * 5, width: todayLabel.frame.width, height: todayLabel.frame.height))
-        tomorrowLabel.textColor = .black
-        tomorrowLabel.font = Constants.HEADER_FONT
-        tomorrowLabel.text = "TOMORROW"
-        view.addSubview(tomorrowLabel)
+    func initTableview() {
+        tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: welcome, padding: 0, width: view.frame.width, height: (self.tabBarController?.tabBar.frame.minY)! - (welcome.frame.maxY)))
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(JobCard.self, forCellReuseIdentifier: "jobCard")
+        
+        tableView.backgroundColor = .flatWhite
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        
+        view.addSubview(tableView)
+        
     }
     
-    func addThisWeekLabel() {
-        thisweekLabel = UILabel(frame: LayoutManager.belowCentered(elementAbove: tomorrowLabel, padding: Constants.PADDING * 5, width: tomorrowLabel.frame.width, height: tomorrowLabel.frame.height))
-        thisweekLabel.textColor = .black
-        thisweekLabel.font = Constants.HEADER_FONT
-        thisweekLabel.text = "THIS WEEK"
-        view.addSubview(thisweekLabel)
-    }
-    
+   
    
     
 }

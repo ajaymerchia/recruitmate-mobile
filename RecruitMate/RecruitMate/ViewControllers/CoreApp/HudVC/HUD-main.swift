@@ -10,17 +10,21 @@ import UIKit
 
 class HudVC: UIViewController {
     
-    var todayLabel: UILabel!
-    var tomorrowLabel: UILabel!
-    var thisweekLabel: UILabel!
+    var welcome: UILabel!
+    var tableView: UITableView!
     
+    var tasks: [String: [Task]] = [:]
+    var taskCategories = ["Today", "Tommorow", "This Week", "Later"]
+    var board: Board!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getDataForCells()
+        
+        print(taskCategories)
+        print(tasks)
+        
         initUI()
-        addTodayLabel()
-        addTomorrowLabel()
-        addThisWeekLabel()
 
         // Do any additional setup after loading the view.
     }

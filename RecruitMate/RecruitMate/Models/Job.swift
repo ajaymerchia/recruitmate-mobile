@@ -125,7 +125,7 @@ class Job: FirebasePushable {
         }
         
         self.tasks = []
-        if let storedTasks = firebaseStruct["Tasks"] as? NSDictionary as? [String: [String: Any?]]{
+        if let storedTasks = firebaseStruct["tasks"] as? NSDictionary as? [String: [String: Any?]]{
             for (id, record) in storedTasks {
                 self.tasks.append(Task(key: id, firebaseStruct: record))
             }

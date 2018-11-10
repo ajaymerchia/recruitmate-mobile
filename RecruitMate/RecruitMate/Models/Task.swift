@@ -32,7 +32,9 @@ class Task {
     init(key: String, firebaseStruct: [String: Any?]) {
         self.id = key
         self.title = (firebaseStruct["title"] as! String)
-        self.deadline = Date(timeIntervalSince1970: TimeInterval(exactly: firebaseStruct["deadline"] as! Int)!)
+        
+        
+        self.deadline = Date(timeIntervalSince1970: TimeInterval(exactly: (firebaseStruct["deadline"] as! NSNumber) as! Double)!)
         self.description = (firebaseStruct["description"] as! String)
     }
     

@@ -80,6 +80,13 @@ class Utils {
         return str
     }
     
+    static func days(s: Double) -> Double {
+        return s/(24.0*60*60)
+    }
+    
+    static func secs(d: Double) -> Double {
+        return d * 24.0 * 60 * 60
+    }
     
     
     
