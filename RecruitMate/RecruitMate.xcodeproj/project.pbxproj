@@ -228,13 +228,13 @@
 			isa = PBXGroup;
 			children = (
 				B76E350B217BDAC900993E15 /* Email.swift */,
-				BD33EE37217C02AC00B2A7B3 /* Job.swift */,
-				B7290FA521976D650073795A /* Task.swift */,
-				B74493B12182E0C400E43BA5 /* CompanySearchResult.swift */,
-				B71A20D42182B48D00D383ED /* Board.swift */,
-				BD33EE39217C08A400B2A7B3 /* Event.swift */,
-				BD33EE3B217C096800B2A7B3 /* Contact.swift */,
 				BD33EE3D217C0FA700B2A7B3 /* User.swift */,
+				B71A20D42182B48D00D383ED /* Board.swift */,
+				BD33EE37217C02AC00B2A7B3 /* Job.swift */,
+				BD33EE39217C08A400B2A7B3 /* Event.swift */,
+				B7290FA521976D650073795A /* Task.swift */,
+				BD33EE3B217C096800B2A7B3 /* Contact.swift */,
+				B74493B12182E0C400E43BA5 /* CompanySearchResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
