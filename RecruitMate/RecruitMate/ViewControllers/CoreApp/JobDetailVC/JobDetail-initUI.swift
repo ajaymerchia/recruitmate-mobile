@@ -13,7 +13,7 @@ import ChameleonFramework
 extension JobDetailVC {
     func initUI() {
         initHeader()
-        initQuickTaskAdder()
+//        initQuickTaskAdder()
     }
     
     func initHeader() {

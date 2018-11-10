@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 extension JobDetailVC {
     func initQuickTaskAdder() {
-        task = UITextField(frame: LayoutManager.belowCentered(elementAbove: companyName, padding: Constants.PADDING, width: view.frame.width, height: 40))
+        task = UITextField(frame: LayoutManager.belowCentered(elementAbove: companyPosition, padding: Constants.PADDING, width: view.frame.width, height: 40))
         task.placeholder = "task title"
         task.textAlignment = .center
         view.addSubview(task)
