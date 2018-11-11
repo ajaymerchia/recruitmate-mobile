@@ -11,8 +11,8 @@ import UIKit
 
 extension HudVC: UITableViewDelegate, UITableViewDataSource {
     
-    static let headerHeight: CGFloat = 100
-    static let rowHeight: CGFloat = 60
+    static let headerHeight: CGFloat = 60
+    static let rowHeight: CGFloat = 100
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell") as! HUD_taskCell

@@ -14,6 +14,7 @@ class HUD_taskCell: UITableViewCell {
     
     var jobName: UILabel!
     var taskName: UILabel!
+    var cell: UIView!
     
     
     func awakeFromNib(height: CGFloat) {
@@ -24,19 +25,23 @@ class HUD_taskCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        jobName = UILabel(frame: CGRect(x: Constants.PADDING, y: Constants.MARGINAL_PADDING, width: contentView.frame.width, height: 20))
+        cell = UIView(frame: CGRect(x: Constants.PADDING, y: Constants.PADDING, width: contentView.frame.width - 2 * Constants.PADDING, height: height - 2*Constants.PADDING))
+        contentView.addSubview(cell)
+        
+        
+        jobName = UILabel(frame: CGRect(x: Constants.MARGINAL_PADDING, y: Constants.MARGINAL_PADDING, width: contentView.frame.width, height: 20))
         jobName.text = "name of company"
         jobName.font = Constants.TEXT_FONT
-        contentView.addSubview(jobName)
+        cell.addSubview(jobName)
         
         taskName = UILabel(frame: LayoutManager.belowLeft(elementAbove: jobName, padding: 0, width: contentView.frame.width - 2*Constants.PADDING, height: 40))
-        taskName.font = Constants.TEXT_FONT
-        contentView.addSubview(taskName)
+        taskName.font = Constants.SUBTITLE_FONT
+        cell.addSubview(taskName)
         
     }
     
     func designFor(job: Job, task: Task) {
-        self.backgroundColor = job.companyColor
+        cell.backgroundColor = job.companyColor
         jobName.text = job.companyName
         taskName.text = task.title
     }
