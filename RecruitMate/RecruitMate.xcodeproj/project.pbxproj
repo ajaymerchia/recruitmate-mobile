@@ -81,6 +81,7 @@
 		B7A2327D218C023400DBB6AF /* Swimlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2327C218C023400DBB6AF /* Swimlane.swift */; };
 		B7A2327F218C0A7E00DBB6AF /* Swimlane-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2327E218C0A7E00DBB6AF /* Swimlane-initUI.swift */; };
 		B7A23281218C0D1600DBB6AF /* Swimlane-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23280218C0D1600DBB6AF /* Swimlane-logic.swift */; };
+		BD525A482197C89300967CB9 /* JobEditVC-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD525A472197C89300967CB9 /* JobEditVC-tableview.swift */; };
 		CF40C3FC21979324007030E6 /* JobEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40C3FB21979324007030E6 /* JobEditVC.swift */; };
 		CF40C3FE21979384007030E6 /* JobEdit-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40C3FD21979384007030E6 /* JobEdit-initUI.swift */; };
 		CFA2B0A52197A6CA00FEB48B /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2B0A32197A6CA00FEB48B /* TaskCell.swift */; };
@@ -167,6 +168,7 @@
 		BD33EE39217C08A400B2A7B3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BD33EE3B217C096800B2A7B3 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		BD33EE3D217C0FA700B2A7B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BD525A472197C89300967CB9 /* JobEditVC-tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobEditVC-tableview.swift"; sourceTree = "<group>"; };
 		CF40C3FB21979324007030E6 /* JobEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobEditVC.swift; sourceTree = "<group>"; };
 		CF40C3FD21979384007030E6 /* JobEdit-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobEdit-initUI.swift"; sourceTree = "<group>"; };
 		CFA2B0A32197A6CA00FEB48B /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
@@ -359,7 +361,6 @@
 				B7290FA72197865F0073795A /* JobDetail-addTaskTest.swift */,
 				B76E3550217BFFDB00993E15 /* JobDetail-system.swift */,
 				CFA2B0A42197A6CA00FEB48B /* JobDetail-tableview.swift */,
-				CFA2B0A32197A6CA00FEB48B /* TaskCell.swift */,
 			);
 			path = JobDetailVC;
 			sourceTree = "<group>";
@@ -377,6 +378,7 @@
 		B76E353A217BFD1000993E15 /* CoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD525A462197C86100967CB9 /* Cells */,
 				CF40C3FA2197930E007030E6 /* JobEditVC */,
 				B76E3537217BFCDD00993E15 /* SettingsVC */,
 				B76E3532217BFC7A00993E15 /* JobDetailVC */,
@@ -432,6 +434,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		BD525A462197C86100967CB9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CFA2B0A32197A6CA00FEB48B /* TaskCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		BE7CD2E1EACB441B72AB433C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +457,7 @@
 				CF40C3FB21979324007030E6 /* JobEditVC.swift */,
 				CF40C3FD21979384007030E6 /* JobEdit-initUI.swift */,
 				CFA2B0A72197ACE000FEB48B /* JobEdit-system.swift */,
+				BD525A472197C89300967CB9 /* JobEditVC-tableview.swift */,
 			);
 			path = JobEditVC;
 			sourceTree = "<group>";
@@ -658,6 +669,7 @@
 				B76E3541217BFE6600993E15 /* SignUp-initUI.swift in Sources */,
 				B71BA466218D09C2008E71C4 /* Swimlane-tableview.swift in Sources */,
 				B76E352D217BFC3D00993E15 /* PipelineVC.swift in Sources */,
+				BD525A482197C89300967CB9 /* JobEditVC-tableview.swift in Sources */,
 				B76E3517217BE79000993E15 /* AlertManager.swift in Sources */,
 				B76E3547217BFF6F00993E15 /* SignUp-system.swift in Sources */,
 				B7290FA621976D660073795A /* Task.swift in Sources */,

@@ -24,7 +24,7 @@ class JobCard: UITableViewCell {
         contentView.addSubview(name)
         
         let logoWidth:CGFloat = 40
-        logo = UIImageView(frame: CGRect(x: contentView.frame.width - 10 * Constants.MARGINAL_PADDING - logoWidth, y: Constants.MARGINAL_PADDING, width: logoWidth, height: logoWidth))
+        logo = UIImageView(frame: CGRect(x: contentView.frame.width - 10 * Constants.MARGINAL_PADDING - logoWidth, y: 2 * Constants.MARGINAL_PADDING, width: logoWidth, height: logoWidth))
         logo.image = UIImage(named: "logo-light")
         logo.contentMode = .scaleAspectFit
         logo.clipsToBounds = true
