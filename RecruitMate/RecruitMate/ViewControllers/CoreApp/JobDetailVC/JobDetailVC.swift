@@ -15,6 +15,8 @@ class JobDetailVC: UIViewController {
     
     
     var companyPosition: UILabel!
+    var companyName: UILabel!
+    
     var urlButton: UIButton!
     var img: UIImageView!
     var tasks: [Task]!

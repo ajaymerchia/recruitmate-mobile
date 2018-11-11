@@ -26,17 +26,9 @@ extension JobDetailVC {
 
     
     func initHeader() {
-        img = UIImageView(frame: CGRect(x: 0, y: view.frame.width/3 , width: view.frame.width/3, height: view.frame.width/3))
-        
-        if let logo = job.companyLogo {
-            img.image = logo
-        } else {
-            Utils.getImageFrom(url: job.companyLogoLink!, defaultImg: .placeholder) { (loaded) in
-                self.img.image = loaded
-            }
-        }
-        
-        img.center = CGPoint(x: view.frame.width/2, y: view.frame.height/5)
+        img = UIImageView(frame: CGRect(x: 0, y: view.frame.width/4.5 , width: view.frame.width/5, height: view.frame.width/5))
+        img.center = CGPoint(x: view.frame.width/2, y: img.frame.midY)
+        img.image = job.companyLogo
         img.contentMode = .scaleAspectFit
         img.clipsToBounds = true
         img.layer.cornerRadius = 0.5 * img.frame.width
@@ -44,19 +36,26 @@ extension JobDetailVC {
         img.layer.borderColor = rgba(162,162,162,1).cgColor
         view.addSubview(img)
         
-        companyPosition = UILabel(frame: LayoutManager.belowCentered(elementAbove: img, padding: Constants.PADDING , width: view.frame.width, height: 60))
-        companyPosition.center = CGPoint(x: view.frame.width/2, y:view.frame.height/3 )
+        companyPosition = UILabel(frame: LayoutManager.belowCentered(elementAbove: img, padding: Constants.PADDING , width: view.frame.width, height: 30))
         companyPosition.textAlignment = .center
         companyPosition.text = job.companyPosition
         companyPosition.font = UIFont(name: "Avenir-Heavy", size: 35)
         view.addSubview(companyPosition)
-    
+        
+        companyName = UILabel(frame: LayoutManager.belowCentered(elementAbove: companyPosition, padding: Constants.PADDING/2, width: view.frame.width, height: 30))
+        companyName.textAlignment = .center
+        companyName.text = job.companyName
+        companyName.font = Constants.SUBTITLE_FONT?.italic
+        view.addSubview(companyName)
      
-        urlButton = UIButton(frame:LayoutManager.belowCentered(elementAbove: companyPosition, padding: Constants.PADDING , width: view.frame.width/2, height: 50))
-        urlButton.layer.cornerRadius = 20
-        urlButton.setTitle("URL Link", for: .normal)
-        urlButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 20.0)
-        urlButton.backgroundColor = UIColor(red: 0, green: 0.4275, blue: 0.8275, alpha: 1)
+        urlButton = UIButton(frame:LayoutManager.belowCentered(elementAbove: companyName, padding: Constants.PADDING , width: view.frame.width/2, height: 50))
+        
+        if job.applicationURL == "" {
+            job.applicationURL = nil
+        }
+        urlButton.setTitle(job.applicationURL ?? "(set application link)", for: .normal)
+        urlButton.setTitleColor(Constants.RECRUITMATE_BLUE, for: .normal)
+        urlButton.titleLabel?.font = Constants.TEXT_FONT
         view.addSubview(urlButton)
         // Utils.openURL(<#T##urlString: String##String#>)
 //        searchWebButton.addTarget(self, action: #selector(gotoWebsite), for: .touchUpInside)

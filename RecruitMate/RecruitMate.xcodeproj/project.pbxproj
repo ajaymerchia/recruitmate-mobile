@@ -358,9 +358,9 @@
 			children = (
 				B76E3533217BFCA800993E15 /* JobDetailVC.swift */,
 				B76E354E217BFFD200993E15 /* JobDetail-initUI.swift */,
-				B7290FA72197865F0073795A /* JobDetail-addTaskTest.swift */,
 				B76E3550217BFFDB00993E15 /* JobDetail-system.swift */,
 				CFA2B0A42197A6CA00FEB48B /* JobDetail-tableview.swift */,
+				B7290FA72197865F0073795A /* JobDetail-addTaskTest.swift */,
 			);
 			path = JobDetailVC;
 			sourceTree = "<group>";
