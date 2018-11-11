@@ -15,8 +15,10 @@ class HudVC: UIViewController {
     
     var tasks: [String: [Task]] = [:]
     var task2JobMap: [String: Job] = [:]
-    var taskCategories = ["Today", "Tommorow", "This Week", "Later"]
+    var taskCategories = ["Today", "Tomorrow", "This Week", "Later"]
     var board: Board!
+    
+    var targetJob: Job?
     
     override func viewDidLoad() {
         super.viewDidLoad()

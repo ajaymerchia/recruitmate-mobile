@@ -13,6 +13,7 @@ class HUD_headerCell: UITableViewCell {
     var name: String!
     var height: CGFloat!
     
+    
     func awakeFromNib(name: String, height: CGFloat) {
         self.name = name
         self.height = height
@@ -40,7 +41,8 @@ class HUD_headerCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
+        
         // Configure the view for the selected state
     }
 

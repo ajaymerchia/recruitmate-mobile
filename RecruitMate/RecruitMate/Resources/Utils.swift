@@ -120,6 +120,40 @@ class Utils {
         return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
     }
     
+    static func hexToRGB(hex: String) -> [Int] {
+        
+        var values = [0,0,0]
+        
+        guard var hexValue = Int(hex.suffix(6), radix: 16) else {
+            return values
+        }
+        
+        for i in 0...2 {
+            values[2-i] = hexValue % 256
+            hexValue = Int(floor(Double(hexValue) / 256.0))
+        }
+        
+        return values
+    }
+    
+    static func sum(_ arr: [Int]) -> Int {
+        var sum = 0
+        for item in arr {
+            sum += item
+        }
+        return sum
+    }
+    
+    static func pow(b: Int, e: Int) -> Int {
+        var ret = 1
+        for _ in 1...e {
+            ret = ret * b
+        }
+        
+        return ret
+        
+    }
+    
     /// Prints all Fonts that have been loaded into the application
     static func printFontFamilies() {
         for family in UIFont.familyNames.sorted() {

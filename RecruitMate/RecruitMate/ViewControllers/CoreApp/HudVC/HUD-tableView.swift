@@ -22,7 +22,7 @@ extension HudVC: UITableViewDelegate, UITableViewDataSource {
         }
         
         // Initialize Cell
-        cell.awakeFromNib(height: HudVC.rowHeight)
+        cell.awakeFromNib(height: HudVC.rowHeight, width: view.frame.width)
         
         let task = tasks[taskCategories[indexPath.section]]![indexPath.row]
         
@@ -60,6 +60,11 @@ extension HudVC: UITableViewDelegate, UITableViewDataSource {
         return HudVC.rowHeight
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        targetJob = task2JobMap[(tasks[taskCategories[indexPath.section]]![indexPath.row]).id]
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: "hud2detail", sender: self)
+    }
     
     
     
