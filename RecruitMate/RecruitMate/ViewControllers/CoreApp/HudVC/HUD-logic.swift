@@ -31,6 +31,8 @@ extension HudVC {
                         tasks[bucketChoice] = []
                     }
                     tasks[bucketChoice]?.append(task)
+                    task2JobMap[task.id] = job
+                    
                 }
             }
         }
@@ -44,6 +46,10 @@ extension HudVC {
         
         taskCategories = filteredCategories
         
+        for cat in taskCategories {
+            tasks[cat]?.sort()
+        }
+        
         
     }
     
@@ -52,15 +58,19 @@ extension HudVC {
         if let date = ofTask.deadline {
             
             
+            let todayAdjusted = Date(timeIntervalSinceNow: TimeInterval(TimeZone.current.secondsFromGMT()))
             
-            let refToday = Date(timeIntervalSince1970: floor(Date.init().timeIntervalSince1970/Utils.secs(d: 1)) * Utils.secs(d: 1))
+            let refToday = Date(timeIntervalSince1970: floor(todayAdjusted.timeIntervalSince1970/Utils.secs(d: 1)) * Utils.secs(d: 1))
             
             print(refToday.description)
             
             let daysAway = Utils.days(s: date.timeIntervalSince(refToday))
             print(date.timeIntervalSince(refToday))
             print(daysAway)
-            if daysAway < 1 {
+            
+            if daysAway < 0 {
+                return nil
+            } else if daysAway < 1 {
                 return taskCategories[0]
             } else if daysAway < 2 {
                 return taskCategories[1]

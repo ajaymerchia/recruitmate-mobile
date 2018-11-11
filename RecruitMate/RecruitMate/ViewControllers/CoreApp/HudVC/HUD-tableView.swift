@@ -10,16 +10,34 @@ import Foundation
 import UIKit
 
 extension HudVC: UITableViewDelegate, UITableViewDataSource {
+    
+    static let headerHeight: CGFloat = 100
+    static let rowHeight: CGFloat = 60
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "jobCard") as! JobCard
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell") as! HUD_taskCell
         
         for subview in cell.contentView.subviews {
             subview.removeFromSuperview()
         }
         
         // Initialize Cell
-        cell.awakeFromNib()
+        cell.awakeFromNib(height: HudVC.rowHeight)
         
+        let task = tasks[taskCategories[indexPath.section]]![indexPath.row]
+        
+        cell.designFor(job: task2JobMap[task.id]!, task: task)
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskHeader") as! HUD_headerCell
+        for subview in cell.contentView.subviews {
+            subview.removeFromSuperview()
+        }
+        cell.awakeFromNib(name: taskCategories[section], height: HudVC.headerHeight)
         
         return cell
     }
@@ -32,15 +50,17 @@ extension HudVC: UITableViewDelegate, UITableViewDataSource {
         return (tasks[taskCategories[section]]?.count)!
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "jobCard") as! JobCard
-        for subview in cell.contentView.subviews {
-            subview.removeFromSuperview()
-        }
-        cell.awakeFromNib()
-        cell.name.text = taskCategories[section]
-        return cell
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return HudVC.headerHeight
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return HudVC.rowHeight
+    }
+    
+    
     
     
     

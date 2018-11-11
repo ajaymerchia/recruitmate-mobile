@@ -8,7 +8,17 @@
 
 import UIKit
 
-class Task {
+class Task: Comparable {
+    static func < (lhs: Task, rhs: Task) -> Bool {
+        return ((lhs.deadline?.compare(rhs.deadline ?? Date.init())) != nil)
+    }
+    
+    static func == (lhs: Task, rhs: Task) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    
+    
     func createPushable() -> [String : Any?] {
         var values: [String : Any?] = [:]
         values["title"] = title

@@ -14,6 +14,7 @@ class HudVC: UIViewController {
     var tableView: UITableView!
     
     var tasks: [String: [Task]] = [:]
+    var task2JobMap: [String: Job] = [:]
     var taskCategories = ["Today", "Tommorow", "This Week", "Later"]
     var board: Board!
     

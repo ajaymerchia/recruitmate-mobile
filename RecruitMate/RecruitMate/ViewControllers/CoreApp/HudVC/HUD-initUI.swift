@@ -26,7 +26,7 @@ extension HudVC {
         welcome = UILabel(frame: LayoutManager.belowCentered(elementAbove: (navigationController?.navigationBar)!, padding: Constants.PADDING, width: view.frame.width, height: 50))
         welcome.text = "Welcome, \((self.tabBarController as! TabBarController).currentUser.first!)"
         welcome.textAlignment = .center
-        welcome.font = Constants.HEADER_FONT
+        welcome.font = Constants.SUBTITLE_FONT
         view.addSubview(welcome)
         
     }
@@ -35,7 +35,8 @@ extension HudVC {
         tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: welcome, padding: 0, width: view.frame.width, height: (self.tabBarController?.tabBar.frame.minY)! - (welcome.frame.maxY)))
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(JobCard.self, forCellReuseIdentifier: "jobCard")
+        tableView.register(HUD_taskCell.self, forCellReuseIdentifier: "taskCell")
+        tableView.register(HUD_headerCell.self, forCellReuseIdentifier: "taskHeader")
         
         tableView.backgroundColor = .flatWhite
         tableView.separatorStyle = .none
