@@ -9,18 +9,28 @@
 import Foundation
 import UIKit
 
-//class JobEditVC: UIViewController {
-//    
-////    var urlInput: UITextField!
-//     var companyPosition: UILabel!
-//   
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        initHeder()
-//      
-//        
-//        // Do any additional setup after loading the view.
-//      
-//}
-//
-//}
+class JobEditVC: UIViewController {
+    
+    var job: Job!
+    var board: Board!
+    
+    var companyPosition: UITextField!
+    var urlButton: UIButton!
+    var img: UIImageView!
+    var tasks: [Task]!
+    var tasksTitle: UILabel!
+    var tableView: UITableView!
+    var companyUnderline: UIView!
+
+    // Testing Variables [[Ignore]]
+    var task: UITextField!
+    var desc: UITextField!
+    var date: UIDatePicker!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        initUI()
+    }
+}

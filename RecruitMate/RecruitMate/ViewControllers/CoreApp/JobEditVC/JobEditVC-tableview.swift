@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension JobDetailVC: UITableViewDelegate, UITableViewDataSource {
+extension JobEditVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return job.tasks.count
     }
