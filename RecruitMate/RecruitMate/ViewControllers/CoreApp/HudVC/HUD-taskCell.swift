@@ -32,7 +32,7 @@ class HUD_taskCell: UITableViewCell {
         self.selectionStyle = .none
         
         // Initialization code
-        cell = UIView(frame: CGRect(x: Constants.PADDING, y: Constants.PADDING, width: width - 2 * Constants.PADDING, height: height - 2*Constants.PADDING))
+        cell = UIView(frame: CGRect(x: Constants.PADDING, y: Constants.MARGINAL_PADDING, width: width - 2 * Constants.PADDING, height: height - (Constants.PADDING + Constants.MARGINAL_PADDING)))
         contentView.addSubview(cell)
         
         
@@ -63,18 +63,24 @@ class HUD_taskCell: UITableViewCell {
         jobName.textColor = officialColor
         taskName.text = task.title
     }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        self.backgroundColor = .white
+        
+        // Configure the view for the selected state
+        if highlighted {
+            cell.backgroundColor = officialColor.withAlphaComponent(0.3)
+        } else {
+            cell.backgroundColor = .none
+        }
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        self.backgroundColor = .white
-
-        // Configure the view for the selected state
         if selected {
             cell.backgroundColor = officialColor.withAlphaComponent(0.3)
-
         } else {
             cell.backgroundColor = .none
-
         }
         
     }

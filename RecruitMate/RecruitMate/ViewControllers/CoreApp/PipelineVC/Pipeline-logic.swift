@@ -21,5 +21,22 @@ extension PipelineVC {
         for job in board.jobs {
             cards[job.pipelineStatus]!.append(job)
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(newJobAdded(_ :)), name: .hasNewJob, object: nil)
+        
     }
+    
+    @objc func newJobAdded(_ notification: Notification) {
+        guard let job = notification.userInfo?["job"] as? Job else {
+            return
+        }
+        
+        let swimlane = swimlanes[swimlaneNames.index(of: job.pipelineStatus)!]
+        swimlane.jobs.append(job)
+        swimlane.tableView.reloadData()
+        swimlane.numJobs.text = "\(swimlane.jobs.count) in this lane"
+        
+        
+    }
+    
 }

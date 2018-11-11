@@ -18,6 +18,11 @@ extension HudVC {
         self.tabBarController?.performSegue(withIdentifier: "main2Settings", sender: self)
     }
     
+    @objc func logout() {
+        FirebaseAPIClient.logout()
+        self.tabBarController?.dismiss(animated: true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? JobDetailVC {
             vc.job = targetJob
