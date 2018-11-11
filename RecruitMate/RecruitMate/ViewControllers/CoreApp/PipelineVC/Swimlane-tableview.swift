@@ -11,7 +11,7 @@ import UIKit
 
 extension Swimlane: UITableViewDelegate, UITableViewDataSource {
     
-    static let cellHeight:CGFloat = 120
+    static let cellHeight: CGFloat = 70
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return jobs.count

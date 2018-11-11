@@ -20,7 +20,7 @@ extension Swimlane {
         
         self.addSubview(laneName)
         
-        addJob = UIButton(frame: LayoutManager.belowCentered(elementAbove: laneName, padding: Constants.MARGINAL_PADDING, width: self.frame.width-2 * Constants.PADDING, height: 30))
+        addJob = UIButton(frame: LayoutManager.belowCentered(elementAbove: laneName, padding: Constants.MARGINAL_PADDING, width: self.frame.width-2 * Constants.PADDING, height: 40))
         addJob.setBackgroundColor(color: .white, forState: .normal)
         addJob.setBackgroundColor(color: .flatWhite, forState: .highlighted)
         addJob.setTitle("+", for: .normal)
