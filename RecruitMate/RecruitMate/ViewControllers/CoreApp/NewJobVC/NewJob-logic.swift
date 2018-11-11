@@ -29,8 +29,10 @@ extension NewJobVC {
         job.companyLogoLink = company?.link
         
         board.addJob(job)
+        NotificationCenter.default.post(name: .hasNewJob, object: nil, userInfo: ["job": job])
         FirebaseAPIClient.push(job: job, toBoard: board) {
             self.dismiss(animated: true, completion: {})
         }
+        
     }
 }

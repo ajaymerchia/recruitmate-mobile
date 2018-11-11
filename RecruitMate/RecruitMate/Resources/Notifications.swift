@@ -11,4 +11,5 @@ import NotificationCenter
 
 extension Notification.Name {
     static let hasPendingUserLogin = Notification.Name("hasPendingUserLogin")
+    static let hasNewJob = Notification.Name("hasNewJob")
 }

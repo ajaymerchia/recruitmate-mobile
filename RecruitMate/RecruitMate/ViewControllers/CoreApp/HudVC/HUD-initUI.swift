@@ -15,16 +15,23 @@ extension HudVC {
         initNav()
         initTitle()
         initTableview()
+        
     }
     
     func initNav() {
+        self.title = "Daily Snapshot"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(goToNewJob))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings"), style: .plain, target: self, action: #selector(goToSettings))
+        
+        
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings"), style: .plain, target: self, action: #selector(goToSettings))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "logout"), style: .plain, target: self, action: #selector(logout))
+
     }
     
     func initTitle() {
         welcome = UILabel(frame: LayoutManager.belowCentered(elementAbove: (navigationController?.navigationBar)!, padding: Constants.PADDING, width: view.frame.width, height: 50))
-        welcome.text = "Welcome, \((self.tabBarController as! TabBarController).currentUser.first!)"
+//        welcome.text = "Welcome, \((self.tabBarController as! TabBarController).currentUser.first!)"
+        welcome.text = board.name
         welcome.textAlignment = .center
         welcome.font = Constants.SUBTITLE_FONT
         view.addSubview(welcome)
@@ -38,7 +45,7 @@ extension HudVC {
         tableView.register(HUD_taskCell.self, forCellReuseIdentifier: "taskCell")
         tableView.register(HUD_headerCell.self, forCellReuseIdentifier: "taskHeader")
         
-        tableView.backgroundColor = .flatWhite
+        tableView.backgroundColor = .white
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         
