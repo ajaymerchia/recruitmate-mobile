@@ -69,6 +69,7 @@ extension LoginVC {
         guard let loggedInUser = Auth.auth().currentUser else {
             return
         }
+        print("about to auto login!")
         FirebaseAPIClient.getUserBareBones(uid: loggedInUser.uid) { (user) in
             self.pendingUser = user
             self.pendingLogin = true

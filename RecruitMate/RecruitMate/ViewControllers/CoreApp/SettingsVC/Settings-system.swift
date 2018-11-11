@@ -8,10 +8,20 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 extension SettingsVC {
     @objc func goBack() {
         self.dismiss(animated: true, completion: {})
+    }
+    
+    @objc func logout() {
+        FirebaseAPIClient.logout()
+        
+        (self.presentingViewController as! TabBarController).killYourself = true
+        self.dismiss(animated: true)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

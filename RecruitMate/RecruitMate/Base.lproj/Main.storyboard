@@ -88,6 +88,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="74T-bX-bDW"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="signoutSegue" id="Dp9-B1-NeK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9L-7M-tg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,8 +272,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hud" width="36" height="36"/>
-        <image name="pipeline" width="36" height="36"/>
+        <image name="hud" width="24" height="24"/>
+        <image name="pipeline" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Ws-2Z-bgK"/>

@@ -40,8 +40,9 @@ class LoginVC: UIViewController {
 //        testing.postalConnect()
 //        testClearbit()
         
+        debugPrint("View did load")
         setupManagers()
-        initUI()
+        initUI()        
         checkForAutoLogin()
         
     }
