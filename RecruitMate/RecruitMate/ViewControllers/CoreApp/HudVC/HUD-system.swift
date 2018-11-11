@@ -19,7 +19,11 @@ extension HudVC {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if let vc = segue.destination as? JobDetailVC {
+            vc.job = targetJob
+            vc.board = board
+            targetJob = nil
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

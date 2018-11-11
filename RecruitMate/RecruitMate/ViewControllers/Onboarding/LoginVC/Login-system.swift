@@ -30,7 +30,6 @@ extension LoginVC {
             tabVC.currentUser = user
             tabVC.currentBoard = user.boards[user.defaultBoardID]
             
-            pendingUser = nil
             pendingLogin = false
             pendingUser = nil
             self.advanceToLogin.isUserInteractionEnabled = true

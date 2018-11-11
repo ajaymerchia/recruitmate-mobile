@@ -272,8 +272,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hud" width="24" height="24"/>
-        <image name="pipeline" width="24" height="24"/>
+        <image name="hud" width="36" height="36"/>
+        <image name="pipeline" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xq2-1t-KQV"/>
