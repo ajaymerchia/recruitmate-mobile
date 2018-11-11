@@ -28,6 +28,7 @@ class Swimlane: UIView {
     var numJobs: UILabel!
     var addJob: UIButton!
     var tableView: UITableView!
+    var officialColor: UIColor!
 
     init(frame: CGRect, name: String, swimlaneParent: PipelineVC, jobs: [Job]) {
         super.init(frame: frame)
