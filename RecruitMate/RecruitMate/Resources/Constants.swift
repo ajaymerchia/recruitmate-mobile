@@ -34,3 +34,20 @@ class Constants {
 extension UIImage {
     static let placeholder: UIImage! = UIImage(named: "white-placeholder")
 }
+
+extension UIFont {
+    public func withTraits(_ traits: UIFontDescriptor.SymbolicTraits...) -> UIFont {
+        let descriptor = self.fontDescriptor
+            .withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits))
+        return UIFont(descriptor: descriptor!, size: 0)
+    }
+    
+    public var italic : UIFont {
+        return withTraits(.traitItalic)
+    }
+    
+    public var bold : UIFont {
+        return withTraits(.traitBold)
+    }
+    
+}
