@@ -17,8 +17,8 @@ class Constants {
     static let CLEARBIT_AUTO = "https://autocomplete.clearbit.com/v1/companies/suggest?query="
     
     // UI Elements
-    static let PADDING:CGFloat = 20
-    static let MARGINAL_PADDING:CGFloat = 5
+    static let PADDING: CGFloat = 20
+    static let MARGINAL_PADDING: CGFloat = 5
     
     static let HEADER_FONT_SIZE: CGFloat = 40
     static let SUBTITLE_FONT_SIZE: CGFloat = 25

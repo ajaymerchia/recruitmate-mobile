@@ -31,7 +31,7 @@ class HUD_headerCell: UITableViewCell {
         
         let label = UILabel(frame: LayoutManager.aboveLeft(elementBelow: underline, padding: 0, width: contentView.frame.width, height: 35))
         label.text = name
-        label.font = Constants.HEADER_FONT
+        label.font = Constants.SUBTITLE_FONT
         label.textColor = Constants.RECRUITMATE_BLUE
         
         contentView.addSubview(label)
