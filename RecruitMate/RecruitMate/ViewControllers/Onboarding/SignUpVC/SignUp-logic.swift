@@ -105,8 +105,6 @@ extension SignUpVC {
         default:
             msg = msg + "something. Try again later."
         }
-        
         alerts.displayAlert(title: "Oops", message: msg)
-        
     }
 }
