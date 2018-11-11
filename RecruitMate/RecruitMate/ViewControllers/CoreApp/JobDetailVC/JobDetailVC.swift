@@ -12,10 +12,14 @@ class JobDetailVC: UIViewController {
 
     var job: Job!
     var board: Board!
+    
+    
     var companyPosition: UILabel!
+    var urlButton: UIButton!
     var img: UIImageView!
-    
-    
+    var tasks: [Task]!
+    var tasksTitle: UILabel!
+    var tableView: UITableView!
     
     // Testing Variables [[Ignore]]
     var task: UITextField!
@@ -26,6 +30,7 @@ class JobDetailVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       // tasks = job.tasks
         initUI()
     }
     

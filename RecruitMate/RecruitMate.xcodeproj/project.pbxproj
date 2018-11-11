@@ -81,6 +81,11 @@
 		B7A2327D218C023400DBB6AF /* Swimlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2327C218C023400DBB6AF /* Swimlane.swift */; };
 		B7A2327F218C0A7E00DBB6AF /* Swimlane-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2327E218C0A7E00DBB6AF /* Swimlane-initUI.swift */; };
 		B7A23281218C0D1600DBB6AF /* Swimlane-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23280218C0D1600DBB6AF /* Swimlane-logic.swift */; };
+		CF40C3FC21979324007030E6 /* JobEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40C3FB21979324007030E6 /* JobEditVC.swift */; };
+		CF40C3FE21979384007030E6 /* JobEdit-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40C3FD21979384007030E6 /* JobEdit-initUI.swift */; };
+		CFA2B0A52197A6CA00FEB48B /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2B0A32197A6CA00FEB48B /* TaskCell.swift */; };
+		CFA2B0A62197A6CA00FEB48B /* JobDetail-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2B0A42197A6CA00FEB48B /* JobDetail-tableview.swift */; };
+		CFA2B0A82197ACE000FEB48B /* JobEdit-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2B0A72197ACE000FEB48B /* JobEdit-system.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +167,11 @@
 		BD33EE39217C08A400B2A7B3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BD33EE3B217C096800B2A7B3 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		BD33EE3D217C0FA700B2A7B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CF40C3FB21979324007030E6 /* JobEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobEditVC.swift; sourceTree = "<group>"; };
+		CF40C3FD21979384007030E6 /* JobEdit-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobEdit-initUI.swift"; sourceTree = "<group>"; };
+		CFA2B0A32197A6CA00FEB48B /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		CFA2B0A42197A6CA00FEB48B /* JobDetail-tableview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JobDetail-tableview.swift"; sourceTree = "<group>"; };
+		CFA2B0A72197ACE000FEB48B /* JobEdit-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobEdit-system.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +358,8 @@
 				B76E354E217BFFD200993E15 /* JobDetail-initUI.swift */,
 				B7290FA72197865F0073795A /* JobDetail-addTaskTest.swift */,
 				B76E3550217BFFDB00993E15 /* JobDetail-system.swift */,
+				CFA2B0A42197A6CA00FEB48B /* JobDetail-tableview.swift */,
+				CFA2B0A32197A6CA00FEB48B /* TaskCell.swift */,
 			);
 			path = JobDetailVC;
 			sourceTree = "<group>";
@@ -365,6 +377,7 @@
 		B76E353A217BFD1000993E15 /* CoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				CF40C3FA2197930E007030E6 /* JobEditVC */,
 				B76E3537217BFCDD00993E15 /* SettingsVC */,
 				B76E3532217BFC7A00993E15 /* JobDetailVC */,
 				B76E352E217BFC4000993E15 /* PipelineVC */,
@@ -426,6 +439,16 @@
 				B5339F031A50A21027DB32E9 /* Pods-RecruitMate.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF40C3FA2197930E007030E6 /* JobEditVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF40C3FB21979324007030E6 /* JobEditVC.swift */,
+				CF40C3FD21979384007030E6 /* JobEdit-initUI.swift */,
+				CFA2B0A72197ACE000FEB48B /* JobEdit-system.swift */,
+			);
+			path = JobEditVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -573,6 +596,7 @@
 			files = (
 				B74493B02182DFD700E43BA5 /* ClearbitAPI.swift in Sources */,
 				B76E3521217BF8FB00993E15 /* Login-main.swift in Sources */,
+				CFA2B0A82197ACE000FEB48B /* JobEdit-system.swift in Sources */,
 				B76E3557217BFFFD00993E15 /* HUD-initUI.swift in Sources */,
 				B76E3527217BFBAE00993E15 /* EmailPermission-main.swift in Sources */,
 				B76E3549217BFF8100993E15 /* EmailPermission-system.swift in Sources */,
@@ -581,6 +605,7 @@
 				B7313593217B970D00B9A094 /* EmailReadSampleVC.swift in Sources */,
 				B7A23269218B9DB900DBB6AF /* CompanySearchCell.swift in Sources */,
 				B7290FA82197865F0073795A /* JobDetail-addTaskTest.swift in Sources */,
+				CFA2B0A62197A6CA00FEB48B /* JobDetail-tableview.swift in Sources */,
 				B7A23272218BC84A00DBB6AF /* PipelineSelect-system.swift in Sources */,
 				B780C5B0217C296200AA7C27 /* SignUp-logic.swift in Sources */,
 				B76E3553217BFFE500993E15 /* Pipeline-initUI.swift in Sources */,
@@ -588,6 +613,7 @@
 				B7290FAA21978C190073795A /* HUD-logic.swift in Sources */,
 				B76E3551217BFFDB00993E15 /* JobDetail-system.swift in Sources */,
 				B76E354D217BFFA600993E15 /* Settings-system.swift in Sources */,
+				CF40C3FE21979384007030E6 /* JobEdit-initUI.swift in Sources */,
 				B76E3519217BE7EC00993E15 /* ColorManager.swift in Sources */,
 				B76E352A217BFC0E00993E15 /* HUD-main.swift in Sources */,
 				B76E3555217BFFED00993E15 /* Pipeline-system.swift in Sources */,
@@ -626,7 +652,9 @@
 				B76E355D217C002700993E15 /* NewJob-initUI.swift in Sources */,
 				B76E355F217C002E00993E15 /* NewJob-system.swift in Sources */,
 				B7A2326D218BC7DB00DBB6AF /* PipelineSelect-main.swift in Sources */,
+				CFA2B0A52197A6CA00FEB48B /* TaskCell.swift in Sources */,
 				B76E350C217BDAC900993E15 /* Email.swift in Sources */,
+				CF40C3FC21979324007030E6 /* JobEditVC.swift in Sources */,
 				B76E3541217BFE6600993E15 /* SignUp-initUI.swift in Sources */,
 				B71BA466218D09C2008E71C4 /* Swimlane-tableview.swift in Sources */,
 				B76E352D217BFC3D00993E15 /* PipelineVC.swift in Sources */,

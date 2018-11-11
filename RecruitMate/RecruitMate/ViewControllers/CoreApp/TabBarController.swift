@@ -14,12 +14,20 @@ class TabBarController: UITabBarController {
     var currentBoard: Board!
     var addFromSwimlane: String!
     
+    var killYourself = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         debugPrint("Successfully Loaded Tab Bar Controller")
         debugPrint("Logged in as \(currentUser.fullname)")
         debugPrint("Showing Board: \(String(describing: currentBoard.name))")
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if killYourself {
+            self.dismiss(animated: false)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

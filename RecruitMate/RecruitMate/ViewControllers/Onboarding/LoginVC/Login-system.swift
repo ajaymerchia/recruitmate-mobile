@@ -32,15 +32,18 @@ extension LoginVC {
             
             pendingUser = nil
             pendingLogin = false
-            
+            pendingUser = nil
+            self.advanceToLogin.isUserInteractionEnabled = true
+            self.hud?.dismiss()
         }
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        
+        debugPrint(pendingUser, pendingLogin)
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        debugPrint("View did appear")
         checkForPendingLogin()
     }
     
@@ -64,9 +67,9 @@ extension LoginVC {
         debugPrint(pendingUser)
         if pendingLogin && (pendingUser != nil) {
             debugPrint("segueing")
+            
             performSegue(withIdentifier: "login2HUD", sender: self)
-            pendingLogin = false
-            pendingUser = nil
+            
         }
     }
 }
