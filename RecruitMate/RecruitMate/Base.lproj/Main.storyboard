@@ -142,10 +142,10 @@
             </objects>
             <point key="canvasLocation" x="6447" y="-1103"/>
         </scene>
-        <!--JobEditVC-->
+        <!--Job EditVC-->
         <scene sceneID="qcN-2t-IDr">
             <objects>
-                <viewController title="JobEditVC" id="921-e1-vyP" customClass="JobDetailVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="921-e1-vyP" customClass="JobEditVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xwx-UO-pjR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,7 +204,7 @@
                         <viewLayoutGuide key="safeArea" id="nOf-LX-1eQ"/>
                     </view>
                     <connections>
-                        <segue destination="921-e1-vyP" kind="presentation" identifier="jobToEdit" id="Gwk-WG-gF7"/>
+                        <segue destination="921-e1-vyP" kind="show" identifier="job2Edit" id="Gwk-WG-gF7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOY-Kl-4d3" userLabel="First Responder" sceneMemberID="firstResponder"/>

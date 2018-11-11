@@ -81,6 +81,7 @@
 		CF40C3FE21979384007030E6 /* JobEdit-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40C3FD21979384007030E6 /* JobEdit-initUI.swift */; };
 		CFA2B0A52197A6CA00FEB48B /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2B0A32197A6CA00FEB48B /* TaskCell.swift */; };
 		CFA2B0A62197A6CA00FEB48B /* JobDetail-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2B0A42197A6CA00FEB48B /* JobDetail-tableview.swift */; };
+		CFA2B0A82197ACE000FEB48B /* JobEdit-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2B0A72197ACE000FEB48B /* JobEdit-system.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +163,7 @@
 		CF40C3FD21979384007030E6 /* JobEdit-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobEdit-initUI.swift"; sourceTree = "<group>"; };
 		CFA2B0A32197A6CA00FEB48B /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		CFA2B0A42197A6CA00FEB48B /* JobDetail-tableview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JobDetail-tableview.swift"; sourceTree = "<group>"; };
+		CFA2B0A72197ACE000FEB48B /* JobEdit-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobEdit-system.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -432,6 +434,7 @@
 			children = (
 				CF40C3FB21979324007030E6 /* JobEditVC.swift */,
 				CF40C3FD21979384007030E6 /* JobEdit-initUI.swift */,
+				CFA2B0A72197ACE000FEB48B /* JobEdit-system.swift */,
 			);
 			path = JobEditVC;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 			files = (
 				B74493B02182DFD700E43BA5 /* ClearbitAPI.swift in Sources */,
 				B76E3521217BF8FB00993E15 /* Login-main.swift in Sources */,
+				CFA2B0A82197ACE000FEB48B /* JobEdit-system.swift in Sources */,
 				B76E3557217BFFFD00993E15 /* HUD-initUI.swift in Sources */,
 				B76E3527217BFBAE00993E15 /* EmailPermission-main.swift in Sources */,
 				B76E3549217BFF8100993E15 /* EmailPermission-system.swift in Sources */,

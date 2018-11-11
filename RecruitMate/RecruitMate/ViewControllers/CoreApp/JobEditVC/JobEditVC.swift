@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import UIKit
+
+//class JobEditVC: UIViewController {
+//    
+////    var urlInput: UITextField!
+//     var companyPosition: UILabel!
+//   
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        initHeder()
+//      
+//        
+//        // Do any additional setup after loading the view.
+//      
+//}
+//
+//}

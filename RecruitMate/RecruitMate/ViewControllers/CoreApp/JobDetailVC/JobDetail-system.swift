@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 
 extension JobDetailVC {
+    
+    @objc func goToEditJob() {
+        self.performSegue(withIdentifier: "job2Edit", sender: self)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }

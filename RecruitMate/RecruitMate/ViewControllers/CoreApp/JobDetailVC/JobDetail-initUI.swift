@@ -11,17 +11,31 @@ import UIKit
 import ChameleonFramework
 
 extension JobDetailVC {
+    
     func initUI() {
         initHeader()
         initTasks()
+         initNav()
 //        initQuickTaskAdder()
     }
     
+    
+    func initNav() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(goToEditJob))
+    }
 
     
     func initHeader() {
         img = UIImageView(frame: CGRect(x: 0, y: view.frame.width/3 , width: view.frame.width/3, height: view.frame.width/3))
-        img.image = job.companyLogo
+        
+        if let logo = job.companyLogo {
+            img.image = logo
+        } else {
+            Utils.getImageFrom(url: job.companyLogoLink!, defaultImg: .placeholder) { (loaded) in
+                self.img.image = loaded
+            }
+        }
+        
         img.center = CGPoint(x: view.frame.width/2, y: view.frame.height/5)
         img.contentMode = .scaleAspectFit
         img.clipsToBounds = true
