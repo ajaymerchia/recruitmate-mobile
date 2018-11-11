@@ -15,7 +15,7 @@ extension JobDetailVC {
     func initUI() {
         initHeader()
         initTasks()
-         initNav()
+        initNav()
 //        initQuickTaskAdder()
     }
     
@@ -58,7 +58,7 @@ extension JobDetailVC {
         urlButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 20.0)
         urlButton.backgroundColor = UIColor(red: 0, green: 0.4275, blue: 0.8275, alpha: 1)
         view.addSubview(urlButton)
-        //Utils.openURL(<#T##urlString: String##String#>)
+        // Utils.openURL(<#T##urlString: String##String#>)
 //        searchWebButton.addTarget(self, action: #selector(gotoWebsite), for: .touchUpInside)
     }
     

@@ -17,7 +17,11 @@ extension JobDetailVC {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if let vc = segue.destination as? JobEditVC {
+            vc.job = job
+            vc.board = board
+            // job = nil
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
