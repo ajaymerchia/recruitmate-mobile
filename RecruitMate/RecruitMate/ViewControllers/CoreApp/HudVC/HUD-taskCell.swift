@@ -36,12 +36,12 @@ class HUD_taskCell: UITableViewCell {
         contentView.addSubview(cell)
         
         
-        jobName = UILabel(frame: CGRect(x: Constants.MARGINAL_PADDING, y: Constants.MARGINAL_PADDING, width: width, height: 20))
+        jobName = UILabel(frame: CGRect(x: 2 * Constants.MARGINAL_PADDING, y: 2 * Constants.MARGINAL_PADDING, width: width, height: 20))
         jobName.text = "name of company"
         jobName.font = Constants.TEXT_FONT
         cell.addSubview(jobName)
         
-        taskName = UILabel(frame: LayoutManager.belowLeft(elementAbove: jobName, padding: 0, width: width - 2*Constants.PADDING, height: 40))
+        taskName = UILabel(frame: LayoutManager.belowLeft(elementAbove: jobName, padding: 0, width: width - 2 * Constants.PADDING, height: 40))
         taskName.font = Constants.SUBTITLE_FONT
         cell.addSubview(taskName)
         

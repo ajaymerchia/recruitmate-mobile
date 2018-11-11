@@ -18,8 +18,9 @@ class JobCard: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        name = UILabel(frame: CGRect(x: 5 * Constants.MARGINAL_PADDING, y: Constants.MARGINAL_PADDING, width: contentView.frame.width, height: 60 - Constants.MARGINAL_PADDING * 2))
+        name = UILabel(frame: CGRect(x: 5 * Constants.MARGINAL_PADDING, y: Constants.MARGINAL_PADDING, width: contentView.frame.width * 0.6, height: 60 - Constants.MARGINAL_PADDING * 2))
         name.text = "sample"
+        name.textColor = .black
         name.font = Constants.TEXT_FONT
         contentView.addSubview(name)
         
@@ -33,7 +34,7 @@ class JobCard: UITableViewCell {
         logo.layer.borderColor = rgba(162,162,162,1).cgColor
         contentView.addSubview(logo)
         
-        
+        self.selectionStyle = .none
         
     }
     

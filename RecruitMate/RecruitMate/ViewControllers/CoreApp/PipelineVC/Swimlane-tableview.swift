@@ -33,7 +33,12 @@ extension Swimlane: UITableViewDelegate, UITableViewDataSource {
         cell.initializeCellFrom(jobs[indexPath.row])
         cell.adjustViewWithHeight(Swimlane.cellHeight)
         
-        
+        officialColor = self.jobs[indexPath.row].companyColor
+        if Utils.sum(Utils.hexToRGB(hex: (self.jobs[indexPath.row].companyColor?.hexValue())!)) > (256*3) * 3/4 {
+            officialColor = self.jobs[indexPath.row].companyColor?.darken(byPercentage: 0.5)
+        }
+
+        cell.backgroundColor = officialColor.withAlphaComponent(0.3)
         return cell
     }
     
