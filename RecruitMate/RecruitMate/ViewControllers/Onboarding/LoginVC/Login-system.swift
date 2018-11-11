@@ -48,7 +48,8 @@ extension LoginVC {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
+        emailField.text = ""
+        passwordField.text = ""
     }
     
     @objc func setPendingLogin(_ notification: Notification) {
