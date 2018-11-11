@@ -75,7 +75,6 @@ extension LoginVC {
         
         view.addSubview(emailField)
         
-    
         passwordField = UITextField(frame: LayoutManager.belowCentered(elementAbove: emailField, padding: Constants.PADDING/2, width: emailField.frame.width, height: emailField.frame.height))
         
         passwordField.backgroundColor = rgba(0,0,0,0)
