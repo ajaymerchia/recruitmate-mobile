@@ -100,6 +100,8 @@ class Utils {
         return ret
     }
     
+    
+    
     /// Adds the question mark based background image to the given view
     ///
     /// - Parameter given_view: View to which a background image should be added

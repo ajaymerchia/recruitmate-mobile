@@ -15,12 +15,16 @@ class JobDetailVC: UIViewController {
     
     
     var companyPosition: UILabel!
-    var companyName: UILabel!
+    var companyStatus: UILabel!
     
     var urlButton: UIButton!
     var img: UIImageView!
     var tasks: [Task]!
     var tasksTitle: UILabel!
+    var addTaskButton: UIButton!
+    
+    var jobDescription: UITextView!
+    
     var tableView: UITableView!
     
     // Testing Variables [[Ignore]]
