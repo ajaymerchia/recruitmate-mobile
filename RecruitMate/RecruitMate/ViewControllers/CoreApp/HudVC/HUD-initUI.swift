@@ -33,7 +33,7 @@ extension HudVC {
 //        welcome.text = "Welcome, \((self.tabBarController as! TabBarController).currentUser.first!)"
         welcome.text = board.name
         welcome.textAlignment = .center
-        welcome.font = Constants.SUBTITLE_FONT
+        welcome.font = Constants.SUBTITLE_FONT?.bold
         view.addSubview(welcome)
         
     }
