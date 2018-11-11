@@ -10,7 +10,7 @@ import UIKit
 
 extension JobDetailVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
+        return job.tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -22,7 +22,7 @@ extension JobDetailVC: UITableViewDelegate, UITableViewDataSource {
         
         // Initialize Cell
         cell.awakeFromNib()
-        cell.initializeCellFrom(tasks[indexPath.row])
+        cell.initializeCellFrom(job.tasks[indexPath.row])
         
         return cell
     }
