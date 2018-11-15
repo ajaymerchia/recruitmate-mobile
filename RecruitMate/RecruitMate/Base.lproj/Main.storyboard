@@ -145,21 +145,6 @@
             </objects>
             <point key="canvasLocation" x="6446" y="-1103"/>
         </scene>
-        <!--Job EditVC-->
-        <scene sceneID="qcN-2t-IDr">
-            <objects>
-                <viewController id="921-e1-vyP" customClass="JobEditVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xwx-UO-pjR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="IGy-4Y-bEB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kZn-Aj-yRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8050" y="806"/>
-        </scene>
         <!--What's Next-->
         <scene sceneID="EDf-JS-ij1">
             <objects>
@@ -207,7 +192,6 @@
                         <viewLayoutGuide key="safeArea" id="nOf-LX-1eQ"/>
                     </view>
                     <connections>
-                        <segue destination="921-e1-vyP" kind="show" identifier="job2Edit" id="Gwk-WG-gF7"/>
                         <segue destination="jnu-DY-Ko2" kind="show" identifier="detail2Task" id="uwM-fD-jrz"/>
                         <segue destination="wRg-f5-9XK" kind="show" identifier="detail2Stage" id="qpd-Iu-IuU"/>
                         <segue destination="zy1-Ql-dUZ" kind="show" identifier="detail2NewTask" id="sxJ-5e-f9k"/>
