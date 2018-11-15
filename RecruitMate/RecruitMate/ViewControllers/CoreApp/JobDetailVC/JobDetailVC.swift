@@ -19,13 +19,14 @@ class JobDetailVC: UIViewController {
     
     var urlButton: UIButton!
     var img: UIImageView!
-    var tasks: [Task]!
     var tasksTitle: UILabel!
     var addTaskButton: UIButton!
     
     var jobDescription: UITextView!
     
     var tableView: UITableView!
+    
+    var selectedTask: Task?
     
     // Testing Variables [[Ignore]]
     var task: UITextField!

@@ -23,6 +23,10 @@ class LayoutManager {
         return CGRect(x: elementBelow.frame.minX, y: elementBelow.frame.minY - (padding+height), width: width, height: height)
     }
     
+    static func aboveRight(elementBelow: UIView, padding: CGFloat, width:CGFloat, height: CGFloat) -> CGRect {
+        return CGRect(x: elementBelow.frame.maxX - width, y: elementBelow.frame.minY - (padding+height), width: width, height: height)
+    }
+    
     
     
     

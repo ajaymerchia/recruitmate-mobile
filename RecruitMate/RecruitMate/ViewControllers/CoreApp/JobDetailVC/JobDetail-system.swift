@@ -15,6 +15,10 @@ extension JobDetailVC {
         self.performSegue(withIdentifier: "job2Edit", sender: self)
     }
     
+    @objc func goToTaskDetail() {
+        self.performSegue(withIdentifier: "detail2Task", sender: self)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? JobEditVC {
@@ -22,6 +26,13 @@ extension JobDetailVC {
             vc.board = board
             // job = nil
         }
+        
+        if let vc = segue.destination as? TaskDetailVC {
+            vc.board = board
+            vc.job = job
+            vc.task = selectedTask
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

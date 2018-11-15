@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import ChameleonFramework
 
-extension JobDetailVC {
+extension JobDetailVC: UITextViewDelegate {
     
     func initUI() {
         initHeader()
@@ -37,7 +37,7 @@ extension JobDetailVC {
         img.layer.borderColor = rgba(162,162,162,1).cgColor
         view.addSubview(img)
         
-        companyPosition = UILabel(frame: LayoutManager.belowCentered(elementAbove: img, padding: Constants.PADDING , width: view.frame.width, height: 30))
+        companyPosition = UILabel(frame: LayoutManager.belowCentered(elementAbove: img, padding: Constants.PADDING , width: view.frame.width, height: 35))
         companyPosition.textAlignment = .center
         companyPosition.text = job.companyPosition
         companyPosition.font = UIFont(name: "Avenir-Heavy", size: 35)
@@ -63,9 +63,16 @@ extension JobDetailVC {
 //        searchWebButton.addTarget(self, action: #selector(gotoWebsite), for: .touchUpInside)
         
         jobDescription = UITextView(frame: LayoutManager.belowCentered(elementAbove: urlButton, padding: Constants.PADDING, width: view.frame.width - 2*Constants.PADDING, height: 50))
-        jobDescription.isEditable = false
+        jobDescription.isEditable = true
+        jobDescription.delegate = self
 //        jobDescription.placeholderText = "Description here"
-        jobDescription.text = "Description here"
+        jobDescription.text = job.additionalInfo ?? "Add job details here"
+        jobDescription.font = Constants.TEXT_FONT
+        
+        if jobDescription.text == "Add job details here" {
+            jobDescription.textColor = Constants.PLACEHOLDER_COLOR
+
+        }
         view.addSubview(jobDescription)
         
     }
@@ -85,6 +92,39 @@ extension JobDetailVC {
         tableView.showsVerticalScrollIndicator = true
         
         view.addSubview(tableView)
+        
+        addTaskButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: tableView, padding: 17.5, width: 25, height: 25))
+        addTaskButton.setBackgroundColor(color: UIColor(hexString: "40d652")!, forState: .normal)
+        addTaskButton.setTitle("+", for: .normal)
+        addTaskButton.setTitleColor(.white, for: .normal)
+        addTaskButton.layer.cornerRadius = addTaskButton.frame.width * 0.5
+        
+        view.addSubview(addTaskButton)
+        
+        
     }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == Constants.PLACEHOLDER_COLOR {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Add job details here"
+            textView.textColor = Constants.PLACEHOLDER_COLOR
+        }
+        
+        if textView.text != job.additionalInfo {
+            job.additionalInfo = textView.text
+            FirebaseAPIClient.push(job: job, toBoard: board) {
+                debugPrint("job additional details updated")
+            }
+        }
+    }
+    
+    
     
 }
