@@ -97,8 +97,9 @@ extension JobDetailVC: UITextViewDelegate {
         addTaskButton.setBackgroundColor(color: UIColor(hexString: "40d652")!, forState: .normal)
         addTaskButton.setTitle("+", for: .normal)
         addTaskButton.setTitleColor(.white, for: .normal)
+        addTaskButton.clipsToBounds = true
         addTaskButton.layer.cornerRadius = addTaskButton.frame.width * 0.5
-        
+        addTaskButton.addTarget(self, action: #selector(goToNewTask), for: .touchUpInside)
         view.addSubview(addTaskButton)
         
         
