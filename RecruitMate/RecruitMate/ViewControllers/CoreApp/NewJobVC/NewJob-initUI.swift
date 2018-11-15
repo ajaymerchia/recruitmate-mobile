@@ -17,7 +17,7 @@ extension NewJobVC {
         initDataEntry()
     }
     func initNav() {
-        let navbar = UINavigationBar(frame: CGRect(x: 0, y: Constants.PADDING, width: view.frame.width, height: 50));
+        let navbar = UINavigationBar(frame: CGRect(x: 0, y: Constants.PADDING + 15, width: view.frame.width, height: 50));
         navbar.tintColor = Constants.RECRUITMATE_BLUE
         navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navbar.shadowImage = UIImage()
