@@ -69,15 +69,15 @@ extension HudVC {
             print(daysAway)
             
             if daysAway < 0 {
-                return nil
-            } else if daysAway < 1 {
                 return taskCategories[0]
-            } else if daysAway < 2 {
+            } else if daysAway < 1 {
                 return taskCategories[1]
-            } else if daysAway < 8 {
+            } else if daysAway < 2 {
                 return taskCategories[2]
-            } else {
+            } else if daysAway < 8 {
                 return taskCategories[3]
+            } else {
+                return taskCategories[4]
             }
             
             

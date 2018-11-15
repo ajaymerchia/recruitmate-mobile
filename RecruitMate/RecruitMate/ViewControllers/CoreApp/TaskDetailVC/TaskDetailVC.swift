@@ -1,33 +1,21 @@
 //
-//  HudVC.swift
+//  TaskDetailVC.swift
 //  RecruitMate
 //
-//  Created by Ajay Raj Merchia on 10/20/18.
+//  Created by Ajay Raj Merchia on 11/14/18.
 //  Copyright © 2018 Ajay Raj Merchia. All rights reserved.
 //
 
 import UIKit
 
-class HudVC: UIViewController {
-    
-    var welcome: UILabel!
-    var tableView: UITableView!
-    
-    var tasks: [String: [Task]] = [:]
-    var task2JobMap: [String: Job] = [:]
-    var taskCategories = ["Past Due","Today", "Tomorrow", "This Week", "Later"]
+class TaskDetailVC: UIViewController {
+
     var board: Board!
-    
-    var targetJob: Job?
+    var job: Job!
+    var task: Task!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getDataForCells()
-        
-        print(taskCategories)
-        print(tasks)
-        
-        initUI()
 
         // Do any additional setup after loading the view.
     }
