@@ -91,6 +91,8 @@ extension JobDetailVC: UITextViewDelegate {
         tasksTitle.font = Constants.SUBTITLE_FONT
         view.addSubview(tasksTitle)
         
+        view.addSubview(Utils.getBottomBorder(forView: tasksTitle, thickness: 2, color: .black))
+        
         tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: tasksTitle, padding: 0, width: view.frame.width - 50, height: view.frame.height / 4))
         tableView.register(TaskCell.self, forCellReuseIdentifier: "taskCell")
         tableView.delegate = self

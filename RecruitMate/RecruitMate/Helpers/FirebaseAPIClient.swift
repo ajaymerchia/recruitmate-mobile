@@ -42,9 +42,10 @@ class FirebaseAPIClient {
     static func push(job: Job, toBoard: Board, completion: @escaping () -> ()) {
         let ref = Database.database().reference().child("boards").child(toBoard.id).child("jobs").child(job.id)
         
-        ref.updateChildValues(job.createPushable()) { (err, ref) in
+        ref.setValue(job.createPushable()) { (err, ref) in
             completion()
         }
+
         
     }
     

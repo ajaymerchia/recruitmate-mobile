@@ -45,6 +45,10 @@ class Job: FirebasePushable {
         }
         values["tasks"] = pushableTasks
         
+        debugPrint("THIS IS THE FINAL PUSHABLE")
+        debugPrint(values["applicationURL"])
+        debugPrint(values)
+        
         return values
     }
     
