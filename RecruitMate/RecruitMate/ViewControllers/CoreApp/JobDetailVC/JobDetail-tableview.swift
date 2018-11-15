@@ -22,6 +22,7 @@ extension JobDetailVC: UITableViewDelegate, UITableViewDataSource {
         
         // Initialize Cell
         cell.awakeFromNib()
+        cell.adjustViewWithHeight(cell.frame.height)
         cell.initializeCellFrom(job.tasks[indexPath.row])
         
         return cell
