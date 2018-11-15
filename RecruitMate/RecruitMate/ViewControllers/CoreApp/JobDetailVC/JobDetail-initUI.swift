@@ -91,18 +91,22 @@ extension JobDetailVC: UITextViewDelegate {
         tasksTitle.font = Constants.SUBTITLE_FONT
         view.addSubview(tasksTitle)
         
+        view.addSubview(Utils.getBottomBorder(forView: tasksTitle, thickness: 2, color: .black))
+        
         tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: tasksTitle, padding: 0, width: view.frame.width - 50, height: view.frame.height / 4))
         tableView.register(TaskCell.self, forCellReuseIdentifier: "taskCell")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .flatWhite
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
         tableView.showsVerticalScrollIndicator = true
+        tableView.layer.borderColor = UIColor.black.cgColor
+        tableView.layer.borderWidth = 1
         
         view.addSubview(tableView)
         
-        addTaskButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: tableView, padding: 17.5, width: 25, height: 25))
-        addTaskButton.setBackgroundColor(color: UIColor(hexString: "40d652")!, forState: .normal)
+        addTaskButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: tableView, padding: 50, width: 25, height: 25))
+        addTaskButton.setBackgroundColor(color: Constants.RECRUITMATE_BLUE, forState: .normal)
         addTaskButton.setTitle("+", for: .normal)
         addTaskButton.setTitleColor(.white, for: .normal)
         addTaskButton.clipsToBounds = true
@@ -110,6 +114,14 @@ extension JobDetailVC: UITextViewDelegate {
         addTaskButton.addTarget(self, action: #selector(goToNewTask), for: .touchUpInside)
         view.addSubview(addTaskButton)
         
+        deleteTaskButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: tableView, padding: 20, width: 25, height: 25))
+        deleteTaskButton.setBackgroundColor(color: Constants.RECRUITMATE_BLUE_DARK, forState: .normal)
+        deleteTaskButton.setTitle("-", for: .normal)
+        deleteTaskButton.setTitleColor(.white, for: .normal)
+        deleteTaskButton.clipsToBounds = true
+        deleteTaskButton.layer.cornerRadius = addTaskButton.frame.width * 0.5
+        deleteTaskButton.addTarget(self, action: #selector(toggleDeleteMode), for: .touchUpInside)
+        view.addSubview(deleteTaskButton)
         
     }
     

@@ -22,12 +22,15 @@ class JobDetailVC: UIViewController {
     var img: UIImageView!
     var tasksTitle: UILabel!
     var addTaskButton: UIButton!
+    var deleteTaskButton: UIButton!
     
     var jobDescription: UITextView!
     
     var tableView: UITableView!
     
     var selectedTask: Task?
+    
+    var deleteMode: Bool = false
     
     // Testing Variables [[Ignore]]
     var task: UITextField!

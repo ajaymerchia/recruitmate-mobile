@@ -14,13 +14,21 @@ class TaskDetailVC: UIViewController {
     var job: Job!
     var task: Task!
     
+    var img: UIImageView!
+    
+    var jobTitle: UILabel!
+    var taskTitle: UILabel!
+    var taskDeadline: UILabel!
+    var taskDescription: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        initHeader()
     }
     
-
+    
     /*
     // MARK: - Navigation
 
