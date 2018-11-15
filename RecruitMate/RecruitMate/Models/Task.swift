@@ -49,6 +49,9 @@ class Task: Comparable {
         
         self.deadline = Date(timeIntervalSince1970: TimeInterval(exactly: (firebaseStruct["deadline"] as! NSNumber) as! Double)!)
         self.description = (firebaseStruct["description"] as! String)
+        
+        self.completed = (firebaseStruct["completed"] as? Bool) ?? false
+        
     }
     
     

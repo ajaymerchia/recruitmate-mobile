@@ -98,8 +98,10 @@ extension JobDetailVC: UITextViewDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .flatWhite
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
         tableView.showsVerticalScrollIndicator = true
+        tableView.layer.borderColor = UIColor.black.cgColor
+        tableView.layer.borderWidth = 1
         
         view.addSubview(tableView)
         

@@ -14,6 +14,8 @@ class TaskCell: UITableViewCell {
     var logo: UIImageView!
     var separator: UIView!
     
+    var doneButton: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,17 +25,30 @@ class TaskCell: UITableViewCell {
         name.font = Constants.TEXT_FONT
         contentView.addSubview(name)
         
+        doneButton = UIButton(frame: CGRect(x: contentView.frame.width - 30, y: Constants.MARGINAL_PADDING, width: 20, height: 20))
+        doneButton.layer.cornerRadius = 10
+        doneButton.clipsToBounds = true
+        doneButton.setBackgroundColor(color: .gray, forState: .normal)
+        doneButton.setBackgroundColor(color: .green, forState: .selected)
+        doneButton.addTarget(self, action: #selector(changeState), for: .touchUpInside)
+        contentView.addSubview(doneButton)
+        
+        
+        
+    }
+    
+    @objc func changeState() {
+        doneButton.isSelected = !doneButton.isSelected
     }
     
     func adjustViewWithHeight(_ height: CGFloat) {
         
-        separator = UIView(frame: CGRect(x: 0, y: height-10, width: contentView.frame.width, height: 10))
-        separator.backgroundColor = .flatWhite
-        contentView.addSubview(separator)
+        doneButton.frame = CGRect(x: contentView.frame.width - 30, y: height/2 - 10, width: 20, height: 20)
     }
     
     func initializeCellFrom(_ data: Task) {
         name.text = data.title
+        doneButton.isSelected = data.completed
     }
     
     
