@@ -39,12 +39,14 @@ extension Swimlane: UITableViewDelegate, UITableViewDataSource {
         }
 
         cell.backgroundColor = officialColor.withAlphaComponent(0.3)
+        cell.designFor(job: jobs[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         swimlaneParent.jobForDetail = self.jobs[indexPath.row]
         swimlaneParent.performSegue(withIdentifier: "pipe2detail", sender: self)
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

@@ -29,7 +29,7 @@ extension PipelineVC {
         
         let sizeOfSwimlane: CGFloat = view.frame.width * 0.75
         let numSwimlanes = CGFloat(swimlaneNames.count)
-        swimlaneHolder.contentSize = CGSize(width: (numSwimlanes * sizeOfSwimlane + (numSwimlanes+1) * Constants.PADDING ), height: swimlaneHolder.frame.height)
+        swimlaneHolder.contentSize = CGSize(width: (numSwimlanes * sizeOfSwimlane + (numSwimlanes+1) * Constants.PADDING), height: swimlaneHolder.frame.height)
         
         view.addSubview(swimlaneHolder)
         var offset: CGFloat = Constants.PADDING

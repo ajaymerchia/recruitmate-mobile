@@ -13,7 +13,8 @@ class JobCard: UITableViewCell {
     var name: UILabel!
     var logo: UIImageView!
     var separator: UIView!
-
+    var cell: UIView!
+    var officialColor: UIColor!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -68,6 +69,30 @@ class JobCard: UITableViewCell {
         }
     }
     
-
+    func designFor(job: Job) {
+        officialColor = job.companyColor
+        if Utils.sum(Utils.hexToRGB(hex: (job.companyColor?.hexValue())!)) > (256*3) * 3/4 {
+            officialColor = job.companyColor?.darken(byPercentage: 0.5)
+        }
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        // Configure the view for the selected state
+        if highlighted {
+            self.backgroundColor = officialColor.withAlphaComponent(0.6)
+        } else {
+            self.backgroundColor = officialColor.withAlphaComponent(0.3)
+        }
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        if selected {
+            self.backgroundColor = officialColor.withAlphaComponent(0.6)
+        } else {
+            self.backgroundColor = officialColor.withAlphaComponent(0.3)
+        }
+        
+    }
 
 }

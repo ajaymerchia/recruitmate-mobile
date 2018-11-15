@@ -12,9 +12,9 @@ import ChameleonFramework
 
 extension Swimlane {
     func initUI() {
-        laneName = UILabel(frame: CGRect(x: 0, y: 20, width: self.frame.width, height: 40))
-        laneName.font = Constants.SUBTITLE_FONT
-                laneName.textColor = Constants.RECRUITMATE_BLUE
+        laneName = UILabel(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: 40))
+        laneName.font = Constants.SUBTITLE_FONT?.bold
+        laneName.textColor = Constants.RECRUITMATE_BLUE
         laneName.text = name.uppercased()
         laneName.textAlignment = .center
         
@@ -36,7 +36,7 @@ extension Swimlane {
         numJobs.textAlignment = .center
         self.addSubview(numJobs)
         
-        tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: numJobs, padding: 0, width: self.frame.width, height: self.frame.maxY - numJobs.frame.maxY))
+        tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: numJobs, padding: Constants.MARGINAL_PADDING * 2, width: self.frame.width, height: self.frame.maxY - numJobs.frame.maxY))
         tableView.register(JobCard.self, forCellReuseIdentifier: "jobCard")
         tableView.delegate = self
         tableView.dataSource = self
