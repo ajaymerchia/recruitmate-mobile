@@ -28,10 +28,15 @@ extension JobDetailVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        selectedTask = job.tasks[indexPath.row]
-        goToTaskDetail()
-        
+        if deleteMode {
+            debugPrint("Deleting task!")
+            job.tasks.remove(at: indexPath.row)
+            FirebaseAPIClient.push(job: job, toBoard: board, completion: {})
+        } else {
+            tableView.deselectRow(at: indexPath, animated: true)
+            selectedTask = job.tasks[indexPath.row]
+            goToTaskDetail()
+        }
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

@@ -13,20 +13,23 @@ class JobDetailVC: UIViewController {
     var job: Job!
     var board: Board!
     
-    
     var companyPosition: UILabel!
     var companyStatus: UILabel!
     
     var urlButton: UIButton!
     var img: UIImageView!
     var tasksTitle: UILabel!
+    
     var addTaskButton: UIButton!
+    var deleteTaskButton: UIButton!
     
     var jobDescription: UITextView!
     
     var tableView: UITableView!
     
     var selectedTask: Task?
+    
+    var deleteMode: Bool = false
     
     // Testing Variables [[Ignore]]
     var task: UITextField!

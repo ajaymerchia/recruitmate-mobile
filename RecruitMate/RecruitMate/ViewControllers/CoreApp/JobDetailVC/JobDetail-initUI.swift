@@ -93,7 +93,7 @@ extension JobDetailVC: UITextViewDelegate {
         
         view.addSubview(tableView)
         
-        addTaskButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: tableView, padding: 17.5, width: 25, height: 25))
+        addTaskButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: tableView, padding: 25, width: 25, height: 25))
         addTaskButton.setBackgroundColor(color: UIColor(hexString: "40d652")!, forState: .normal)
         addTaskButton.setTitle("+", for: .normal)
         addTaskButton.setTitleColor(.white, for: .normal)
@@ -102,6 +102,14 @@ extension JobDetailVC: UITextViewDelegate {
         addTaskButton.addTarget(self, action: #selector(goToNewTask), for: .touchUpInside)
         view.addSubview(addTaskButton)
         
+        deleteTaskButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: tableView, padding: 0, width: 25, height: 25))
+        deleteTaskButton.setBackgroundColor(color: Constants.RECRUITMATE_BLUE, forState: .normal)
+        deleteTaskButton.setTitle("x", for: .normal)
+        deleteTaskButton.setTitleColor(.white, for: .normal)
+        deleteTaskButton.clipsToBounds = true
+        deleteTaskButton.layer.cornerRadius = addTaskButton.frame.width * 0.5
+        deleteTaskButton.addTarget(self, action: #selector(toggleDeleteMode), for: .touchUpInside)
+        view.addSubview(deleteTaskButton)
         
     }
     

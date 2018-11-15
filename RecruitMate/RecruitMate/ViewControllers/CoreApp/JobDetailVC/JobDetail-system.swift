@@ -23,7 +23,13 @@ extension JobDetailVC {
         self.performSegue(withIdentifier: "detail2NewTask", sender: self)
     }
     
-    
+    @objc func toggleDeleteMode() {
+        if deleteMode {
+            deleteMode = false
+        } else {
+            deleteMode = true
+        }
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
