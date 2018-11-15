@@ -13,9 +13,10 @@ class JobDetailVC: UIViewController {
     var job: Job!
     var board: Board!
     
+    var alerts: AlertManager!
     
     var companyPosition: UILabel!
-    var companyStatus: UILabel!
+    var companyStatus: UIButton!
     
     var urlButton: UIButton!
     var img: UIImageView!
@@ -38,6 +39,7 @@ class JobDetailVC: UIViewController {
 
         // Do any additional setup after loading the view.
        // tasks = job.tasks
+        setUpManagers()
         initUI()
     }
     

@@ -35,6 +35,36 @@ class AlertManager {
         return hud
     }
     
+    func getTextInput(withTitle: String, andPlaceholder: String, placeholderToText: Bool = false,  completion: @escaping (String) -> (), cancellation: @escaping () -> () = {}) {
+        let alert = UIAlertController(title: withTitle, message: nil, preferredStyle: .alert)
+        
+        alert.addTextField(configurationHandler: { textField in
+            if placeholderToText {
+                textField.text = andPlaceholder
+            } else {
+                textField.placeholder = andPlaceholder
+
+            }
+        })
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            _ in
+            cancellation()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { action in
+            guard let response = alert.textFields?.first?.text else {
+                cancellation()
+                return
+            }
+            completion(response)
+        }))
+        
+        srcView.present(alert, animated: true)
+        
+        
+    }
+    
     
     
 }

@@ -43,12 +43,21 @@ extension JobDetailVC: UITextViewDelegate {
         companyPosition.font = UIFont(name: "Avenir-Heavy", size: 35)
         view.addSubview(companyPosition)
         
-        companyStatus = UILabel(frame: LayoutManager.belowCentered(elementAbove: companyPosition, padding: Constants.PADDING/2, width: view.frame.width, height: 30))
-        companyStatus.textAlignment = .center
-        companyStatus.text = "Status: \(job.pipelineStatus!)"
-        companyStatus.font = Constants.SUBTITLE_FONT?.italic
+        companyStatus = UIButton(frame: LayoutManager.belowCentered(elementAbove: companyPosition, padding: Constants.PADDING/2, width: view.frame.width, height: 30))
+        companyStatus.setTitle("Status: \(job.pipelineStatus!)", for: .normal)
+        companyStatus.titleLabel?.font = Constants.SUBTITLE_FONT?.italic
+        companyStatus.setTitleColor(.black, for: .normal)
+        companyStatus.addTarget(self, action: #selector(goToStage), for: .touchUpInside)
         view.addSubview(companyStatus)
-     
+        
+        var prompt = UILabel(frame: LayoutManager.belowCentered(elementAbove: companyStatus, padding: -5, width: view.frame.width, height: 14))
+        prompt.font = UIFont(name: "Avenir-Light", size: 12)
+        prompt.textAlignment = .center
+        prompt.text = "(tap to change status)"
+        view.addSubview(prompt)
+        
+        
+        
         urlButton = UIButton(frame:LayoutManager.belowCentered(elementAbove: companyStatus, padding: 0, width: view.frame.width/2, height: 50))
         
         if job.applicationURL == "" {
@@ -58,9 +67,8 @@ extension JobDetailVC: UITextViewDelegate {
         urlButton.setTitleColor(Constants.RECRUITMATE_BLUE, for: .normal)
         urlButton.setTitleColor(Constants.RECRUITMATE_BLUE_DARK, for: .highlighted)
         urlButton.titleLabel?.font = Constants.TEXT_FONT
+        urlButton.addTarget(self, action: #selector(openActionSheet), for: .touchUpInside)
         view.addSubview(urlButton)
-        // Utils.openURL(<#T##urlString: String##String#>)
-//        searchWebButton.addTarget(self, action: #selector(gotoWebsite), for: .touchUpInside)
         
         jobDescription = UITextView(frame: LayoutManager.belowCentered(elementAbove: urlButton, padding: Constants.PADDING, width: view.frame.width - 2*Constants.PADDING, height: 50))
         jobDescription.isEditable = true
@@ -124,6 +132,16 @@ extension JobDetailVC: UITextViewDelegate {
                 debugPrint("job additional details updated")
             }
         }
+    }
+    
+    func updateFields() {
+        img.image = job.companyLogo
+        companyPosition.text = job.companyPosition
+        companyStatus.setTitle("Status: \(job.pipelineStatus!)", for: .normal)
+        urlButton.setTitle(job.applicationURL ?? "(set application link)", for: .normal)
+        jobDescription.text = job.additionalInfo ?? "Add job details here"
+        tableView.reloadData()
+        
     }
     
     

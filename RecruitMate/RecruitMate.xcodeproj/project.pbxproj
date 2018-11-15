@@ -63,6 +63,7 @@
 		B76E355F217C002E00993E15 /* NewJob-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E355E217C002E00993E15 /* NewJob-system.swift */; };
 		B77CFA21219D38B600D3D8C4 /* TaskDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77CFA20219D38B600D3D8C4 /* TaskDetailVC.swift */; };
 		B77CFA24219D3EBF00D3D8C4 /* NewTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77CFA23219D3EBF00D3D8C4 /* NewTaskVC.swift */; };
+		B77CFA27219D474200D3D8C4 /* JobDetail-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77CFA26219D474200D3D8C4 /* JobDetail-logic.swift */; };
 		B780C5B0217C296200AA7C27 /* SignUp-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C5AF217C296200AA7C27 /* SignUp-logic.swift */; };
 		B78AF181217DAAE400DE37C9 /* Login-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78AF180217DAAE400DE37C9 /* Login-logic.swift */; };
 		B78AF182217DAB3C00DE37C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33EE3D217C0FA700B2A7B3 /* User.swift */; };
@@ -152,6 +153,7 @@
 		B76E355E217C002E00993E15 /* NewJob-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewJob-system.swift"; sourceTree = "<group>"; };
 		B77CFA20219D38B600D3D8C4 /* TaskDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailVC.swift; sourceTree = "<group>"; };
 		B77CFA23219D3EBF00D3D8C4 /* NewTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskVC.swift; sourceTree = "<group>"; };
+		B77CFA26219D474200D3D8C4 /* JobDetail-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDetail-logic.swift"; sourceTree = "<group>"; };
 		B780C5AF217C296200AA7C27 /* SignUp-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-logic.swift"; sourceTree = "<group>"; };
 		B78AF180217DAAE400DE37C9 /* Login-logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Login-logic.swift"; path = "RecruitMate/ViewControllers/Onboarding/LoginVC/Login-logic.swift"; sourceTree = SOURCE_ROOT; };
 		B7A23261218B6C8800DBB6AF /* CompanySelectVC-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanySelectVC-main.swift"; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 			children = (
 				B76E3533217BFCA800993E15 /* JobDetailVC.swift */,
 				B76E354E217BFFD200993E15 /* JobDetail-initUI.swift */,
+				B77CFA26219D474200D3D8C4 /* JobDetail-logic.swift */,
 				B76E3550217BFFDB00993E15 /* JobDetail-system.swift */,
 				CFA2B0A42197A6CA00FEB48B /* JobDetail-tableview.swift */,
 				B7290FA72197865F0073795A /* JobDetail-addTaskTest.swift */,
@@ -704,6 +707,7 @@
 				B7A23276218BCBC900DBB6AF /* NewJob-logic.swift in Sources */,
 				B78AF185217DAB4500DE37C9 /* Job.swift in Sources */,
 				B7A23267218B6CE900DBB6AF /* CompanySelectVC-system.swift in Sources */,
+				B77CFA27219D474200D3D8C4 /* JobDetail-logic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

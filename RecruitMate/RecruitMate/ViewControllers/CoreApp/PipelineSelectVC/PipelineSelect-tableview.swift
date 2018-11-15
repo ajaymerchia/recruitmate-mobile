@@ -33,9 +33,20 @@ extension PipelineSelectVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        (self.presentingViewController as? NewJobVC)?.swimlane = board.swimlanes[indexPath.row]
-        tableView.deselectRow(at: indexPath, animated: true)
-        self.dismiss(animated: true, completion: {})
+        if let vc = self.presentingViewController as? NewJobVC {
+            vc.swimlane = board.swimlanes[indexPath.row]
+            self.dismiss(animated: true)
+        } else if let vc = self.navigationController?.viewControllers[1] as? JobDetailVC {
+            vc.job.pipelineStatus = board.swimlanes[indexPath.row]
+            vc.updateFields()
+            AlertManager(view: self).startProgressHud(withMsg: "Updating Status")
+            FirebaseAPIClient.push(job: vc.job, toBoard: board, completion: {
+                tableView.deselectRow(at: indexPath, animated: true)
+                self.navigationController?.popViewController(animated: true)
+            })
+        }
+        
+        
     }
     
     
