@@ -16,6 +16,7 @@ class TaskDetailVC: UIViewController {
     
     var img: UIImageView!
     
+    var jobTitle: UILabel!
     var taskTitle: UILabel!
     var taskDeadline: UILabel!
     var taskDescription: UITextView!

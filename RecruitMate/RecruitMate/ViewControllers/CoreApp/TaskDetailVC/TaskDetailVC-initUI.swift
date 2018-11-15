@@ -21,13 +21,19 @@ extension TaskDetailVC: UITextViewDelegate {
         img.layer.borderColor = rgba(162,162,162,1).cgColor
         view.addSubview(img)
         
-        taskTitle = UILabel(frame: LayoutManager.belowCentered(elementAbove: img, padding: Constants.PADDING , width: view.frame.width, height: 35))
+        jobTitle = UILabel(frame: LayoutManager.belowCentered(elementAbove: img, padding: Constants.PADDING , width: view.frame.width, height: 35))
+        jobTitle.textAlignment = .center
+        jobTitle.text = job.companyName
+        jobTitle.font = UIFont(name: "Avenir-Heavy", size: 35)
+        view.addSubview(jobTitle)
+        
+        taskTitle = UILabel(frame: LayoutManager.belowCentered(elementAbove: jobTitle, padding: Constants.MARGINAL_PADDING , width: view.frame.width, height: 35))
         taskTitle.textAlignment = .center
-        taskTitle.text = task.title
-        taskTitle.font = UIFont(name: "Avenir-Heavy", size: 35)
+        taskTitle.text = "Task: \(task.title!)"
+        taskTitle.font = Constants.TEXT_FONT
         view.addSubview(taskTitle)
         
-        taskDeadline = UILabel(frame: LayoutManager.belowCentered(elementAbove: taskTitle, padding: Constants.PADDING/2, width: view.frame.width, height: 30))
+        taskDeadline = UILabel(frame: LayoutManager.belowCentered(elementAbove: taskTitle, padding: 0, width: view.frame.width, height: 30))
         taskDeadline.textAlignment = .center
         taskDeadline.text = "Due: \(task.deadline!)"
         taskDeadline.font = Constants.TEXT_FONT?.italic
@@ -36,7 +42,6 @@ extension TaskDetailVC: UITextViewDelegate {
         taskDescription = UITextView(frame: LayoutManager.belowCentered(elementAbove: taskDeadline, padding: Constants.PADDING, width: view.frame.width - 2 * Constants.PADDING, height: 50))
         taskDescription.isEditable = true
         taskDescription.delegate = self
-        //        jobDescription.placeholderText = "Description here"
         taskDescription.text = task.description ?? "Add task description here"
         taskDescription.font = Constants.TEXT_FONT
         
