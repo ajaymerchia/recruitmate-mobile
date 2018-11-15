@@ -19,6 +19,12 @@ extension JobDetailVC {
         self.performSegue(withIdentifier: "detail2Task", sender: self)
     }
     
+    @objc func goToNewTask() {
+        self.performSegue(withIdentifier: "detail2NewTask", sender: self)
+    }
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? JobEditVC {

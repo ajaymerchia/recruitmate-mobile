@@ -210,11 +210,27 @@
                         <segue destination="921-e1-vyP" kind="show" identifier="job2Edit" id="Gwk-WG-gF7"/>
                         <segue destination="jnu-DY-Ko2" kind="show" identifier="detail2Task" id="uwM-fD-jrz"/>
                         <segue destination="wRg-f5-9XK" kind="show" identifier="detail2Stage" id="qpd-Iu-IuU"/>
+                        <segue destination="zy1-Ql-dUZ" kind="show" identifier="detail2NewTask" id="sxJ-5e-f9k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOY-Kl-4d3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7262" y="27"/>
+        </scene>
+        <!--New TaskVC-->
+        <scene sceneID="sLK-k9-WDg">
+            <objects>
+                <viewController id="zy1-Ql-dUZ" customClass="NewTaskVC" customModule="RecruitMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R1o-HU-76e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OBe-ih-Evc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xlT-NY-QMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8049" y="-687"/>
         </scene>
         <!--Task DetailVC-->
         <scene sceneID="hCR-qI-3QD">
