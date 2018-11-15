@@ -39,7 +39,7 @@ extension TaskDetailVC: UITextViewDelegate {
         taskDeadline.font = Constants.TEXT_FONT?.italic
         view.addSubview(taskDeadline)
         
-        taskDescription = UITextView(frame: LayoutManager.belowCentered(elementAbove: taskDeadline, padding: Constants.PADDING, width: view.frame.width - 2 * Constants.PADDING, height: 50))
+        taskDescription = UITextView(frame: LayoutManager.belowCentered(elementAbove: taskDeadline, padding: Constants.MARGINAL_PADDING, width: view.frame.width - 2 * Constants.PADDING, height: 50))
         taskDescription.isEditable = true
         taskDescription.delegate = self
         taskDescription.text = task.description ?? "Add task description here"
