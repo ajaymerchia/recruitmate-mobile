@@ -15,15 +15,15 @@ extension JobDetailVC: UITextViewDelegate {
     func initUI() {
         initHeader()
         initTasks()
-        initNav()
+        //initNav()
 //        initQuickTaskAdder()
     }
     
     
-    func initNav() {
-        self.title = job.companyName
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(goToEditJob))
-    }
+//    func initNav() {
+//        self.title = job.companyName
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(goToEditJob))
+//    }
 
     
     func initHeader() {
