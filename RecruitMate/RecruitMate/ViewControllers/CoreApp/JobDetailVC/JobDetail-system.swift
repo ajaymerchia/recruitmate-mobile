@@ -31,6 +31,14 @@ extension JobDetailVC {
         }
     }
     
+    @objc func goToStage() {
+        self.performSegue(withIdentifier: "detail2Stage", sender: self)
+    }
+    
+    
+    func setUpManagers() {
+        alerts = AlertManager(view: self)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? JobEditVC {
@@ -43,6 +51,10 @@ extension JobDetailVC {
             vc.board = board
             vc.job = job
             vc.task = selectedTask
+        }
+        
+        if let vc = segue.destination as? PipelineSelectVC {
+            vc.board = board
         }
         
     }
