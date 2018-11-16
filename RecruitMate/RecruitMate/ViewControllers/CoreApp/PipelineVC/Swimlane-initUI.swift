@@ -27,8 +27,6 @@ extension Swimlane {
         numJobs.textAlignment = .center
         self.addSubview(numJobs)
         
-        debugPrint("maxY")
-        debugPrint(self.frame.height)
         addJob = UIButton(frame: CGRect(x: self.frame.width/2 - 30, y: self.frame.height - (60 + Constants.PADDING), width: 60, height: 60))
         addJob.setBackgroundColor(color: .white, forState: .normal)
         addJob.setBackgroundColor(color: .flatWhite, forState: .highlighted)
