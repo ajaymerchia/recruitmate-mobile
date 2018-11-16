@@ -51,7 +51,6 @@ extension CompanySelectVC: UITableViewDelegate, UITableViewDataSource {
         cell.awakeFromNib()
         cell.initializeCellFrom(result: results[indexPath.row])
         
-        
         return cell
     }
     

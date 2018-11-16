@@ -12,6 +12,7 @@ class CompanySearchCell: UITableViewCell {
 
     var name: UILabel!
     var logo: UIImageView!
+    var logoWidth: CGFloat = 40
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +22,6 @@ class CompanySearchCell: UITableViewCell {
         name.font = Constants.TEXT_FONT
         contentView.addSubview(name)
         
-        let logoWidth:CGFloat = 40
         logo = UIImageView(frame: CGRect(x: contentView.frame.width - 5 * Constants.MARGINAL_PADDING - logoWidth, y: Constants.MARGINAL_PADDING, width: logoWidth, height: logoWidth))
         logo.image = UIImage(named: "logo-light")
         logo.contentMode = .scaleAspectFit
