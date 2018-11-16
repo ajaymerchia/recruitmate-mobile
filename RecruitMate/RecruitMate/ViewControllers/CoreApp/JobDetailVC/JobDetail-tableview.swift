@@ -31,6 +31,8 @@ extension JobDetailVC: UITableViewDelegate, UITableViewDataSource {
         cell.adjustViewWithHeight(JobDetailVC.ROW_HEIGHT)
         cell.initializeCellFrom(job.tasks[indexPath.row])
         cell.backgroundColor = nil
+        cell.job = job
+        cell.board = board
         
         return cell
     }

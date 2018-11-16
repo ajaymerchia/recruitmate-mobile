@@ -10,6 +10,10 @@ import UIKit
 
 class TaskCell: UITableViewCell {
     
+    var job: Job!
+    var board: Board!
+    var task: Task!
+    
     var name: UILabel!
     var logo: UIImageView!
     var separator: UIView!
@@ -51,6 +55,10 @@ class TaskCell: UITableViewCell {
     
     @objc func changeState() {
         doneButton.isSelected = !doneButton.isSelected
+        
+        task.completed = doneButton.isSelected
+        FirebaseAPIClient.push(job: job, toBoard: board, completion: {})
+        
     }
     
     func adjustViewWithHeight(_ height: CGFloat) {
@@ -61,6 +69,9 @@ class TaskCell: UITableViewCell {
     func initializeCellFrom(_ data: Task) {
         name.text = data.title
         doneButton.isSelected = data.completed
+        
+        task = data
+        
     }
     
     
