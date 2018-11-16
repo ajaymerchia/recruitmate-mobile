@@ -30,11 +30,11 @@ class Task: Comparable {
     
     var id: String!
     var title: String!
-    var description: String!
+    var description: String?
     var deadline: Date?
     var completed: Bool!
     
-    init(title: String, description: String, deadline: Date? = nil) {
+    init(title: String, description: String?, deadline: Date? = nil) {
         self.id = Utils.uuid()
         self.title = title
         self.description = description
@@ -48,7 +48,7 @@ class Task: Comparable {
         
         
         self.deadline = Date(timeIntervalSince1970: TimeInterval(exactly: (firebaseStruct["deadline"] as! NSNumber) as! Double)!)
-        self.description = (firebaseStruct["description"] as! String)
+        self.description = (firebaseStruct["description"] as? String) ?? ""
         
         self.completed = (firebaseStruct["completed"] as? Bool) ?? false
         

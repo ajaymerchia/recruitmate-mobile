@@ -63,5 +63,26 @@ extension JobDetailVC {
         
     }
     
+    @objc func deleteJob() {
+        alerts.yesOrNo(title: "Are you sure?", message: "Are you sure you want to delete? This can not be undone.", yes: {
+            
+            guard let ind = self.board.jobs.index(of: self.job) else {
+                self.alerts.displayAlert(title: "Sorry", message: "This action could not be completed. Contact support.")
+                return
+            }
+            
+            self.board.jobs.remove(at: ind)
+            
+            FirebaseAPIClient.delete(job: self.job, fromBoard: self.board, completion: {
+                self.navigationController?.popViewController(animated: true)
+            })
+            
+            
+            
+        }) {
+            // crisis averted
+        }
+    }
+    
     
 }

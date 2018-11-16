@@ -194,7 +194,7 @@
                     <connections>
                         <segue destination="jnu-DY-Ko2" kind="show" identifier="detail2Task" id="uwM-fD-jrz"/>
                         <segue destination="wRg-f5-9XK" kind="show" identifier="detail2Stage" id="qpd-Iu-IuU"/>
-                        <segue destination="zy1-Ql-dUZ" kind="show" identifier="detail2NewTask" id="sxJ-5e-f9k"/>
+                        <segue destination="zy1-Ql-dUZ" kind="presentation" identifier="detail2NewTask" id="sxJ-5e-f9k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOY-Kl-4d3" userLabel="First Responder" sceneMemberID="firstResponder"/>

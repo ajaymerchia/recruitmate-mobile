@@ -7,13 +7,33 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class NewTaskVC: UIViewController {
+    
+    var board: Board!
+    var job: Job!
+    var task: Task!
+    
+    var refreshMe: JobDetailVC?
+    
+    var img: UIImageView!
+    var taskDescription: UITextView!
+    
+    var taskField: UITextField!
+    var jobTitle: UILabel!
+    var datePicker: UIDatePicker!
+    
+    var addTaskButton: UIButton!
+    var alerts: AlertManager!
+    var hud: JGProgressHUD?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupManagers()
+        initUI()
     }
     
 

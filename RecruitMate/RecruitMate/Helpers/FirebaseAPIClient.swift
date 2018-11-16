@@ -49,6 +49,15 @@ class FirebaseAPIClient {
         
     }
     
+    static func delete(job: Job, fromBoard: Board, completion: @escaping() -> () = {}) {
+        let ref = Database.database().reference().child("boards").child(fromBoard.id).child("jobs").child(job.id)
+        
+        ref.removeValue { (err, data) in
+            completion()
+        }
+        
+    }
+    
     static func logout() {
         do {
             print("Attempting to log out")

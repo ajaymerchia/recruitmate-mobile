@@ -1,27 +1,29 @@
 //
-//  TaskDetailVC-system.swift
+//  NewTaskVC-system.swift
 //  RecruitMate
 //
-//  Created by Isabella Lau on 11/15/18.
+//  Created by Ajay Raj Merchia on 11/16/18.
 //  Copyright © 2018 Ajay Raj Merchia. All rights reserved.
 //
 
-import UIKit
-
 import Foundation
 import UIKit
+import JGProgressHUD
 
-extension TaskDetailVC {
-    
-    func setUpManagers() {
+extension NewTaskVC {
+    func setupManagers() {
         alerts = AlertManager(view: self, stateRestoration: {
+            self.addTaskButton.isUserInteractionEnabled = true
             self.hud?.dismiss()
-            self.deleteTask.isUserInteractionEnabled = true
         })
     }
     
+    @objc func goBack() {
+        self.dismiss(animated: true, completion: {})
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

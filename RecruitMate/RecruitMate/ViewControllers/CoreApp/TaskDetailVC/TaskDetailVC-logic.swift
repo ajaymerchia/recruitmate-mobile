@@ -50,4 +50,22 @@ extension TaskDetailVC {
         }, completion: nil)
         
     }
+    
+    @objc func deleteTaskOperation() {
+        
+        deleteTask.isUserInteractionEnabled = false
+        hud = alerts.startProgressHud(withMsg: "Removing Task")
+        
+        guard let ind = job.tasks.index(of: task) else {
+            AlertManager(view: self).displayAlert(title: "Error", message: "Could not delete")
+            return
+        }
+        
+        job.tasks.remove(at: ind)
+        FirebaseAPIClient.push(job: job, toBoard: board) {
+            self.navigationController?.popViewController(animated: true)
+
+        }
+        
+    }
 }

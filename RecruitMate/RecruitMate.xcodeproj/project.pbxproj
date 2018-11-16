@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A3D3AD27525121C3D60EE68A /* Pods_RecruitMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38316692A8E37245E4FF8BD /* Pods_RecruitMate.framework */; };
 		B7093954219EBA8E004272E3 /* TaskDetailVC-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7093953219EBA8E004272E3 /* TaskDetailVC-logic.swift */; };
+		B7093956219ECA7B004272E3 /* NewTaskVC-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7093955219ECA7B004272E3 /* NewTaskVC-initUI.swift */; };
+		B7093958219ECEBC004272E3 /* NewTaskVC-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7093957219ECEBC004272E3 /* NewTaskVC-system.swift */; };
+		B709395A219ECF5D004272E3 /* NewTaskVC-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7093959219ECF5D004272E3 /* NewTaskVC-logic.swift */; };
 		B71A20D52182B48D00D383ED /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A20D42182B48D00D383ED /* Board.swift */; };
 		B71BA464218D0595008E71C4 /* Pipeline-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71BA463218D0595008E71C4 /* Pipeline-logic.swift */; };
 		B71BA466218D09C2008E71C4 /* Swimlane-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71BA465218D09C2008E71C4 /* Swimlane-tableview.swift */; };
@@ -98,6 +101,9 @@
 /* Begin PBXFileReference section */
 		327E3D0C56447D2BA7C7CD81 /* Pods-RecruitMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecruitMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecruitMate/Pods-RecruitMate.release.xcconfig"; sourceTree = "<group>"; };
 		B7093953219EBA8E004272E3 /* TaskDetailVC-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskDetailVC-logic.swift"; sourceTree = "<group>"; };
+		B7093955219ECA7B004272E3 /* NewTaskVC-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewTaskVC-initUI.swift"; sourceTree = "<group>"; };
+		B7093957219ECEBC004272E3 /* NewTaskVC-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewTaskVC-system.swift"; sourceTree = "<group>"; };
+		B7093959219ECF5D004272E3 /* NewTaskVC-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewTaskVC-logic.swift"; sourceTree = "<group>"; };
 		B71A20D42182B48D00D383ED /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		B71BA463218D0595008E71C4 /* Pipeline-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pipeline-logic.swift"; sourceTree = "<group>"; };
 		B71BA465218D09C2008E71C4 /* Swimlane-tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swimlane-tableview.swift"; sourceTree = "<group>"; };
@@ -425,6 +431,9 @@
 			isa = PBXGroup;
 			children = (
 				B77CFA23219D3EBF00D3D8C4 /* NewTaskVC.swift */,
+				B7093957219ECEBC004272E3 /* NewTaskVC-system.swift */,
+				B7093955219ECA7B004272E3 /* NewTaskVC-initUI.swift */,
+				B7093959219ECF5D004272E3 /* NewTaskVC-logic.swift */,
 			);
 			path = NewTaskVC;
 			sourceTree = "<group>";
@@ -652,6 +661,7 @@
 				B7313593217B970D00B9A094 /* EmailReadSampleVC.swift in Sources */,
 				B7A23269218B9DB900DBB6AF /* CompanySearchCell.swift in Sources */,
 				B7290FA82197865F0073795A /* JobDetail-addTaskTest.swift in Sources */,
+				B7093958219ECEBC004272E3 /* NewTaskVC-system.swift in Sources */,
 				CFA2B0A62197A6CA00FEB48B /* JobDetail-tableview.swift in Sources */,
 				B7A23272218BC84A00DBB6AF /* PipelineSelect-system.swift in Sources */,
 				B780C5B0217C296200AA7C27 /* SignUp-logic.swift in Sources */,
@@ -693,6 +703,7 @@
 				B71BA464218D0595008E71C4 /* Pipeline-logic.swift in Sources */,
 				B78AF184217DAB4200DE37C9 /* Event.swift in Sources */,
 				B74493AB2182CD2400E43BA5 /* FirebaseAPIClient.swift in Sources */,
+				B7093956219ECA7B004272E3 /* NewTaskVC-initUI.swift in Sources */,
 				B71BA468218D09E2008E71C4 /* JobCard.swift in Sources */,
 				B74493B22182E0C400E43BA5 /* CompanySearchResult.swift in Sources */,
 				B76E354B217BFF9900993E15 /* Settings-initUI.swift in Sources */,
@@ -710,6 +721,7 @@
 				B76E352D217BFC3D00993E15 /* PipelineVC.swift in Sources */,
 				BD525A482197C89300967CB9 /* JobEditVC-tableview.swift in Sources */,
 				B76E3517217BE79000993E15 /* AlertManager.swift in Sources */,
+				B709395A219ECF5D004272E3 /* NewTaskVC-logic.swift in Sources */,
 				B76E3547217BFF6F00993E15 /* SignUp-system.swift in Sources */,
 				B7290FA621976D660073795A /* Task.swift in Sources */,
 				B76E350A217BCD4F00993E15 /* Constants.swift in Sources */,

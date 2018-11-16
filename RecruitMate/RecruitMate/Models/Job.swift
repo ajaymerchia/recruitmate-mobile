@@ -9,7 +9,11 @@
 import Foundation
 import UIKit
 
-class Job: FirebasePushable {
+class Job: FirebasePushable, Equatable {
+    static func == (lhs: Job, rhs: Job) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     func createPushable() -> [String : Any?] {
         var values: [String : Any?] = [:]
         values["companyName"] = companyName

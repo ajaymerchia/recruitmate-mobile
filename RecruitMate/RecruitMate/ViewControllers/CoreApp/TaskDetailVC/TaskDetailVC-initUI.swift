@@ -63,7 +63,7 @@ extension TaskDetailVC: UITextViewDelegate {
     }
     
     func initBody() {
-        taskDescription = UITextView(frame: LayoutManager.belowCentered(elementAbove: taskDeadline, padding: Constants.PADDING * 2, width: view.frame.width - 2 * Constants.PADDING, height: 250))
+        taskDescription = UITextView(frame: LayoutManager.belowCentered(elementAbove: taskDeadline, padding: Constants.PADDING * 2, width: view.frame.width - 2 * Constants.PADDING, height: 225))
         taskDescription.isEditable = true
         taskDescription.delegate = self
         taskDescription.text = task.description ?? "Add task description here"
@@ -85,6 +85,13 @@ extension TaskDetailVC: UITextViewDelegate {
         datePicker.isUserInteractionEnabled = false
         datePicker.alpha = 0
         view.addSubview(datePicker)
+        
+        deleteTask = UIButton(frame: LayoutManager.belowCentered(elementAbove: taskDescription, padding: Constants.PADDING * 2, width: view.frame.width - 4 * Constants.PADDING, height: 75))
+        deleteTask.setTitle("Delete Task", for: .normal)
+        deleteTask.setTitleColor(.red, for: .normal)
+        deleteTask.addTarget(self, action: #selector(deleteTaskOperation), for: .touchUpInside)
+        view.addSubview(deleteTask)
+        
     }
     
     func updateDeadline() {

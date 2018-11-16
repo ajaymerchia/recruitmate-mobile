@@ -22,7 +22,7 @@ extension JobDetailVC: UITextViewDelegate {
     
     func initNav() {
         self.title = job.companyName
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(goToEditJob))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteJob))
     }
 
     
@@ -147,7 +147,7 @@ extension JobDetailVC: UITextViewDelegate {
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             textView.text = "Add job details here"
             textView.textColor = Constants.PLACEHOLDER_COLOR
         }

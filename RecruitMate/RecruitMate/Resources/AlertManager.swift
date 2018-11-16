@@ -28,6 +28,22 @@ class AlertManager {
         callback?()
     }
     
+
+    func yesOrNo(title: String, message: String, yes: @escaping () -> (), no: @escaping () -> () ) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { (_) in
+            yes()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (_) in
+            no()
+        }))
+        
+        srcView.present(alert, animated: true, completion: nil)
+        
+    }
+    
     func startProgressHud(withMsg:String) -> JGProgressHUD {
         let hud = JGProgressHUD(style: .light)
         hud.textLabel.text = withMsg

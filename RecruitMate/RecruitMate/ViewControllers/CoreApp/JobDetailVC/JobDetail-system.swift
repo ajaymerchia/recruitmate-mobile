@@ -59,6 +59,12 @@ extension JobDetailVC {
             vc.board = board
         }
         
+        if let vc = segue.destination as? NewTaskVC {
+            vc.board = board
+            vc.job = job
+            vc.refreshMe = self
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

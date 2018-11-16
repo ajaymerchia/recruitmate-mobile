@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class TaskDetailVC: UIViewController {
 
@@ -24,17 +25,20 @@ class TaskDetailVC: UIViewController {
     var jobTitle: UILabel!
     var taskTitle: UILabel!
     var taskDeadline: UILabel!
-//    var deadlineEditStartButton: UIButton!
-//    var deadlineEditDoneButton: UIButton!
     
     var datePicker: UIDatePicker!
     
     var inEditMode = false
     
+    var deleteTask: UIButton!
+    var alerts: AlertManager!
+    var hud: JGProgressHUD?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setUpManagers()
         initUI()
     }
     
