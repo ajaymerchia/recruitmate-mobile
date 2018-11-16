@@ -14,6 +14,10 @@ class TaskDetailVC: UIViewController {
     var job: Job!
     var task: Task!
     
+    var year: Int = 0
+    var month: Int = 0
+    var day: Int = 0
+    
     var img: UIImageView!
     
     var jobTitle: UILabel!

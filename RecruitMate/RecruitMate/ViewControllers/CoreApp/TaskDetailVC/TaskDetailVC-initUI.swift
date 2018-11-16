@@ -33,9 +33,16 @@ extension TaskDetailVC: UITextViewDelegate {
         taskTitle.font = Constants.TEXT_FONT
         view.addSubview(taskTitle)
         
+        let calendar = Calendar.current
+        if task.deadline != nil {
+            year = calendar.component(.year, from: task.deadline!)
+            month = calendar.component(.month, from: task.deadline!)
+            day = calendar.component(.day, from: task.deadline!)
+        }
+        
         taskDeadline = UILabel(frame: LayoutManager.belowCentered(elementAbove: taskTitle, padding: 0, width: view.frame.width, height: 30))
         taskDeadline.textAlignment = .center
-        taskDeadline.text = "Due: \(task.deadline!)"
+        taskDeadline.text = "Due: \(month)/\(day)/\(year)"
         taskDeadline.font = Constants.TEXT_FONT?.italic
         view.addSubview(taskDeadline)
         
