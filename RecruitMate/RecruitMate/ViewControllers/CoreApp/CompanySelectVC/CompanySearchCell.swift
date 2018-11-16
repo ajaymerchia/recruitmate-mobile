@@ -47,6 +47,9 @@ class CompanySearchCell: UITableViewCell {
         self.logo.image = loadedLogo
     }
     
+    func recomputeBounds(_ width: CGFloat) {
+//        contentView.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: view.frame.width, height: 60)
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

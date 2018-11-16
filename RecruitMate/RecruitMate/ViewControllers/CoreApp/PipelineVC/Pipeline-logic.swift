@@ -22,7 +22,7 @@ extension PipelineVC {
             cards[job.pipelineStatus]!.append(job)
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(newJobAdded(_ :)), name: .hasNewJob, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(newJobAdded(_ :)), name: .hasNewJob, object: nil)
         
     }
     

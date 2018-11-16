@@ -26,10 +26,13 @@ extension PipelineSelectVC: UITableViewDelegate, UITableViewDataSource {
         }
         
         // Initialize Cell
+        cell.contentView.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: view.frame.width, height: 60)
         cell.awakeFromNib()
+//        cell.recomputeBounds(view.frame.width)
         cell.name.text = board.swimlanes[indexPath.row]
         cell.logo.image = UIImage(named: board.swimlanes[indexPath.row])
-        cell.logo.contentMode = .scaleAspectFit
+        cell.logo.clipsToBounds = false
+        cell.logo.layer.borderWidth = 0
         
         return cell
     }
