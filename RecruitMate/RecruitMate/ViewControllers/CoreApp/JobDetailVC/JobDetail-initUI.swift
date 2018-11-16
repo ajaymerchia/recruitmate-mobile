@@ -50,7 +50,7 @@ extension JobDetailVC: UITextViewDelegate {
         companyStatus.addTarget(self, action: #selector(goToStage), for: .touchUpInside)
         view.addSubview(companyStatus)
         
-        var prompt = UILabel(frame: LayoutManager.belowCentered(elementAbove: companyStatus, padding: -5, width: view.frame.width, height: 14))
+        let prompt = UILabel(frame: LayoutManager.belowCentered(elementAbove: companyStatus, padding: -5, width: view.frame.width, height: 14))
         prompt.font = UIFont(name: "Avenir-Light", size: 12)
         prompt.textAlignment = .center
         prompt.text = "(tap to change status)"

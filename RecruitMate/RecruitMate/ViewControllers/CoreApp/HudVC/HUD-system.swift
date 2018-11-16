@@ -32,7 +32,8 @@ extension HudVC {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        getDataForCells()
+        tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

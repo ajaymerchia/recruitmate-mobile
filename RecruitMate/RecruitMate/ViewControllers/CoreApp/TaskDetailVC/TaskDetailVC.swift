@@ -24,16 +24,18 @@ class TaskDetailVC: UIViewController {
     var jobTitle: UILabel!
     var taskTitle: UILabel!
     var taskDeadline: UILabel!
-    var deadlineEditStartButton: UIButton!
-    var deadlineEditDoneButton: UIButton!
+//    var deadlineEditStartButton: UIButton!
+//    var deadlineEditDoneButton: UIButton!
     
     var datePicker: UIDatePicker!
+    
+    var inEditMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        initHeader()
+        initUI()
     }
     
     

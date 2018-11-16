@@ -21,6 +21,8 @@ extension HudVC {
         board = (self.tabBarController as! TabBarController).currentBoard
         print("helloWorld")
         print(board.jobs)
+        
+        tasks = [:]
         for job in board.jobs {
             print(job)
             print(job.tasks)
@@ -38,7 +40,7 @@ extension HudVC {
         }
         
         var filteredCategories:[String] = []
-        for option in taskCategories {
+        for option in masterTaskCategories {
             if tasks[option] != nil {
                 filteredCategories.append(option)
             }
@@ -69,15 +71,15 @@ extension HudVC {
             print(daysAway)
             
             if daysAway < 0 {
-                return taskCategories[0]
+                return masterTaskCategories[0]
             } else if daysAway < 1 {
-                return taskCategories[1]
+                return masterTaskCategories[1]
             } else if daysAway < 2 {
-                return taskCategories[2]
+                return masterTaskCategories[2]
             } else if daysAway < 8 {
-                return taskCategories[3]
+                return masterTaskCategories[3]
             } else {
-                return taskCategories[4]
+                return masterTaskCategories[4]
             }
             
             

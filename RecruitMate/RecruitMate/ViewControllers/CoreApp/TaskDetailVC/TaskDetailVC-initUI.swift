@@ -10,6 +10,21 @@ import UIKit
 
 extension TaskDetailVC: UITextViewDelegate {
     
+    func initUI() {
+        initNav()
+        initHeader()
+        initBody()
+        
+    }
+    
+    func initNav() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(startEditingTask))
+
+        self.title = task.title
+        
+    }
+    
+    
     func initHeader() {
         img = UIImageView(frame: CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.maxY)! + Constants.PADDING , width: view.frame.width/5, height: view.frame.width/5))
         img.center = CGPoint(x: view.frame.width/2, y: img.frame.midY)
@@ -21,40 +36,40 @@ extension TaskDetailVC: UITextViewDelegate {
         img.layer.borderColor = rgba(162,162,162,1).cgColor
         view.addSubview(img)
         
-        jobTitle = UILabel(frame: LayoutManager.belowCentered(elementAbove: img, padding: Constants.PADDING , width: view.frame.width, height: 35))
+        jobTitle = UILabel(frame: LayoutManager.belowCentered(elementAbove: img, padding: Constants.PADDING , width: view.frame.width, height: 40))
         jobTitle.textAlignment = .center
-        jobTitle.text = job.companyName
+        jobTitle.text = task.title
         jobTitle.font = UIFont(name: "Avenir-Heavy", size: 35)
         view.addSubview(jobTitle)
         
         taskTitle = UILabel(frame: LayoutManager.belowCentered(elementAbove: jobTitle, padding: Constants.MARGINAL_PADDING , width: view.frame.width, height: 35))
         taskTitle.textAlignment = .center
-        taskTitle.text = "Task: \(task.title!)"
+        taskTitle.text = job.companyName
+        if let pos = job.companyPosition {
+            if pos != "" {
+                taskTitle.text = "\(pos) @ \(job.companyName!)"
+            }
+        }
         taskTitle.font = Constants.TEXT_FONT
         view.addSubview(taskTitle)
         
-        let calendar = Calendar.current
-        if task.deadline != nil {
-            year = calendar.component(.year, from: task.deadline!)
-            month = calendar.component(.month, from: task.deadline!)
-            day = calendar.component(.day, from: task.deadline!)
-        }
+        
         
         taskDeadline = UILabel(frame: LayoutManager.belowCentered(elementAbove: taskTitle, padding: 0, width: view.frame.width, height: 30))
         taskDeadline.textAlignment = .center
-        taskDeadline.text = "Due: \(month)/\(day)/\(year)"
         taskDeadline.font = Constants.TEXT_FONT?.italic
+        updateDeadline()
         view.addSubview(taskDeadline)
-        
-        datePicker = UIDatePicker(frame: LayoutManager.belowLeftX(elementAbove: taskTitle, padding: Constants.PADDING * 2, width: view.frame.width * 0.6, height: 75))
-        datePicker.datePickerMode = UIDatePicker.Mode.date
-        datePicker.date = task.deadline ?? Date(timeIntervalSinceNow: TimeInterval(exactly: 0)!)
-        
-        taskDescription = UITextView(frame: LayoutManager.belowCentered(elementAbove: taskDeadline, padding: Constants.PADDING * 2, width: view.frame.width - 2 * Constants.PADDING, height: 50))
+    }
+    
+    func initBody() {
+        taskDescription = UITextView(frame: LayoutManager.belowCentered(elementAbove: taskDeadline, padding: Constants.PADDING * 2, width: view.frame.width - 2 * Constants.PADDING, height: 250))
         taskDescription.isEditable = true
         taskDescription.delegate = self
         taskDescription.text = task.description ?? "Add task description here"
         taskDescription.font = Constants.TEXT_FONT
+        taskDescription.showsVerticalScrollIndicator = true
+        taskDescription.isScrollEnabled = true
         
         if taskDescription.text == "Add task description here" {
             taskDescription.textColor = Constants.PLACEHOLDER_COLOR
@@ -62,23 +77,25 @@ extension TaskDetailVC: UITextViewDelegate {
         }
         view.addSubview(taskDescription)
         
-        deadlineEditStartButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: taskDescription, padding: Constants.PADDING * 2, width: 75, height: 25))
-        deadlineEditStartButton.setBackgroundColor(color: job.companyColor?.darkerColor(percent: 0.4) ?? Constants.RECRUITMATE_BLUE, forState: .normal)
-        deadlineEditStartButton.setTitle("Edit", for: .normal)
-        deadlineEditStartButton.setTitleColor(.white, for: .normal)
-        deadlineEditStartButton.clipsToBounds = true
-        deadlineEditStartButton.layer.cornerRadius = deadlineEditStartButton.frame.width * 0.1
-        deadlineEditStartButton.addTarget(self, action: #selector(deadlineEditStart), for: .touchUpInside)
-        view.addSubview(deadlineEditStartButton)
+        view.addSubview(Utils.getBorder(forView: taskDescription, thickness: 1, color: .black, side: .Top))
         
-        deadlineEditDoneButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: taskDescription, padding: Constants.PADDING, width: 75, height: 25))
-        deadlineEditDoneButton.setBackgroundColor(color: job.companyColor?.darkerColor(percent: 0.4) ?? Constants.RECRUITMATE_BLUE, forState: .normal)
-        deadlineEditDoneButton.setTitle("Done", for: .normal)
-        deadlineEditDoneButton.setTitleColor(.white, for: .normal)
-        deadlineEditDoneButton.clipsToBounds = true
-        deadlineEditDoneButton.layer.cornerRadius = deadlineEditDoneButton.frame.width * 0.1
-        deadlineEditDoneButton.addTarget(self, action: #selector(deadlineEditDone), for: .touchUpInside)
-        
+        datePicker = UIDatePicker(frame: LayoutManager.between(elementAbove: taskTitle, elementBelow: taskDescription, width: view.frame.width * 0.6, topPadding: Constants.MARGINAL_PADDING, bottomPadding: Constants.MARGINAL_PADDING))
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+        datePicker.date = task.deadline ?? Date(timeIntervalSinceNow: TimeInterval(exactly: 0)!)
+        datePicker.isUserInteractionEnabled = false
+        datePicker.alpha = 0
+        view.addSubview(datePicker)
+    }
+    
+    func updateDeadline() {
+        let calendar = Calendar.current
+        if task.deadline != nil {
+            year = calendar.component(.year, from: task.deadline!)
+            month = calendar.component(.month, from: task.deadline!)
+            day = calendar.component(.day, from: task.deadline!)
+        }
+        taskDeadline.text = "Due: \(month)/\(day)/\(year)"
+
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -86,20 +103,27 @@ extension TaskDetailVC: UITextViewDelegate {
             textView.text = nil
             textView.textColor = UIColor.black
         }
+        
+        if inEditMode == false {
+            startEditingTask()
+        }
+        
+        inEditMode = true
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             textView.text = "Add task description here"
             textView.textColor = Constants.PLACEHOLDER_COLOR
         }
         
-        if textView.text != task.description {
-            task.description = textView.text
-            FirebaseAPIClient.push(job: job, toBoard: board) {
-                debugPrint("Task description updated")
-            }
+        if inEditMode {
+            endEditingTask()
         }
+        
+        inEditMode = false
+        
+        
     }
 
 }

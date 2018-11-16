@@ -32,6 +32,10 @@ extension PipelineVC {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        for lane in swimlanes {
+            lane.tableView.reloadData()
+        }
+        
         
     }
     

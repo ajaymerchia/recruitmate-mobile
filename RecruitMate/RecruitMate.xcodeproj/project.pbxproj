@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A3D3AD27525121C3D60EE68A /* Pods_RecruitMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38316692A8E37245E4FF8BD /* Pods_RecruitMate.framework */; };
+		B7093954219EBA8E004272E3 /* TaskDetailVC-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7093953219EBA8E004272E3 /* TaskDetailVC-logic.swift */; };
 		B71A20D52182B48D00D383ED /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A20D42182B48D00D383ED /* Board.swift */; };
 		B71BA464218D0595008E71C4 /* Pipeline-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71BA463218D0595008E71C4 /* Pipeline-logic.swift */; };
 		B71BA466218D09C2008E71C4 /* Swimlane-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71BA465218D09C2008E71C4 /* Swimlane-tableview.swift */; };
@@ -96,6 +97,7 @@
 
 /* Begin PBXFileReference section */
 		327E3D0C56447D2BA7C7CD81 /* Pods-RecruitMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecruitMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecruitMate/Pods-RecruitMate.release.xcconfig"; sourceTree = "<group>"; };
+		B7093953219EBA8E004272E3 /* TaskDetailVC-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskDetailVC-logic.swift"; sourceTree = "<group>"; };
 		B71A20D42182B48D00D383ED /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		B71BA463218D0595008E71C4 /* Pipeline-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pipeline-logic.swift"; sourceTree = "<group>"; };
 		B71BA465218D09C2008E71C4 /* Swimlane-tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swimlane-tableview.swift"; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 				B77CFA20219D38B600D3D8C4 /* TaskDetailVC.swift */,
 				BD083600219D47A7006E2793 /* TaskDetailVC-initUI.swift */,
 				BD083603219E9AB6006E2793 /* TaskDetailVC-system.swift */,
+				B7093953219EBA8E004272E3 /* TaskDetailVC-logic.swift */,
 			);
 			path = TaskDetailVC;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				B76E354F217BFFD200993E15 /* JobDetail-initUI.swift in Sources */,
 				B78AF183217DAB4000DE37C9 /* Contact.swift in Sources */,
 				B76E353F217BFE3900993E15 /* Login-initUI.swift in Sources */,
+				B7093954219EBA8E004272E3 /* TaskDetailVC-logic.swift in Sources */,
 				B7290FAE21978ECE0073795A /* HUD-tableView.swift in Sources */,
 				B7313591217B970D00B9A094 /* AppDelegate.swift in Sources */,
 				BD083601219D47A7006E2793 /* TaskDetailVC-initUI.swift in Sources */,
