@@ -29,7 +29,7 @@ class TaskCell: UITableViewCell {
         doneButton.layer.cornerRadius = 10
         doneButton.clipsToBounds = true
         doneButton.setBackgroundColor(color: .gray, forState: .normal)
-        doneButton.setBackgroundColor(color: .green, forState: .selected)
+        doneButton.setBackgroundColor(color: Constants.RECRUITMATE_BLUE, forState: .selected)
         doneButton.addTarget(self, action: #selector(changeState), for: .touchUpInside)
         contentView.addSubview(doneButton)
         
