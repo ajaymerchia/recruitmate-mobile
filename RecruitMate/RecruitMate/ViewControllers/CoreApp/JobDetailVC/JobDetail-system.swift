@@ -62,7 +62,7 @@ extension JobDetailVC {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

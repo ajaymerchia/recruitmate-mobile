@@ -20,23 +20,31 @@ extension Swimlane {
         
         self.addSubview(laneName)
         
-        addJob = UIButton(frame: LayoutManager.belowCentered(elementAbove: laneName, padding: Constants.MARGINAL_PADDING, width: self.frame.width-2 * Constants.PADDING, height: 40))
-        addJob.setBackgroundColor(color: .white, forState: .normal)
-        addJob.setBackgroundColor(color: .flatWhite, forState: .highlighted)
-        addJob.setTitle("+", for: .normal)
-        addJob.setTitleColor(Constants.RECRUITMATE_BLUE, for: .normal)
-        addJob.addTarget(self, action: #selector(goToNewJob), for: .touchUpInside)
-        applyFormatting(component: addJob)
-        self.addSubview(addJob)
-        
-        numJobs = UILabel(frame: LayoutManager.belowCentered(elementAbove: addJob, padding: Constants.MARGINAL_PADDING, width: self.frame.width, height: 25))
+        numJobs = UILabel(frame: LayoutManager.belowCentered(elementAbove: laneName, padding: Constants.MARGINAL_PADDING, width: self.frame.width, height: 25))
         numJobs.font = Constants.TEXT_FONT
         numJobs.textColor = Constants.RECRUITMATE_BLUE
         numJobs.text = "\(jobs.count) in this lane"
         numJobs.textAlignment = .center
         self.addSubview(numJobs)
         
-        tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: numJobs, padding: Constants.MARGINAL_PADDING * 2, width: self.frame.width, height: self.frame.maxY - numJobs.frame.maxY))
+        debugPrint("maxY")
+        debugPrint(self.frame.height)
+        addJob = UIButton(frame: CGRect(x: self.frame.width/2 - 30, y: self.frame.height - (60 + Constants.PADDING), width: 60, height: 60))
+        addJob.setBackgroundColor(color: .white, forState: .normal)
+        addJob.setBackgroundColor(color: .flatWhite, forState: .highlighted)
+        addJob.setTitle("+", for: .normal)
+        addJob.setTitleColor(Constants.RECRUITMATE_BLUE, for: .normal)
+        addJob.addTarget(self, action: #selector(goToNewJob), for: .touchUpInside)
+        addJob.titleLabel?.font = Constants.SUBTITLE_FONT
+        
+        addJob.layer.cornerRadius = addJob.frame.width/2
+        addJob.clipsToBounds = true
+        
+        applyFormatting(component: addJob)
+        self.addSubview(addJob)
+        
+        
+        tableView = UITableView(frame: LayoutManager.between(elementAbove: numJobs, elementBelow: addJob, width: self.frame.width, topPadding: Constants.PADDING, bottomPadding: Constants.PADDING))
         tableView.register(JobCard.self, forCellReuseIdentifier: "jobCard")
         tableView.delegate = self
         tableView.dataSource = self

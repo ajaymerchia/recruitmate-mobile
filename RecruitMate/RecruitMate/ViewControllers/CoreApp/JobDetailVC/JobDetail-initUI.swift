@@ -15,15 +15,15 @@ extension JobDetailVC: UITextViewDelegate {
     func initUI() {
         initHeader()
         initTasks()
-        //initNav()
+        initNav()
 //        initQuickTaskAdder()
     }
     
     
-//    func initNav() {
-//        self.title = job.companyName
+    func initNav() {
+        self.title = job.companyName
 //        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(goToEditJob))
-//    }
+    }
 
     
     func initHeader() {
@@ -97,16 +97,30 @@ extension JobDetailVC: UITextViewDelegate {
         tableView.register(TaskCell.self, forCellReuseIdentifier: "taskCell")
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = .flatWhite
-        tableView.separatorStyle = .singleLine
+        
         tableView.showsVerticalScrollIndicator = true
+
+        
+        // Clear Style Table
+        tableView.separatorStyle = .none
         tableView.layer.borderColor = UIColor.black.cgColor
         tableView.layer.borderWidth = 1
         
+        // Paper Style Table
+//        tableView.backgroundColor = UIColor(hexString: "f1e6a2")!.lighten(byPercentage: 0.4)
+//        tableView.separatorColor = .flatSkyBlueDark
+//        tableView.separatorStyle = .singleLine
+//        view.addSubview(Utils.getBorder(forView: tableView, thickness: 1, color: .flatRed, side: .Left))
+        
+
+        
         view.addSubview(tableView)
         
-        addTaskButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: tableView, padding: 50, width: 25, height: 25))
-        addTaskButton.setBackgroundColor(color: Constants.RECRUITMATE_BLUE, forState: .normal)
+        
+        
+        
+        addTaskButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: tableView, padding: 17.5, width: 25, height: 25))
+        addTaskButton.setBackgroundColor(color: UIColor(hexString: "40d652")!, forState: .normal)
         addTaskButton.setTitle("+", for: .normal)
         addTaskButton.setTitleColor(.white, for: .normal)
         addTaskButton.clipsToBounds = true
@@ -114,14 +128,14 @@ extension JobDetailVC: UITextViewDelegate {
         addTaskButton.addTarget(self, action: #selector(goToNewTask), for: .touchUpInside)
         view.addSubview(addTaskButton)
         
-        deleteTaskButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: tableView, padding: 20, width: 25, height: 25))
-        deleteTaskButton.setBackgroundColor(color: Constants.RECRUITMATE_BLUE_DARK, forState: .normal)
-        deleteTaskButton.setTitle("-", for: .normal)
-        deleteTaskButton.setTitleColor(.white, for: .normal)
-        deleteTaskButton.clipsToBounds = true
-        deleteTaskButton.layer.cornerRadius = addTaskButton.frame.width * 0.5
-        deleteTaskButton.addTarget(self, action: #selector(toggleDeleteMode), for: .touchUpInside)
-        view.addSubview(deleteTaskButton)
+//        deleteTaskButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: tableView, padding: 20, width: 25, height: 25))
+//        deleteTaskButton.setBackgroundColor(color: Constants.RECRUITMATE_BLUE_DARK, forState: .normal)
+//        deleteTaskButton.setTitle("-", for: .normal)
+//        deleteTaskButton.setTitleColor(.white, for: .normal)
+//        deleteTaskButton.clipsToBounds = true
+//        deleteTaskButton.layer.cornerRadius = addTaskButton.frame.width * 0.5
+//        deleteTaskButton.addTarget(self, action: #selector(toggleDeleteMode), for: .touchUpInside)
+//        view.addSubview(deleteTaskButton)
         
     }
     

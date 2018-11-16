@@ -90,7 +90,7 @@ extension TaskDetailVC: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "Add job details here"
+            textView.text = "Add task description here"
             textView.textColor = Constants.PLACEHOLDER_COLOR
         }
         

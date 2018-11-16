@@ -35,7 +35,7 @@ extension PipelineVC {
         var offset: CGFloat = Constants.PADDING
         
         for name in swimlaneNames {
-            swimlanes.append(Swimlane(frame: CGRect(x: offset, y: swimlaneHolder.frame.minY, width: sizeOfSwimlane, height: swimlaneHolder.frame.height), name: name, swimlaneParent: self, jobs: cards[name]!))
+            swimlanes.append(Swimlane(frame: CGRect(x: offset, y: Constants.PADDING * 2, width: sizeOfSwimlane, height: swimlaneHolder.frame.height - Constants.PADDING * 2), name: name, swimlaneParent: self, jobs: cards[name]!))
             offset += (sizeOfSwimlane + Constants.PADDING)
         }
         
