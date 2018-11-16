@@ -15,7 +15,8 @@ extension HudVC {
         initNav()
         initTitle()
         initTableview()
-        
+        initDefaultView()
+
     }
     
     func initNav() {
@@ -38,8 +39,26 @@ extension HudVC {
         
     }
     
+    func initDefaultView() {
+        noTasks = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50))
+        noTasks.center = CGPoint(x: view.frame.width / 2, y: view.frame.height / 2)
+        noTasks.text = "No tasks yet!"
+        noTasks.textAlignment = .center
+        noTasks.font = Constants.SUBTITLE_FONT
+        
+        debugPrint("Number of tasks: ", tasks.count)
+        if tasks.count == 0 {
+            view.addSubview(noTasks)
+            tableView.removeFromSuperview()
+            debugPrint("Adding that pesky label")
+        } else {
+            noTasks?.removeFromSuperview()
+            view.addSubview(tableView)
+        }
+    }
+   
     func initTableview() {
-        tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: welcome, padding: 0, width: view.frame.width, height: (self.tabBarController?.tabBar.frame.minY)! - (welcome.frame.maxY)))
+        tableView = UITableView(frame: LayoutManager.belowCentered(elementAbove: welcome, padding: Constants.MARGINAL_PADDING, width: view.frame.width, height: (self.tabBarController?.tabBar.frame.minY)! - (welcome.frame.maxY)))
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(HUD_taskCell.self, forCellReuseIdentifier: "taskCell")
@@ -52,8 +71,5 @@ extension HudVC {
         view.addSubview(tableView)
         
     }
-    
-   
-   
     
 }

@@ -25,8 +25,10 @@ extension JobDetailVC {
     
     @objc func toggleDeleteMode() {
         if deleteMode {
+            deleteTaskButton.setBackgroundColor(color: Constants.RECRUITMATE_BLUE_DARK, forState: .normal)
             deleteMode = false
         } else {
+            deleteTaskButton.setBackgroundColor(color: .gray, forState: .normal)
             deleteMode = true
         }
     }
@@ -60,7 +62,7 @@ extension JobDetailVC {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

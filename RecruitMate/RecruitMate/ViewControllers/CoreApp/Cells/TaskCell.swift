@@ -10,6 +10,10 @@ import UIKit
 
 class TaskCell: UITableViewCell {
     
+    var job: Job!
+    var board: Board!
+    var task: Task!
+    
     var name: UILabel!
     var logo: UIImageView!
     var separator: UIView!
@@ -20,18 +24,30 @@ class TaskCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        name = UILabel(frame: CGRect(x: 5 * Constants.MARGINAL_PADDING, y: Constants.MARGINAL_PADDING * 0.35, width: contentView.frame.width, height: 60 - Constants.MARGINAL_PADDING * 2))
-        name.text = "sample"
-        name.font = Constants.TEXT_FONT
-        contentView.addSubview(name)
         
-        doneButton = UIButton(frame: CGRect(x: contentView.frame.width - 30, y: Constants.MARGINAL_PADDING, width: 20, height: 20))
+        doneButton = UIButton(frame: CGRect(x: Constants.PADDING, y: 0, width: 30, height: 30))
         doneButton.layer.cornerRadius = 10
         doneButton.clipsToBounds = true
-        doneButton.setBackgroundColor(color: .gray, forState: .normal)
-        doneButton.setBackgroundColor(color: .green, forState: .selected)
+        doneButton.setBackgroundColor(color: .white, forState: .normal)
+        doneButton.setBackgroundColor(color: Constants.RECRUITMATE_BLUE, forState: .selected)
+        doneButton.setTitle("✓", for: .selected)
+        doneButton.setTitleColor(.white, for: .selected)
+        doneButton.layer.cornerRadius = 15
+        doneButton.layer.borderWidth = 1
+        doneButton.layer.borderColor = UIColor.flatGrayDark.cgColor
+        doneButton.clipsToBounds = true
         doneButton.addTarget(self, action: #selector(changeState), for: .touchUpInside)
         contentView.addSubview(doneButton)
+        
+        
+        
+        
+        name = UILabel(frame: CGRect(x: doneButton.frame.maxX + Constants.PADDING, y: doneButton.frame.minY, width: contentView.frame.width - (doneButton.frame.maxX + Constants.PADDING), height: doneButton.frame.height))
+        name.text = "sample"
+        name.font = UIFont(name: "Avenir-Roman", size: 20)
+        contentView.addSubview(name)
+        
+        
         
         
         
@@ -39,16 +55,23 @@ class TaskCell: UITableViewCell {
     
     @objc func changeState() {
         doneButton.isSelected = !doneButton.isSelected
+        
+        task.completed = doneButton.isSelected
+        FirebaseAPIClient.push(job: job, toBoard: board, completion: {})
+        
     }
     
     func adjustViewWithHeight(_ height: CGFloat) {
-        
-        doneButton.frame = CGRect(x: contentView.frame.width - 30, y: height/2 - 10, width: 20, height: 20)
+        doneButton.frame = CGRect(x: Constants.PADDING, y: height/2 - 15, width: 30, height: 30)
+        name.frame = CGRect(x: doneButton.frame.maxX + Constants.PADDING, y: doneButton.frame.minY, width: contentView.frame.width - (doneButton.frame.maxX + Constants.PADDING), height: doneButton.frame.height)
     }
     
     func initializeCellFrom(_ data: Task) {
         name.text = data.title
         doneButton.isSelected = data.completed
+        
+        task = data
+        
     }
     
     

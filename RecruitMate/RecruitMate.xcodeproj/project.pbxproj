@@ -85,6 +85,7 @@
 		B7A2327F218C0A7E00DBB6AF /* Swimlane-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2327E218C0A7E00DBB6AF /* Swimlane-initUI.swift */; };
 		B7A23281218C0D1600DBB6AF /* Swimlane-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A23280218C0D1600DBB6AF /* Swimlane-logic.swift */; };
 		BD083601219D47A7006E2793 /* TaskDetailVC-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD083600219D47A7006E2793 /* TaskDetailVC-initUI.swift */; };
+		BD083604219E9AB6006E2793 /* TaskDetailVC-system.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD083603219E9AB6006E2793 /* TaskDetailVC-system.swift */; };
 		BD525A482197C89300967CB9 /* JobEditVC-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD525A472197C89300967CB9 /* JobEditVC-tableview.swift */; };
 		CF40C3FC21979324007030E6 /* JobEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40C3FB21979324007030E6 /* JobEditVC.swift */; };
 		CF40C3FE21979384007030E6 /* JobEdit-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40C3FD21979384007030E6 /* JobEdit-initUI.swift */; };
@@ -170,6 +171,7 @@
 		B7A2327E218C0A7E00DBB6AF /* Swimlane-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swimlane-initUI.swift"; sourceTree = "<group>"; };
 		B7A23280218C0D1600DBB6AF /* Swimlane-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swimlane-logic.swift"; sourceTree = "<group>"; };
 		BD083600219D47A7006E2793 /* TaskDetailVC-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskDetailVC-initUI.swift"; sourceTree = "<group>"; };
+		BD083603219E9AB6006E2793 /* TaskDetailVC-system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskDetailVC-system.swift"; sourceTree = "<group>"; };
 		BD33EE37217C02AC00B2A7B3 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		BD33EE39217C08A400B2A7B3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BD33EE3B217C096800B2A7B3 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 			children = (
 				B77CFA20219D38B600D3D8C4 /* TaskDetailVC.swift */,
 				BD083600219D47A7006E2793 /* TaskDetailVC-initUI.swift */,
+				BD083603219E9AB6006E2793 /* TaskDetailVC-system.swift */,
 			);
 			path = TaskDetailVC;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				B76E3524217BFB4C00993E15 /* SignUp-main.swift in Sources */,
 				B7290FB42197A3070073795A /* HUD-headerCell.swift in Sources */,
 				B7A23270218BC81800DBB6AF /* PipelineSelect-initUI.swift in Sources */,
+				BD083604219E9AB6006E2793 /* TaskDetailVC-system.swift in Sources */,
 				B7A23265218B6CD500DBB6AF /* CompanySelectVC-initUI.swift in Sources */,
 				B76D5522218292BE00D3ECFA /* Notifications.swift in Sources */,
 				B76E354F217BFFD200993E15 /* JobDetail-initUI.swift in Sources */,
@@ -859,7 +863,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BF5K6M8RNY;
+				DEVELOPMENT_TEAM = 9T3JS4TFUB;
 				INFOPLIST_FILE = RecruitMate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -879,7 +883,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BF5K6M8RNY;
+				DEVELOPMENT_TEAM = 9T3JS4TFUB;
 				INFOPLIST_FILE = RecruitMate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
