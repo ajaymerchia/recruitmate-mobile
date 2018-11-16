@@ -46,7 +46,11 @@ extension TaskDetailVC: UITextViewDelegate {
         taskDeadline.font = Constants.TEXT_FONT?.italic
         view.addSubview(taskDeadline)
         
-        taskDescription = UITextView(frame: LayoutManager.belowCentered(elementAbove: taskDeadline, padding: Constants.MARGINAL_PADDING, width: view.frame.width - 2 * Constants.PADDING, height: 50))
+        datePicker = UIDatePicker(frame: LayoutManager.belowLeftX(elementAbove: taskTitle, padding: Constants.PADDING * 2, width: view.frame.width * 0.6, height: 75))
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+        datePicker.date = task.deadline ?? Date(timeIntervalSinceNow: TimeInterval(exactly: 0)!)
+        
+        taskDescription = UITextView(frame: LayoutManager.belowCentered(elementAbove: taskDeadline, padding: Constants.PADDING * 2, width: view.frame.width - 2 * Constants.PADDING, height: 50))
         taskDescription.isEditable = true
         taskDescription.delegate = self
         taskDescription.text = task.description ?? "Add task description here"
@@ -57,6 +61,23 @@ extension TaskDetailVC: UITextViewDelegate {
             
         }
         view.addSubview(taskDescription)
+        
+        deadlineEditStartButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: taskDescription, padding: Constants.PADDING * 2, width: 75, height: 25))
+        deadlineEditStartButton.setBackgroundColor(color: job.companyColor?.darkerColor(percent: 0.4) ?? Constants.RECRUITMATE_BLUE, forState: .normal)
+        deadlineEditStartButton.setTitle("Edit", for: .normal)
+        deadlineEditStartButton.setTitleColor(.white, for: .normal)
+        deadlineEditStartButton.clipsToBounds = true
+        deadlineEditStartButton.layer.cornerRadius = deadlineEditStartButton.frame.width * 0.1
+        deadlineEditStartButton.addTarget(self, action: #selector(deadlineEditStart), for: .touchUpInside)
+        view.addSubview(deadlineEditStartButton)
+        
+        deadlineEditDoneButton = UIButton(frame: LayoutManager.aboveRight(elementBelow: taskDescription, padding: Constants.PADDING, width: 75, height: 25))
+        deadlineEditDoneButton.setBackgroundColor(color: job.companyColor?.darkerColor(percent: 0.4) ?? Constants.RECRUITMATE_BLUE, forState: .normal)
+        deadlineEditDoneButton.setTitle("Done", for: .normal)
+        deadlineEditDoneButton.setTitleColor(.white, for: .normal)
+        deadlineEditDoneButton.clipsToBounds = true
+        deadlineEditDoneButton.layer.cornerRadius = deadlineEditDoneButton.frame.width * 0.1
+        deadlineEditDoneButton.addTarget(self, action: #selector(deadlineEditDone), for: .touchUpInside)
         
     }
     

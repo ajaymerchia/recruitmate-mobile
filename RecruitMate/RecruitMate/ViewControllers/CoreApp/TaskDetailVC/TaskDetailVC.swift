@@ -19,11 +19,15 @@ class TaskDetailVC: UIViewController {
     var day: Int = 0
     
     var img: UIImageView!
-    
+    var taskDescription: UITextView!
+
     var jobTitle: UILabel!
     var taskTitle: UILabel!
     var taskDeadline: UILabel!
-    var taskDescription: UITextView!
+    var deadlineEditStartButton: UIButton!
+    var deadlineEditDoneButton: UIButton!
+    
+    var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,6 +11,7 @@ import UIKit
 class HudVC: UIViewController {
     
     var welcome: UILabel!
+    var noTasks: UILabel!
     var tableView: UITableView!
     
     var tasks: [String: [Task]] = [:]
@@ -28,7 +29,6 @@ class HudVC: UIViewController {
         print(tasks)
         
         initUI()
-
         // Do any additional setup after loading the view.
     }
     
