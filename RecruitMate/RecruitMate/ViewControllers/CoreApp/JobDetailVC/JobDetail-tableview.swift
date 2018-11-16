@@ -13,6 +13,12 @@ extension JobDetailVC: UITableViewDelegate, UITableViewDataSource {
         return job.tasks.count
     }
     
+    static let ROW_HEIGHT = Constants.PADDING*2 + 30
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return JobDetailVC.ROW_HEIGHT
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell") as! TaskCell
         
@@ -22,22 +28,17 @@ extension JobDetailVC: UITableViewDelegate, UITableViewDataSource {
         
         // Initialize Cell
         cell.awakeFromNib()
-        cell.adjustViewWithHeight(cell.frame.height)
+        cell.adjustViewWithHeight(JobDetailVC.ROW_HEIGHT)
         cell.initializeCellFrom(job.tasks[indexPath.row])
+        cell.backgroundColor = nil
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if deleteMode {
-            debugPrint("Deleting task!")
-            job.tasks.remove(at: indexPath.row)
-            FirebaseAPIClient.push(job: job, toBoard: board, completion: {})
-        } else {
-            tableView.deselectRow(at: indexPath, animated: true)
-            selectedTask = job.tasks[indexPath.row]
-            goToTaskDetail()
-        }
+        tableView.deselectRow(at: indexPath, animated: true)
+        selectedTask = job.tasks[indexPath.row]
+        goToTaskDetail()
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

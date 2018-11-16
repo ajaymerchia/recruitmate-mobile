@@ -93,11 +93,41 @@ class Utils {
     
     // UI Stuff
     
+    enum Side {
+        case Top
+        case Right
+        case Bottom
+        case Left
+    }
+    
     static func getBottomBorder(forView: UIView, thickness: CGFloat, color: UIColor) -> UIView {
         let ret = UIView(frame: LayoutManager.belowCentered(elementAbove: forView, padding: 0, width: forView.frame.width, height: thickness))
         
         ret.backgroundColor = color
         return ret
+    }
+    
+    static func getBorder(forView: UIView, thickness: CGFloat, color: UIColor, side: Side) -> UIView {
+        
+        let ret = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        ret.backgroundColor = color
+        
+        switch side {
+            case .Top:
+                
+                ret.frame = LayoutManager.aboveCentered(elementBelow: forView, padding: thickness, width: forView.frame.width, height: thickness)
+                return ret
+            case .Right:
+                ret.frame = CGRect(x: forView.frame.maxX, y: forView.frame.minY, width: thickness, height: forView.frame.height)
+                return ret
+            case .Bottom:
+                ret.frame = LayoutManager.belowCentered(elementAbove: forView, padding: 0, width: forView.frame.width, height: thickness)
+                return ret
+            case .Left:
+                ret.frame = CGRect(x: forView.frame.minX - thickness, y: forView.frame.minY, width: thickness, height: forView.frame.height)
+                return ret
+        }
+        
     }
     
     
