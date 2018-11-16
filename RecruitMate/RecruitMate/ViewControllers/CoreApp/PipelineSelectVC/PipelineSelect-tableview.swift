@@ -28,7 +28,8 @@ extension PipelineSelectVC: UITableViewDelegate, UITableViewDataSource {
         // Initialize Cell
         cell.awakeFromNib()
         cell.name.text = board.swimlanes[indexPath.row]
-    
+        cell.logo.image = UIImage(named: board.swimlanes[indexPath.row])
+        
         return cell
     }
     
