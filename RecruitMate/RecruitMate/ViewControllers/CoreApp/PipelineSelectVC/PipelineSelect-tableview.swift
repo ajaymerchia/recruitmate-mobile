@@ -29,6 +29,7 @@ extension PipelineSelectVC: UITableViewDelegate, UITableViewDataSource {
         cell.awakeFromNib()
         cell.name.text = board.swimlanes[indexPath.row]
         cell.logo.image = UIImage(named: board.swimlanes[indexPath.row])
+        cell.logo.contentMode = .scaleAspectFit
         
         return cell
     }
