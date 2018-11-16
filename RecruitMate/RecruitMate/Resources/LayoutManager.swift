@@ -27,6 +27,14 @@ class LayoutManager {
         return CGRect(x: elementBelow.frame.maxX - width, y: elementBelow.frame.minY - (padding+height), width: width, height: height)
     }
     
+    static func between(elementAbove: UIView, elementBelow: UIView, width:CGFloat, topPadding: CGFloat, bottomPadding: CGFloat) -> CGRect {
+        
+        debugPrint(elementAbove.frame.maxY + topPadding)
+        
+        return CGRect(x: elementAbove.frame.midX - width/2, y: elementAbove.frame.maxY + topPadding, width: width, height: elementBelow.frame.minY - (elementAbove.frame.maxY + topPadding + bottomPadding))
+        
+    }
+    
     
     
     
